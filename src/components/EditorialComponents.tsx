@@ -10,17 +10,17 @@ export function EditorialBadge({
   className?: string;
 }) {
   const styles: Record<string, string> = {
-    forest: "bg-[#172D24] text-[#F3F3EC] border-[#2E4739]",
-    secondary: "bg-[#294333] text-[#F3F3EC] border-[#3D5E4A]",
-    natural: "bg-[#46634B]/15 text-[#2B4430] border-[#46634B]/40 font-semibold",
-    sage: "bg-[#B4BEA5]/30 text-[#172D24] border-[#B4BEA5]/70 font-semibold",
+    forest: "bg-[#1D382B] text-[#F4F4EF] border-[#2D4C3C]",
+    secondary: "bg-[#304A38] text-[#F4F4EF] border-[#43644E]",
+    natural: "bg-[#60775B]/15 text-[#253D2A] border-[#60775B]/40 font-semibold",
+    sage: "bg-[#AEBBA4]/30 text-[#1D382B] border-[#AEBBA4]/70 font-semibold",
     earth: "bg-[#A87952]/15 text-[#7A4B29] border-[#A87952]/40 font-semibold",
-    stone: "bg-[#DADDD3] text-[#202820] border-[#C7CBC0] font-semibold",
-    light: "bg-[#F3F3EC] text-[#202820] border-[#DADDD3]",
-    white: "bg-white text-[#202820] border-[#DADDD3]",
-    // Compatibility fallbacks
-    dark: "bg-[#172D24] text-[#F3F3EC] border-[#2E4739]",
-    moss: "bg-[#46634B]/15 text-[#2B4430] border-[#46634B]/40 font-semibold",
+    stone: "bg-[#E2E4DA] text-[#202723] border-[#CBD0C3] font-semibold",
+    light: "bg-[#F4F4EF] text-[#202723] border-[#E2E4DA]",
+    white: "bg-white text-[#202723] border-[#E2E4DA]",
+    // Compatibility
+    dark: "bg-[#1D382B] text-[#F4F4EF] border-[#2D4C3C]",
+    moss: "bg-[#60775B]/15 text-[#253D2A] border-[#60775B]/40 font-semibold",
   };
 
   const selectedStyle = styles[variant] || styles.natural;
@@ -35,7 +35,6 @@ export function EditorialBadge({
   );
 }
 
-// Alias for compatibility
 export const MuseumBadge = EditorialBadge;
 
 export function HairlineDivider({
@@ -48,7 +47,7 @@ export function HairlineDivider({
   return (
     <div
       className={`w-full h-[1px] ${
-        dark ? "bg-[#2E4739]" : "bg-[#DADDD3]"
+        dark ? "bg-[#2D4C3C]" : "bg-[#E2E4DA]"
       } ${className}`}
     />
   );

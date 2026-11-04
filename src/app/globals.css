@@ -1,44 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* BondInWater — Nature Engineered Brand Identity Palette */
-  --color-forest-deep: #172D24;
-  --color-forest-secondary: #294333;
-  --color-forest-natural: #46634B;
-  --color-sage-muted: #B4BEA5;
-  --color-natural-white: #F3F3EC;
-  --color-natural-stone: #DADDD3;
+  /* BondInWater — Research-Led "Nature Engineered" Palette */
+  --color-forest-deep: #1D382B;
+  --color-forest-secondary: #304A38;
+  --color-forest-natural: #60775B;
+  --color-sage-muted: #AEBBA4;
+  --color-natural-white: #F4F4EF;
+  --color-natural-stone: #E2E4DA;
   --color-earth-accent: #A87952;
-  --color-charcoal: #202522;
-  --color-brand-text: #202820;
+  --color-charcoal: #202723;
+  --color-brand-text: #202723;
 
   /* Semantic UI Tokens */
-  --color-canvas: #F3F3EC;
-  --color-canvas-alt: #EBEBE3;
+  --color-canvas: #F4F4EF;
+  --color-canvas-alt: #EBECE4;
   --color-canvas-white: #FFFFFF;
-  --color-canvas-stone: #DADDD3;
-  --color-canvas-border: #DADDD3;
-  --color-canvas-border-light: #E5E7DF;
+  --color-canvas-stone: #E2E4DA;
+  --color-canvas-border: #E2E4DA;
+  --color-canvas-border-light: #EBECE4;
 
-  --color-text-primary: #202820;
-  --color-text-body: #3E4A3F;
-  --color-text-muted: #667367;
+  --color-text-primary: #202723;
+  --color-text-body: #3A473E;
+  --color-text-muted: #647368;
 
-  --color-panel-forest: #172D24;
-  --color-panel-forest-secondary: #294333;
-  --color-panel-forest-border: #2E4739;
-  --color-panel-forest-text: #F3F3EC;
-  --color-panel-forest-muted: #B4BEA5;
+  --color-panel-forest: #1D382B;
+  --color-panel-forest-secondary: #304A38;
+  --color-panel-forest-border: #2D4C3C;
+  --color-panel-forest-text: #F4F4EF;
+  --color-panel-forest-muted: #AEBBA4;
 
-  --font-display: var(--font-display), "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-display), "Oswald", "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-mono), "Space Mono", monospace;
 }
 
 @layer base {
   :root {
-    --background: #F3F3EC;
-    --foreground: #202820;
+    --background: #F4F4EF;
+    --foreground: #202723;
   }
   
   html {
@@ -48,16 +48,16 @@
   }
 
   body {
-    background-color: #F3F3EC;
-    color: #202820;
+    background-color: #F4F4EF;
+    color: #202723;
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
-    font-weight: 800;
+    letter-spacing: -0.015em;
+    font-weight: 700;
   }
 
   .font-mono {
@@ -65,21 +65,21 @@
   }
 }
 
-/* Polished Nature Engineered Scrollbar */
+/* Polished Editorial Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F3F3EC;
+  background: #F4F4EF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #B4BEA5;
+  background: #AEBBA4;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #46634B;
+  background: #60775B;
 }
 
-/* Clean Image Presentation */
+/* Crisp Image Zoom */
 .reveal-zoom {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }

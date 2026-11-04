@@ -21,7 +21,6 @@ export function ThreeBrandPillars() {
         "Captive breeding biotope conditions & water chemistry",
       ],
       icon: Trees,
-      accentColor: "#B4BEA5",
     },
     {
       id: "design",
@@ -39,7 +38,6 @@ export function ThreeBrandPillars() {
         "Integrated MEP engineering & climate HVAC conduits",
       ],
       icon: Compass,
-      accentColor: "#A87952",
     },
     {
       id: "engineering",
@@ -57,12 +55,11 @@ export function ThreeBrandPillars() {
         "Turnkey execution across all 8 verified lifecycle stages",
       ],
       icon: Cpu,
-      accentColor: "#46634B",
     },
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-[#172D24] text-[#F3F3EC] relative border-b border-[#2E4739]">
+    <section className="py-24 lg:py-32 bg-[#1D382B] text-[#F4F4EF] relative border-b border-[#2D4C3C]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -71,16 +68,16 @@ export function ThreeBrandPillars() {
             <EditorialBadge variant="sage">
               NATURE ENGINEERED &bull; CORE PILLARS
             </EditorialBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#B4BEA5]">
-              THE THREE DIMENSIONS OF OUR PRACTICE
+            <span className="text-xs font-mono uppercase tracking-widest text-[#AEBBA4]">
+              THE THREE CONNECTING DIMENSIONS OF OUR PRACTICE
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#F3F3EC] leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#F4F4EF] leading-[0.95]">
             Nature. Design. Engineering.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#DADDD3] font-sans font-light leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-[#E2E4DA] font-sans font-light leading-relaxed max-w-3xl">
             A unified multidisciplinary practice where zoological empathy drives the design, architectural expertise shapes the space, and precision engineering guarantees lifelong biological stability.
           </p>
         </div>
@@ -92,11 +89,11 @@ export function ThreeBrandPillars() {
             return (
               <div
                 key={pillar.id}
-                className="bg-[#294333] border border-[#3D5E4A] flex flex-col justify-between shadow-xl hover:border-[#B4BEA5] transition-all duration-300"
+                className="bg-[#304A38] border border-[#43644E] flex flex-col justify-between shadow-xl hover:border-[#AEBBA4] transition-all duration-300"
               >
                 <div>
                   {/* Photo Header */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#172D24] border-b border-[#3D5E4A]">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#1D382B] border-b border-[#43644E]">
                     <Image
                       src={pillar.image}
                       alt={pillar.name}
@@ -104,10 +101,10 @@ export function ThreeBrandPillars() {
                       className="object-cover reveal-zoom"
                       sizes="(max-width: 1024px) 100vw, 33vw"
                     />
-                    <div className="absolute top-3 left-3 bg-[#172D24]/90 backdrop-blur-sm text-[#F3F3EC] px-2.5 py-1 text-[10px] font-mono border border-[#3D5E4A]">
+                    <div className="absolute top-3 left-3 bg-[#1D382B]/90 backdrop-blur-sm text-[#F4F4EF] px-2.5 py-1 text-[10px] font-mono border border-[#43644E]">
                       PILLAR {pillar.number}
                     </div>
-                    <div className="absolute bottom-2 left-2 right-2 bg-[#172D24]/85 text-[#B4BEA5] px-2.5 py-1 text-[10px] font-mono truncate">
+                    <div className="absolute bottom-2 left-2 right-2 bg-[#1D382B]/85 text-[#AEBBA4] px-2.5 py-1 text-[10px] font-mono truncate">
                       {pillar.imageCaption}
                     </div>
                   </div>
@@ -116,31 +113,31 @@ export function ThreeBrandPillars() {
                   <div className="p-6 sm:p-7 space-y-5">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono uppercase tracking-widest text-[#B4BEA5] font-bold">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#AEBBA4] font-bold">
                           DIMENSION {pillar.number}
                         </span>
-                        <Icon className="w-5 h-5 text-[#B4BEA5]" />
+                        <Icon className="w-5 h-5 text-[#AEBBA4]" />
                       </div>
-                      <h3 className="text-2xl font-display uppercase tracking-tight text-[#F3F3EC] font-bold">
+                      <h3 className="text-2xl font-display uppercase tracking-tight text-[#F4F4EF] font-bold">
                         {pillar.name}
                       </h3>
-                      <p className="text-xs font-mono text-[#DADDD3] font-medium">
+                      <p className="text-xs font-mono text-[#E2E4DA] font-medium">
                         {pillar.tagline}
                       </p>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-[#DADDD3] font-sans font-light leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#E2E4DA] font-sans font-light leading-relaxed">
                       {pillar.description}
                     </p>
 
-                    <div className="space-y-2 pt-3 border-t border-[#3D5E4A]">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#B4BEA5] block font-bold">
+                    <div className="space-y-2 pt-3 border-t border-[#43644E]">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#AEBBA4] block font-bold">
                         VERIFIED CAPABILITIES
                       </span>
                       <ul className="space-y-2">
                         {pillar.capabilities.map((cap, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-xs text-[#F3F3EC]">
-                            <Check className="w-3.5 h-3.5 text-[#B4BEA5] shrink-0 mt-0.5" />
+                          <li key={idx} className="flex items-start gap-2 text-xs text-[#F4F4EF]">
+                            <Check className="w-3.5 h-3.5 text-[#AEBBA4] shrink-0 mt-0.5" />
                             <span>{cap}</span>
                           </li>
                         ))}
@@ -153,7 +150,7 @@ export function ThreeBrandPillars() {
                 <div className="p-6 sm:p-7 pt-0">
                   <a
                     href="#expertise"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-[#172D24] hover:bg-[#3D5E4A] text-[#F3F3EC] text-xs font-mono uppercase tracking-wider py-3 border border-[#3D5E4A] transition-colors font-bold"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#1D382B] hover:bg-[#43644E] text-[#F4F4EF] text-xs font-mono uppercase tracking-wider py-3 border border-[#43644E] transition-colors font-bold"
                   >
                     <span>Inspect {pillar.name} Scope</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />

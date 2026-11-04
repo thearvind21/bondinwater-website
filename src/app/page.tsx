@@ -1,8 +1,10 @@
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { CompanyIntroduction } from "@/components/CompanyIntroduction";
 import { ThreeBrandPillars } from "@/components/ThreeBrandPillars";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
+import { HabitatArchitectureStory } from "@/components/HabitatArchitectureStory";
 import { AnimalNatureStorytelling } from "@/components/AnimalNatureStorytelling";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -16,47 +18,53 @@ import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#F3F3EC] text-[#202820] selection:bg-[#172D24] selection:text-[#F3F3EC]">
+    <main className="min-h-screen bg-[#F4F4EF] text-[#202723] selection:bg-[#1D382B] selection:text-[#F4F4EF]">
       {/* 00: Navigation Bar */}
       <Navbar />
 
-      {/* 01: Hero Entrance — Where Nature Meets Extraordinary Design */}
+      {/* 01: Hero Entrance — Extraordinary Environments. Engineered Around Nature. */}
       <Hero />
 
-      {/* 02: Three Brand Pillars — Nature • Design • Engineering (Deep Forest #172D24) */}
+      {/* 02: Company Introduction — Where Nature, Design and Engineering Come Together */}
+      <CompanyIntroduction />
+
+      {/* 03: Three Brand Pillars — Nature • Projects • Engineering (Deep Forest #1D382B) */}
       <ThreeBrandPillars />
 
-      {/* 03: Master Capabilities — The 9 Divisions A through I (Natural White #F3F3EC) */}
+      {/* 04: Master Capabilities — The 9 Divisions A through I (Natural White #F4F4EF) */}
       <ExpertiseSection />
 
-      {/* 04: Animal & Nature Storytelling — Conservation Creed (Secondary Forest #294333) */}
+      {/* 05: Habitat Architecture Case Study Story (Warm Stone #E2E4DA — Epsten Group Style) */}
+      <HabitatArchitectureStory />
+
+      {/* 06: Animal & Nature Storytelling — Conservation Creed (Secondary Forest #304A38) */}
       <AnimalNatureStorytelling />
 
-      {/* 05: Curated Real Works Portfolio (Natural White #F3F3EC) */}
+      {/* 07: Curated Real Works Portfolio (Okeanos Group 8-Category Layout — Natural White #F4F4EF) */}
       <ProjectGallery />
 
-      {/* 06: The 8-Stage Turnkey Methodology (Natural Stone #DADDD3 / #F3F3EC) */}
+      {/* 08: The 8-Stage Turnkey Methodology (Natural White #F4F4EF / Warm Stone #E2E4DA) */}
       <ProcessSection />
 
-      {/* 07: Company Story & 30-Year Architectural Heritage (Charcoal #202522) */}
+      {/* 09: Company Story & 30-Year Architectural Heritage (Charcoal #202723) */}
       <FounderStory />
 
-      {/* 08: Specialised Technical Solutions & Apex Automation (Natural White #F3F3EC) */}
+      {/* 10: Specialised Technical Solutions & Apex Automation (Natural White #F4F4EF) */}
       <SmartAquariumSection />
 
-      {/* 09: Why Choose BondInWater Differentiators (Natural White #F3F3EC) */}
+      {/* 11: Why Choose BondInWater Differentiators (Natural White #F4F4EF) */}
       <WhyBondInWater />
 
-      {/* 10: Verified Client Collaborations & Trust (Natural White #F3F3EC) */}
+      {/* 12: Verified Client Collaborations & Trust (Natural White #F4F4EF) */}
       <ClientTrustSection />
 
-      {/* 11: Interactive Living Habitat Feasibility Calculator (Natural White #F3F3EC) */}
+      {/* 13: Interactive Living Habitat Feasibility Calculator (Natural White #F4F4EF) */}
       <InteractiveHabitatEstimator />
 
-      {/* 12: Project Feasibility & Design Consultation Desk (Natural White #F3F3EC) */}
+      {/* 14: Project Feasibility & Design Consultation Desk (Natural White #F4F4EF) */}
       <ContactSection />
 
-      {/* 13: Studio Directory Footer (Deep Forest #172D24) */}
+      {/* 15: Studio Directory Footer (Deep Forest #1D382B) */}
       <Footer />
     </main>
   );

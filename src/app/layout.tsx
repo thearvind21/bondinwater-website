@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, Inter, Space_Mono } from "next/font/google";
+import { Oswald, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const barlowCondensed = Barlow_Condensed({
+const oswald = Oswald({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-display",
   display: "swap",
 });
@@ -30,13 +30,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "BondInWater — Nature Engineered | Aquatic Architecture & Habitat Engineering",
-  description: "From bespoke aquatic environments and natural habitats to architectural planning and precision engineering, BondInWater designs, builds and maintains extraordinary environments inspired by nature.",
-  keywords: "BondInWater, Nature Engineered, Aquatic Design, Habitat Engineering, Zoo Masterplanning, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Life Support Systems, Mumbai",
+  title: "BondInWater — Extraordinary Environments. Engineered Around Nature.",
+  description: "From bespoke aquariums and natural habitats to architectural water features and precision engineering, BondInWater designs, builds and maintains environments shaped by nature.",
+  keywords: "BondInWater, Nature Engineered, Custom Aquariums, Natural Koi Ponds, Paludariums, Zoo Masterplanning, Acrylic Swimming Pools, Animal Enclosures, Aviary Engineering, Mumbai",
   authors: [{ name: "BondInWater" }],
   openGraph: {
-    title: "BondInWater — Nature Engineered | Aquatic Architecture & Habitat Engineering",
-    description: "Design, build, and maintain turnkey aquatic architecture, public oceanariums, and living habitats inspired by nature.",
+    title: "BondInWater — Extraordinary Environments. Engineered Around Nature.",
+    description: "Bespoke aquariums, natural habitats, architectural water features, and precision habitat engineering.",
     type: "website",
     locale: "en_US",
   },
@@ -50,9 +50,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlowCondensed.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
+      className={`${oswald.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#F3F3EC] text-[#202820] font-sans selection:bg-[#172D24] selection:text-[#F3F3EC]">
+      <body className="min-h-screen bg-[#F4F4EF] text-[#202723] font-sans selection:bg-[#1D382B] selection:text-[#F4F4EF]">
         {children}
       </body>
     </html>

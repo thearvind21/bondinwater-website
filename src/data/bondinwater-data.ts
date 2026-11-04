@@ -31,10 +31,21 @@ export interface ServiceItem {
   highlight: string;
 }
 
+export type ProjectCategory =
+  | "all"
+  | "aquariums"
+  | "ponds"
+  | "paludariums"
+  | "enclosures"
+  | "aviaries"
+  | "acrylic"
+  | "pools"
+  | "filtration";
+
 export interface ProjectItem {
   id: string;
   title: string;
-  category: "all" | "aquariums" | "ponds" | "paludariums" | "habitats" | "acrylic" | "engineering";
+  category: ProjectCategory;
   categoryLabel: string;
   classification: "On-Site Installation" | "3D Conceptual Model" | "Technical Plant Room";
   image: string;
@@ -576,15 +587,17 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ];
 
 // =========================================================================
-// VERIFIED FIELD INSTALLATIONS & PORTFOLIO WORKS
+// VERIFIED FIELD INSTALLATIONS & PORTFOLIO WORKS (OKEANOS GROUP STRUCTURED)
 // Factually grounded: Strictly authentic assets without fabricated client claims
+// 8 Categories: Aquariums, Ponds, Paludariums, Enclosures, Aviaries, Acrylic, Pools, Filtration
 // =========================================================================
 export const PROJECTS_DATA: ProjectItem[] = [
+  // 1. AQUARIUMS & OCEANARIUMS
   {
     id: "bespoke-reef-aquarium",
-    title: "Luxury Living Room Coral Reef Architecture",
+    title: "Living Room Marine Coral Reef Biotope",
     category: "aquariums",
-    categoryLabel: "Custom Aquariums",
+    categoryLabel: "Aquariums & Oceanariums",
     classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_00d0a8d52ba24f73a1cc51b4e2821b92.jpg",
     location: "Private Architectural Residence",
@@ -600,67 +613,10 @@ export const PROJECTS_DATA: ProjectItem[] = [
     badge: "Completed Field Installation"
   },
   {
-    id: "zenith-koi-sanctuary",
-    title: "Natural Koi Pond & Riparian Landscape",
-    category: "ponds",
-    categoryLabel: "Natural Ponds & Landscaping",
-    classification: "On-Site Installation",
-    image: "/images/bondinwater/22553ed11ea647cdaa83b3af08f66f04.jpg",
-    location: "Western India (Private Landscape)",
-    materials: "Volcanic Granite Strata, Submerged Bog Filter, Cast Aeration Cones",
-    filtrationType: "Vortex Mechanical Separation + Wetland Bog Bio-Filtration",
-    description: "A landscaped natural koi pond featuring rock waterfall cascades, volcanic granite borders, and an active wetland plant bog that naturally extracts nitrates to sustain high-grade Nishikigoi.",
-    keyFeatures: [
-      "Crystal clear water maintained via biological wetland processes",
-      "Vortex bottom-drain settlement removing particulate solids",
-      "Natural acoustic water flow with zero splashing erosion",
-      "Nighttime submerged LED illumination architecture"
-    ],
-    badge: "Completed Field Installation"
-  },
-  {
-    id: "horizon-infinity-acrylic-pool",
-    title: "Cantilevered Acrylic Swimming Pool Barrier",
-    category: "acrylic",
-    categoryLabel: "Acrylic Swimming Pools",
-    classification: "On-Site Installation",
-    image: "/images/bondinwater/ef9742_0c82a93844c64e2fa7a9568ba75ebab2.jpg",
-    location: "Maharashtra Hillside Villa",
-    materials: "Structural Cast PMMA Acrylic Panel, Marine Silicone Gaskets",
-    filtrationType: "High-Rate Sand & Saltwater Circulation Life Support",
-    description: "A cantilevered infinity swimming pool featuring a structural optical acrylic wall that creates an unhindered panoramic vista. Engineered with high safety margins against hydrostatic pressure.",
-    keyFeatures: [
-      "Structural cast acrylic barrier engineered for dynamic load deflection",
-      "Precision rebated concrete interface with dual-elastomer compression seal",
-      "UV-inhibited acrylic preventing discoloration or weathering",
-      "Seamless aesthetic integration with natural stone pool coping"
-    ],
-    badge: "Completed Field Installation"
-  },
-  {
-    id: "botanical-vivarium-concept",
-    title: "Vertical Bio-Wall Rainforest Paludarium",
-    category: "paludariums",
-    categoryLabel: "Paludariums & Waterfalls",
-    classification: "On-Site Installation",
-    image: "/images/bondinwater/ef9742_24a9faa7a4974bbb808192e4c1258982.jpg",
-    location: "Private Architectural Studio",
-    materials: "Low-Iron Optical Glass, Hygroscopic Epi-Web, Bromeliads & Moss",
-    filtrationType: "Concealed Biological Drainage Plenum",
-    description: "An intricate vertical slice of tropical riverbank ecosystem featuring bromeliads, Tillandsia, creeping ficus, and automated rain simulations operating in biological equilibrium.",
-    keyFeatures: [
-      "Automated vertical irrigation maintaining live moss moisture",
-      "Full-spectrum LED photoperiod simulation with circadian dimming",
-      "Ultra-quiet centrifugal ventilation preventing front panel condensation",
-      "Reverse osmosis automatic top-off with precision TDS regulation"
-    ],
-    badge: "Completed Field Installation"
-  },
-  {
     id: "cylindrical-cichlid-tower",
     title: "360° Cylindrical Acrylic Aquarium Tower",
     category: "aquariums",
-    categoryLabel: "Luxury Aquariums",
+    categoryLabel: "Aquariums & Oceanariums",
     classification: "On-Site Installation",
     image: "/images/bondinwater/edc791_b6905808d5f44203b58196e8239cc566.jpg",
     location: "Corporate Executive Atrium, Mumbai",
@@ -676,9 +632,110 @@ export const PROJECTS_DATA: ProjectItem[] = [
     badge: "Completed Field Installation"
   },
   {
+    id: "oceanarium-tunnel-display",
+    title: "Walkthrough Oceanarium Viewing Display",
+    category: "aquariums",
+    categoryLabel: "Aquariums & Oceanariums",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p20_img1.png",
+    location: "Public Aquarium & Marine Pavilion",
+    materials: "Heavy-Gauge Thermoformed Cast PMMA, Structural Concrete Rebate",
+    filtrationType: "High-Rate Sand, Fluidized Sand Bio-Filter & Dual Ozone Reactors",
+    description: "A monumental oceanarium underwater walkthrough structure from company profile page 20, providing guests with immersive panoramic observation into pelagic marine life.",
+    keyFeatures: [
+      "Monolithic curved optical acrylic panels offering zero visible distortion",
+      "Structural compression flange gaskets with dual redundancy",
+      "Continuous ozone and multi-stage Life Support System circulation",
+      "Hydrostatic load calculations compliant with international public aquarium standards"
+    ],
+    badge: "Public Aquarium Installation"
+  },
+
+  // 2. NATURAL PONDS & WATERFALLS
+  {
+    id: "zenith-koi-sanctuary",
+    title: "Natural Koi Pond & Riparian Landscape",
+    category: "ponds",
+    categoryLabel: "Natural Ponds & Waterfalls",
+    classification: "On-Site Installation",
+    image: "/images/bondinwater/22553ed11ea647cdaa83b3af08f66f04.jpg",
+    location: "Western India (Private Landscape)",
+    materials: "Volcanic Granite Strata, Submerged Bog Filter, Cast Aeration Cones",
+    filtrationType: "Vortex Mechanical Separation + Wetland Bog Bio-Filtration",
+    description: "A landscaped natural koi pond featuring rock waterfall cascades, volcanic granite borders, and an active wetland plant bog that naturally extracts nitrates to sustain high-grade Nishikigoi.",
+    keyFeatures: [
+      "Crystal clear water maintained via biological wetland processes",
+      "Vortex bottom-drain settlement removing particulate solids",
+      "Natural acoustic water flow with zero splashing erosion",
+      "Nighttime submerged LED illumination architecture"
+    ],
+    badge: "Completed Field Installation"
+  },
+  {
+    id: "rock-cascade-koi-stream",
+    title: "Cascading Mountain Stream & Natural Rock Pond",
+    category: "ponds",
+    categoryLabel: "Natural Ponds & Waterfalls",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p24_img1.png",
+    location: "Private Estate Garden, Western India",
+    materials: "Naturally Selected Boulders, GFRC Formations & Heavy EPDM Membrane",
+    filtrationType: "Multi-Tiered Biological Waterfall Weir with UV Clarifier",
+    description: "A natural riverine pond from company profile page 24 incorporating cascading waterfalls that create continuous oxygenation while cultivating rich beneficial bacteria along rock surfaces.",
+    keyFeatures: [
+      "Acoustically tuned tiered waterfalls simulating natural mountain brooks",
+      "Concealed bio-falls filtration weir blending seamlessly into rocks",
+      "Heavy-duty EPDM waterproofing membrane with 30-year design life",
+      "Swimming pool to natural pond conversion methodology applied"
+    ],
+    badge: "Completed Field Installation"
+  },
+
+  // 3. VIVARIUMS & PALUDARIUMS
+  {
+    id: "botanical-vivarium-concept",
+    title: "Vertical Bio-Wall Rainforest Paludarium",
+    category: "paludariums",
+    categoryLabel: "Vivariums & Paludariums",
+    classification: "On-Site Installation",
+    image: "/images/bondinwater/ef9742_24a9faa7a4974bbb808192e4c1258982.jpg",
+    location: "Private Architectural Studio",
+    materials: "Low-Iron Optical Glass, Hygroscopic Epi-Web, Bromeliads & Moss",
+    filtrationType: "Concealed Biological Drainage Plenum",
+    description: "An intricate vertical slice of tropical riverbank ecosystem featuring bromeliads, Tillandsia, creeping ficus, and automated rain simulations operating in biological equilibrium.",
+    keyFeatures: [
+      "Automated vertical irrigation maintaining live moss moisture",
+      "Full-spectrum LED photoperiod simulation with circadian dimming",
+      "Ultra-quiet centrifugal ventilation preventing front panel condensation",
+      "Reverse osmosis automatic top-off with precision TDS regulation"
+    ],
+    badge: "Completed Field Installation"
+  },
+  {
+    id: "mist-canopy-paludarium",
+    title: "Riverine Riparium with High-Pressure Monsoon Misting",
+    category: "paludariums",
+    categoryLabel: "Vivariums & Paludariums",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p21_img1.png",
+    location: "Private Nature Retreat, Western India",
+    materials: "Opti-White Crystal Glass, Hygroscopic Driftwood, Epiphytic Flora",
+    filtrationType: "Sub-Gravel Bio-Plenum & Dual Return Canister",
+    description: "A breathtaking dual-zone paludarium from company profile page 21 combining submerged aquatic plants with emergent marginal reeds, automated foggers, and tropical epiphytes.",
+    keyFeatures: [
+      "Precision ultrasonic humidifier nozzles replicating highland cloud forest mist",
+      "Submerged bioactive root tangle sheltering micro-crustaceans and rasboras",
+      "High CRI lighting promoting chlorophyll synthesis and vibrant coloration",
+      "Handcrafted natural driftwood hardscape bonded with neutral silicones"
+    ],
+    badge: "Completed Field Installation"
+  },
+
+  // 4. ANIMAL ENCLOSURES
+  {
     id: "bioactive-reptile-habitat",
-    title: "Ethological Reptile Enclosure & Microclimate Vivarium",
-    category: "habitats",
+    title: "Ethological Bio-Active Reptile Enclosure",
+    category: "enclosures",
     categoryLabel: "Animal Enclosures",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p27_img2.png",
@@ -695,10 +752,31 @@ export const PROJECTS_DATA: ProjectItem[] = [
     badge: "Completed Field Installation"
   },
   {
+    id: "species-calibrated-habitat",
+    title: "Zoo-Grade Animal Habitat & Climate Enclosure",
+    category: "enclosures",
+    categoryLabel: "Animal Enclosures",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p26_img2.png",
+    location: "Sanctuary / Conservation Enclosure",
+    materials: "Structural Steel Frame, Impact-Resistant Acrylic & GFRC Rockwork",
+    filtrationType: "HVAC Climate Control & Automated Air Exchange System",
+    description: "A specialized animal enclosure from company profile page 26 designed in consultation with wildlife ethologists to support species-appropriate exercise, foraging, and security.",
+    keyFeatures: [
+      "Zoned climate control balancing temperature and relative humidity",
+      "GFRC rockwork designed with natural ledges and sheltered nesting burrows",
+      "Keeper safety access airlocks and heavy-duty tamper-proof lock hardware",
+      "Natural daylight harvesting supplemented with UVB photoperiod arrays"
+    ],
+    badge: "Completed Field Installation"
+  },
+
+  // 5. AVIARIES & FLIGHT MESH
+  {
     id: "aviary-mesh-enclosure",
     title: "Avian Walkthrough Aviary & Free-Flight Mesh Canopy",
-    category: "habitats",
-    categoryLabel: "Aviary Engineering",
+    category: "aviaries",
+    categoryLabel: "Aviaries & Flight Mesh",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p28_img2.png",
     location: "Public Sanctuary / Tourism Estate",
@@ -713,6 +791,27 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     badge: "Completed Field Installation"
   },
+  {
+    id: "structural-flight-aviary",
+    title: "Large-Scale Flight Aviary Dome Structure",
+    category: "aviaries",
+    categoryLabel: "Aviaries & Flight Mesh",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p28_img1.png",
+    location: "Eco-Tourism & Zoological Sanctuary",
+    materials: "Structural Curved Steel Truss, Stainless Steel Cable Mesh",
+    filtrationType: "Natural Bioretention Swale & Rain Dispersion",
+    description: "A structural flight sanctuary from company profile page 28 engineered to withstand monsoonal wind loads while offering unobstructed flight corridors for varied bird species.",
+    keyFeatures: [
+      "Tensile stainless steel cable net engineered against wind shear and uplift",
+      "Full canopy height accommodating elevated roosting perches",
+      "Elevated visitor walkways keeping guests at bird eye-level",
+      "Non-toxic zinc-free wire coatings preventing metal toxicosis in birds"
+    ],
+    badge: "Completed Field Installation"
+  },
+
+  // 6. ACRYLIC ENGINEERING
   {
     id: "curved-acrylic-viewing-panel",
     title: "Curved Oceanarium Viewing Panel",
@@ -734,10 +833,71 @@ export const PROJECTS_DATA: ProjectItem[] = [
     conceptOnly: true
   },
   {
+    id: "structural-acrylic-fabrication",
+    title: "Cast PMMA Structural Acrylic Fabrication (20mm–300mm)",
+    category: "acrylic",
+    categoryLabel: "Acrylic Engineering",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p14_img1.png",
+    location: "Precision Acrylic Fabrication Facility",
+    materials: "100% Virgin Cast Monomeric PMMA Acrylic, Molecular Chemical Bonds",
+    filtrationType: "Engineering Material Testing & Hydrostatic Certification",
+    description: "Precision fabrication and annealing of massive cast PMMA acrylic panels ranging from 20mm up to 300mm thickness from company profile page 14, engineered for massive water containment.",
+    keyFeatures: [
+      "Factory temperature-controlled oven annealing relieving internal material stress",
+      "Molecular chemical polymer bonding achieving up to 95% tensile strength",
+      "93% optical light transmission superior to standard glass",
+      "Full compliance with international structural safety factors (minimum safety factor of 11)"
+    ],
+    badge: "Engineering Installation"
+  },
+
+  // 7. ACRYLIC SWIMMING POOLS
+  {
+    id: "horizon-infinity-acrylic-pool",
+    title: "Cantilevered Acrylic Swimming Pool Barrier",
+    category: "pools",
+    categoryLabel: "Acrylic Swimming Pools",
+    classification: "On-Site Installation",
+    image: "/images/bondinwater/ef9742_0c82a93844c64e2fa7a9568ba75ebab2.jpg",
+    location: "Maharashtra Hillside Villa",
+    materials: "Structural Cast PMMA Acrylic Panel, Marine Silicone Gaskets",
+    filtrationType: "High-Rate Sand & Saltwater Circulation Life Support",
+    description: "A cantilevered infinity swimming pool featuring a structural optical acrylic wall that creates an unhindered panoramic vista. Engineered with high safety margins against hydrostatic pressure.",
+    keyFeatures: [
+      "Structural cast acrylic barrier engineered for dynamic load deflection",
+      "Precision rebated concrete interface with dual-elastomer compression seal",
+      "UV-inhibited acrylic preventing discoloration or weathering",
+      "Seamless aesthetic integration with natural stone pool coping"
+    ],
+    badge: "Completed Field Installation"
+  },
+  {
+    id: "submerged-pool-viewing-window",
+    title: "Submerged Optical Pool Viewing Window",
+    category: "pools",
+    categoryLabel: "Acrylic Swimming Pools",
+    classification: "On-Site Installation",
+    image: "/images/pdf_images/p16_img1.png",
+    location: "Luxury Private Residence, Western India",
+    materials: "Cast PMMA Optical Acrylic Panel, Marine Stainless Gasket Retainers",
+    filtrationType: "Ozone Sanitized Pool Circulation System",
+    description: "A submerged acrylic viewing window from company profile page 16 connecting an outdoor swimming pool directly with an interior subterranean lounge for dramatic illumination.",
+    keyFeatures: [
+      "Seamless natural light transmission illuminating interior living spaces",
+      "Engineered rebated seal resistant to pool chlorine and ozone chemistry",
+      "Calculated deflection limits ensuring absolute perimeter watertightness",
+      "Hand-polished optical bevels for crystal-clear refraction"
+    ],
+    badge: "Completed Field Installation"
+  },
+
+  // 8. FILTRATION & TECHNICAL SYSTEMS
+  {
     id: "cfd-filtration-array",
     title: "Advanced Life Support Plant Room Hub",
-    category: "engineering",
-    categoryLabel: "Filtration & Engineering",
+    category: "filtration",
+    categoryLabel: "Filtration & Technical Systems",
     classification: "Technical Plant Room",
     image: "/images/bondinwater/ef9742_88000d9858af4e41b383bb7f27d6f699.jpg",
     location: "Institutional Exhibit Plant Room",
@@ -749,6 +909,25 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Variable-speed energy-efficient commercial circulation pumps",
       "Integrated ozone contact columns and redox potential monitoring",
       "Fail-safe bypass valves with vibration-dampening mounting pads"
+    ],
+    badge: "Engineering Installation"
+  },
+  {
+    id: "apex-telemetry-array",
+    title: "Neptune Systems Apex Automated Telemetry Array",
+    category: "filtration",
+    categoryLabel: "Filtration & Technical Systems",
+    classification: "Technical Plant Room",
+    image: "/images/pdf_images/p13_img1.png",
+    location: "Commercial Life Support Facility",
+    materials: "Neptune Systems Apex Controllers, Digital Probes & Flow Sensors",
+    filtrationType: "Automated Telemetry, Dosing & Fail-Safe Cloud Monitoring",
+    description: "An automated Life Support telemetry command center from company profile page 13 providing real-time biochemical monitoring of pH, ORP, temperature, and conductivity with cloud alert dispatch.",
+    keyFeatures: [
+      "24/7 continuous biochemical monitoring with instant mobile push alarms",
+      "Automated trace element dosing synchronized with photoperiods",
+      "Redundant optical float sensors preventing overflow or pump dry-run",
+      "Comprehensive cloud data logging enabling predictive water quality analytics"
     ],
     badge: "Engineering Installation"
   }
