@@ -30,13 +30,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "BondInWater — Natural History & Habitat Engineering Studio | Official Website",
-  description: "BondInWater specializes in large-scale aquatic architecture, zoo masterplanning, custom acrylic engineering, bio-authentic habitats, and lifelong biological maintenance.",
-  keywords: "BondInWater, Aquarium Architecture, Zoo Masterplanning, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Aquatic Engineering, Life Support Systems, Mumbai",
+  title: "BondInWater — Aquatic Design, Habitat Engineering & Turnkey Solutions",
+  description: "BondInWater specializes in custom acrylic aquariums, natural koi ponds, bio-authentic vivariums, zoo masterplanning, and turnkey aquatic engineering.",
+  keywords: "BondInWater, Aquatic Design, Habitat Engineering, Zoo Masterplanning, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Life Support Systems, Mumbai",
   authors: [{ name: "BondInWater" }],
   openGraph: {
-    title: "BondInWater — Natural History & Habitat Engineering Studio",
-    description: "Design, build, and operate turnkey aquatic architectures, public oceanariums, and wildlife habitats.",
+    title: "BondInWater — Aquatic Design, Habitat Engineering & Turnkey Solutions",
+    description: "Design, build, and maintain turnkey aquatic architecture, public oceanariums, and living habitats.",
     type: "website",
     locale: "en_US",
   },
@@ -52,7 +52,7 @@ export default function RootLayout({
       lang="en"
       className={`${barlowCondensed.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#0D0E11] text-neutral-200 font-sans selection:bg-[#3D4B3E] selection:text-white">
+      <body className="min-h-screen bg-[#CED2D2] text-[#171A19] font-sans selection:bg-[#171A19] selection:text-[#F1F1ED]">
         {children}
       </body>
     </html>

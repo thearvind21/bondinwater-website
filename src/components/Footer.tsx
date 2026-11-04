@@ -1,8 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import { BrandLogo } from "./BrandLogo";
 import { BRAND_CONTACT, COMPANY_DIVISIONS } from "@/data/bondinwater-data";
-import { Phone, Mail, MapPin, ArrowUpRight, MessageSquare, ShieldCheck } from "lucide-react";
+import { Phone, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   const currentYear = 2026;
@@ -19,14 +18,14 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#08090B] text-neutral-300 pt-20 pb-12 relative overflow-hidden border-t border-neutral-800">
+    <footer className="bg-[#191C1B] text-[#CED2D2] pt-20 pb-12 relative overflow-hidden border-t border-[#2D3230]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Studio Brand Banner */}
-        <div className="pb-14 border-b border-neutral-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="pb-14 border-b border-[#2D3230] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-3">
             <BrandLogo variant="dark" />
-            <p className="text-xs sm:text-sm text-neutral-400 font-sans font-light leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm text-[#9AA39E] font-sans font-light leading-relaxed max-w-xl">
               Turnkey aquatic architecture, zoo masterplanning, custom optical PMMA acrylic engineering (20mm to 300mm), bio-authentic vivariums, and lifelong biologist-led stewardship.
             </p>
           </div>
@@ -34,15 +33,15 @@ export function Footer() {
           <div className="lg:col-span-5 flex flex-wrap items-center lg:justify-end gap-3 text-xs font-mono">
             <a
               href={`tel:${BRAND_CONTACT.phoneRaw}`}
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-800 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#212524] hover:bg-[#2A2E2C] text-[#F1F1ED] border border-[#2D3230] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-400" />
+              <Phone className="w-3.5 h-3.5 text-[#79836D]" />
               <span>{BRAND_CONTACT.phone}</span>
             </a>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-neutral-200 text-neutral-950 font-bold uppercase tracking-wider transition-colors border border-white"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#F1F1ED] hover:bg-white text-[#171A19] font-bold uppercase tracking-wider transition-colors border border-[#F1F1ED]"
             >
               <span>Consult Studio</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -50,19 +49,19 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 4-Column Museum Directory Grid */}
-        <div className="py-14 border-b border-neutral-800 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        {/* 4-Column Directory Grid */}
+        <div className="py-14 border-b border-[#2D3230] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           
           {/* Column 1: Studio Identity (4 cols) */}
           <div className="lg:col-span-4 space-y-4 text-xs font-mono">
-            <span className="text-[10px] uppercase tracking-widest text-emerald-400 block font-bold">
-              STUDIO IDENTIFICATION // MUMBAI
+            <span className="text-[10px] uppercase tracking-widest text-[#79836D] block font-bold">
+              STUDIO IDENTIFICATION &bull; MUMBAI
             </span>
-            <div className="space-y-2 text-neutral-400 font-sans leading-relaxed">
+            <div className="space-y-2 text-[#9AA39E] font-sans leading-relaxed">
               <p>
                 BondInWater operates across India and international markets, delivering biological integrity and structural excellence for public oceanariums, luxury estates, and zoological parks.
               </p>
-              <p className="text-neutral-500 font-mono text-[11px] pt-1">
+              <p className="text-[#6D7772] font-mono text-[11px] pt-1">
                 DESIGN &bull; BUILD &bull; OPERATE &bull; MAINTAIN
               </p>
             </div>
@@ -70,17 +69,17 @@ export function Footer() {
 
           {/* Column 2: 9 Capability Divisions (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block font-bold">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[#CED2D2] block font-bold">
               09 CAPABILITY DIVISIONS
             </span>
-            <div className="grid grid-cols-1 gap-1.5 text-xs font-mono text-neutral-400">
+            <div className="grid grid-cols-1 gap-1.5 text-xs font-mono text-[#9AA39E]">
               {COMPANY_DIVISIONS.map((div) => (
                 <a
                   key={div.id}
                   href="#expertise"
                   className="hover:text-white transition-colors truncate flex items-center gap-2"
                 >
-                  <span className="text-neutral-600 text-[10px]">[{div.letter}]</span>
+                  <span className="text-[#6D7772] text-[10px]">[{div.letter}]</span>
                   <span>{div.title}</span>
                 </a>
               ))}
@@ -89,10 +88,10 @@ export function Footer() {
 
           {/* Column 3: Navigation Index (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block font-bold">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-[#CED2D2] block font-bold">
               DIRECTORY
             </span>
-            <ul className="space-y-2 text-xs font-mono text-neutral-400">
+            <ul className="space-y-2 text-xs font-mono text-[#9AA39E]">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a href={link.href} className="hover:text-white transition-colors">
@@ -103,19 +102,19 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Disclosures (2 cols) */}
+          {/* Column 4: Contact & Location (2 cols) */}
           <div className="lg:col-span-2 space-y-4 text-xs font-mono">
-            <span className="text-[10px] uppercase tracking-widest text-neutral-400 block font-bold">
+            <span className="text-[10px] uppercase tracking-widest text-[#CED2D2] block font-bold">
               HEADQUARTERS
             </span>
-            <div className="space-y-2 text-neutral-400">
-              <p className="text-white font-bold">{BRAND_CONTACT.location}</p>
-              <p className="text-neutral-500 text-[11px] leading-snug">
+            <div className="space-y-2 text-[#9AA39E]">
+              <p className="text-[#F1F1ED] font-bold">{BRAND_CONTACT.location}</p>
+              <p className="text-[#6D7772] text-[11px] leading-snug">
                 {BRAND_CONTACT.hours.weekdays}
               </p>
               <a
                 href={`mailto:${BRAND_CONTACT.email}`}
-                className="text-emerald-400 hover:underline block pt-1 break-all"
+                className="text-[#79836D] hover:underline block pt-1 break-all"
               >
                 {BRAND_CONTACT.email}
               </a>
@@ -125,14 +124,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Disclosures Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-neutral-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#6D7772]">
           <div>
-            &copy; {currentYear} BondInWater. All Rights Reserved. Turnkey Aquatic Architecture & Habitat Engineering.
+            &copy; {currentYear} BondInWater. All Rights Reserved. Turnkey Aquatic Architecture &amp; Habitat Engineering.
           </div>
-          <div className="flex items-center gap-4 text-neutral-500">
+          <div className="flex items-center gap-4 text-[#6D7772]">
             <span>COMPANY PROFILE COMPLIANT</span>
             <span>&bull;</span>
-            <span>VERIFIED FACTUAL ARCHIVE</span>
+            <span>AQUATIC ARCHITECTURE &bull; HABITAT ENGINEERING</span>
           </div>
         </div>
 

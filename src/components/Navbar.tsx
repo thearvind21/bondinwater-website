@@ -19,13 +19,13 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Overview", href: "#hero", code: "00" },
-    { name: "Capabilities", href: "#expertise", code: "01" },
-    { name: "Portfolio", href: "#projects", code: "02" },
-    { name: "Studio Ethos", href: "#story", code: "03" },
-    { name: "Methodology", href: "#process", code: "04" },
-    { name: "Engineering", href: "#automation", code: "05" },
-    { name: "Contact", href: "#contact", code: "06" },
+    { name: "Overview", href: "#hero", code: "01" },
+    { name: "Capabilities", href: "#expertise", code: "02" },
+    { name: "Turnkey Process", href: "#process", code: "03" },
+    { name: "Portfolio", href: "#projects", code: "04" },
+    { name: "Studio Ethos", href: "#story", code: "05" },
+    { name: "Automation", href: "#automation", code: "06" },
+    { name: "Contact", href: "#contact", code: "07" },
   ];
 
   return (
@@ -33,25 +33,25 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#0D0E11]/95 backdrop-blur-md py-3 shadow-2xl border-b border-neutral-800"
-            : "bg-[#0D0E11]/90 backdrop-blur-sm py-4 border-b border-neutral-800/80"
+            ? "bg-[#CED2D2]/95 backdrop-blur-md py-3 shadow-sm border-b border-[#B4B9B9]"
+            : "bg-[#CED2D2]/90 backdrop-blur-sm py-4 border-b border-[#B4B9B9]/70"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             
-            {/* Left: Brand Logo (Left-aligned, architectural mark) */}
+            {/* Left: Brand Logo (Aligned left, dark variant on light canvas) */}
             <BrandLogo variant="dark" />
 
-            {/* Center: Desktop Navigation Links (Single line, museum catalog styling) */}
-            <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+            {/* Center: Desktop Navigation Links (Single line, balanced spacing) */}
+            <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 2xl:gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="group flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white transition-colors py-1 whitespace-nowrap"
+                  className="group flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-[#171A19] hover:text-[#A66547] transition-colors py-1 whitespace-nowrap"
                 >
-                  <span className="text-[10px] text-neutral-500 group-hover:text-emerald-400 font-mono transition-colors">
+                  <span className="text-[10px] text-[#565E5C] group-hover:text-[#A66547] font-mono transition-colors">
                     {link.code}
                   </span>
                   <span>{link.name}</span>
@@ -64,27 +64,27 @@ export function Navbar() {
               {/* Direct Phone Line */}
               <a
                 href={`tel:${BRAND_CONTACT.phoneRaw}`}
-                className="flex items-center gap-2 text-xs font-mono text-neutral-300 hover:text-white transition-colors whitespace-nowrap px-2 py-1"
+                className="flex items-center gap-2 text-xs font-mono text-[#171A19] hover:text-[#A66547] transition-colors whitespace-nowrap px-2 py-1"
                 title="Direct Studio Desk"
               >
-                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span className="tabular-nums tracking-wide">{BRAND_CONTACT.phone}</span>
+                <Phone className="w-3.5 h-3.5 text-[#79836D] shrink-0" />
+                <span className="tabular-nums tracking-wide font-medium">{BRAND_CONTACT.phone}</span>
               </a>
 
-              {/* Action Button: Start Project */}
+              {/* Action Button: Consult Studio */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-white text-neutral-950 hover:bg-neutral-200 text-xs font-mono uppercase font-bold tracking-wider px-4 py-2.5 transition-all duration-200 shrink-0 border border-white"
+                className="inline-flex items-center gap-2 bg-[#191C1B] text-[#F1F1ED] hover:bg-[#A66547] text-xs font-mono uppercase font-bold tracking-wider px-4 py-2.5 transition-all duration-200 shrink-0 border border-[#191C1B]"
               >
                 <span>Consult Studio</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-neutral-950" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-neutral-300 hover:text-white border border-neutral-800 bg-[#16181C]"
+              className="lg:hidden p-2 text-[#171A19] hover:text-[#A66547] border border-[#B4B9B9] bg-[#F1F1ED]"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -93,40 +93,40 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Responsive Mobile Drawer */}
+      {/* Responsive Mobile Drawer (Light editorial canvas) */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#0D0E11]/98 backdrop-blur-xl lg:hidden pt-24 px-6 pb-10 flex flex-col justify-between border-b border-neutral-800">
+        <div className="fixed inset-0 z-40 bg-[#CED2D2]/98 backdrop-blur-xl lg:hidden pt-24 px-6 pb-10 flex flex-col justify-between border-b border-[#B4B9B9]">
           <div className="space-y-4">
-            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500 border-b border-neutral-800 pb-2">
-              Exhibition Navigation Index
+            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#565E5C] border-b border-[#B4B9B9] pb-2">
+              Capabilities & Studio Index
             </div>
-            <nav className="flex flex-col space-y-3">
+            <nav className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-between text-base font-display uppercase tracking-wider text-neutral-200 hover:text-white py-2 border-b border-neutral-900"
+                  className="flex items-center justify-between text-base font-display uppercase tracking-wider text-[#171A19] hover:text-[#A66547] py-2 border-b border-[#B4B9B9]/50"
                 >
                   <span>{link.name}</span>
-                  <span className="font-mono text-xs text-neutral-500">{link.code}</span>
+                  <span className="font-mono text-xs text-[#565E5C]">{link.code}</span>
                 </a>
               ))}
             </nav>
           </div>
 
-          <div className="space-y-4 pt-6 border-t border-neutral-800">
+          <div className="space-y-4 pt-6 border-t border-[#B4B9B9]">
             <a
               href={`tel:${BRAND_CONTACT.phoneRaw}`}
-              className="flex items-center gap-3 text-xs font-mono text-neutral-300 py-2"
+              className="flex items-center gap-3 text-xs font-mono text-[#171A19] py-2"
             >
-              <Phone className="w-4 h-4 text-emerald-400" />
+              <Phone className="w-4 h-4 text-[#79836D]" />
               <span>{BRAND_CONTACT.phone}</span>
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full bg-white text-neutral-950 text-xs font-mono uppercase font-bold tracking-wider py-3 border border-white"
+              className="flex items-center justify-center gap-2 w-full bg-[#191C1B] text-[#F1F1ED] text-xs font-mono uppercase font-bold tracking-wider py-3 border border-[#191C1B]"
             >
               <span>Consult Studio</span>
               <ArrowUpRight className="w-4 h-4" />

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { MuseumBadge, HairlineDivider } from "./MuseumComponents";
-import { Compass, Eye, ShieldCheck, Activity, Cpu, Trees } from "lucide-react";
+import { EditorialBadge } from "./EditorialComponents";
+import { Compass, ShieldCheck, Cpu, Trees } from "lucide-react";
 import { COMPANY_PHILOSOPHY_DATA } from "@/data/bondinwater-data";
 
 export function BrandStoryIntro() {
@@ -37,25 +37,25 @@ export function BrandStoryIntro() {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-[#F3F4F6] text-neutral-900 border-b border-neutral-300 relative bg-museum-grid-light">
+    <section className="py-24 lg:py-32 bg-[#F1F1ED] text-[#171A19] border-b border-[#B4B9B9] relative bg-editorial-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
           <div className="flex items-center gap-3">
-            <MuseumBadge variant="light">
-              STUDIO PHILOSOPHY // ETHOS
-            </MuseumBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
+            <EditorialBadge variant="light">
+              COMPANY PHILOSOPHY &bull; ETHOS
+            </EditorialBadge>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#565E5C]">
               DOCUMENTED PROFILE STANDARDS
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-neutral-950 leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#171A19] leading-[0.95]">
             Precision Engineering Rooted in Biome Science.
           </h2>
 
-          <p className="text-base sm:text-lg text-neutral-700 font-sans font-light leading-relaxed max-w-3xl pt-2">
+          <p className="text-base sm:text-lg text-[#323836] font-sans font-normal leading-relaxed max-w-3xl pt-2">
             “{COMPANY_PHILOSOPHY_DATA.coreCreed}” — BondInWater
           </p>
         </div>
@@ -65,8 +65,8 @@ export function BrandStoryIntro() {
           
           {/* Left Column: Authentic Photography Exhibition (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="border border-neutral-300 bg-white p-3 shadow-lg">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-neutral-200">
+            <div className="border border-[#B4B9B9] bg-white p-3 shadow-sm">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#CED2D2] border border-[#D8DCDA]">
                 <Image
                   src="/images/pdf_images/p10_img1.png"
                   alt="Understanding the biome and architectural integration from BondInWater profile"
@@ -74,53 +74,53 @@ export function BrandStoryIntro() {
                   className="object-cover reveal-zoom"
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
-                <div className="absolute bottom-3 left-3 right-3 bg-neutral-950/85 text-white p-3 border border-neutral-700">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 block">
-                    BIOME STUDY // PROFILE PAGE 10
+                <div className="absolute bottom-3 left-3 right-3 bg-[#171A19]/90 text-white p-3 border border-[#171A19]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#949F86] block font-bold">
+                    BIOME STUDY &bull; PROFILE PAGE 10
                   </span>
-                  <p className="text-xs font-sans text-neutral-200 mt-1 leading-snug">
+                  <p className="text-xs font-sans text-[#F1F1ED] mt-1 leading-snug">
                     Studying microclimate, water currents, and ethological behavior before spatial fabrication.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="border border-neutral-300 bg-white p-3 flex items-center justify-between text-xs font-mono text-neutral-600">
-              <span>MULTIDISCIPLINARY COHESION</span>
-              <span className="uppercase text-neutral-500">Biologists &bull; Architects &bull; Engineers</span>
+            <div className="border border-[#B4B9B9] bg-white p-3 flex items-center justify-between text-xs font-mono text-[#565E5C]">
+              <span className="text-[#171A19] font-medium">MULTIDISCIPLINARY COHESION</span>
+              <span className="uppercase text-[#565E5C]">Biologists &bull; Architects &bull; Engineers</span>
             </div>
           </div>
 
-          {/* Right Column: 4 Museum Pillar Blocks (7 cols) */}
+          {/* Right Column: 4 Pillar Blocks (7 cols) */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {pillars.map((pillar) => {
               const Icon = pillar.icon;
               return (
                 <div
                   key={pillar.code}
-                  className="border border-neutral-300 bg-white p-6 flex flex-col justify-between hover:border-neutral-900 transition-colors shadow-sm"
+                  className="border border-[#B4B9B9] bg-white p-6 flex flex-col justify-between hover:border-[#171A19] transition-colors shadow-sm"
                 >
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-neutral-200 pb-3">
-                      <span className="text-xs font-mono font-bold text-neutral-950">
+                    <div className="flex items-center justify-between border-b border-[#D8DCDA] pb-3">
+                      <span className="text-xs font-mono font-bold text-[#A66547]">
                         [{pillar.code}]
                       </span>
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500">
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#565E5C]">
                         {pillar.tag}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-display uppercase tracking-tight text-neutral-950 font-bold">
+                    <h3 className="text-lg font-display uppercase tracking-tight text-[#171A19] font-bold">
                       {pillar.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-neutral-600 font-sans leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#323836] font-sans leading-relaxed">
                       {pillar.desc}
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-neutral-100 flex items-center gap-2 text-[11px] font-mono text-neutral-500">
-                    <Icon className="w-3.5 h-3.5 text-neutral-700" />
+                  <div className="pt-4 mt-4 border-t border-[#D8DCDA] flex items-center gap-2 text-[11px] font-mono text-[#565E5C]">
+                    <Icon className="w-3.5 h-3.5 text-[#79836D]" />
                     <span>VERIFIED STANDARD</span>
                   </div>
                 </div>

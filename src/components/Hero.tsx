@@ -2,80 +2,77 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowUpRight, Compass, ShieldCheck, Activity, Layers, ArrowDown } from "lucide-react";
-import { MuseumBadge } from "./MuseumComponents";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { EditorialBadge } from "./EditorialComponents";
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] lg:min-h-screen pt-28 pb-16 lg:pt-36 lg:pb-24 flex items-center bg-[#0D0E11] text-neutral-100 overflow-hidden bg-museum-grid"
+      className="relative min-h-[92vh] lg:min-h-screen pt-28 pb-16 lg:pt-36 lg:pb-24 flex items-center bg-[#CED2D2] text-[#171A19] overflow-hidden bg-editorial-grid"
     >
-      {/* Top Hairline Indicator */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-neutral-800" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        {/* Museum Exhibition Metadata Row */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-neutral-800/80 mb-10">
+        {/* Studio Identification Row */}
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#B4B9B9] mb-10">
           <div className="flex items-center gap-3">
-            <MuseumBadge variant="moss">
-              STUDIO ARCHIVE // 2026
-            </MuseumBadge>
-            <span className="hidden sm:inline-block text-xs font-mono uppercase tracking-widest text-neutral-400">
-              AQUATIC DESIGN &bull; HABITAT ENGINEERING &bull; ZOO MASTERPLANNING
+            <EditorialBadge variant="moss">
+              BONDINWATER &bull; INDIA
+            </EditorialBadge>
+            <span className="hidden sm:inline-block text-xs font-mono uppercase tracking-widest text-[#565E5C]">
+              AQUATIC DESIGN &bull; HABITAT ENGINEERING &bull; ARCHITECTURAL PLANNING
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] font-mono uppercase tracking-widest text-neutral-400">
-            <span>LOCATION: MUMBAI, INDIA</span>
-            <span className="hidden md:inline text-neutral-600">|</span>
+          <div className="flex items-center gap-4 text-[11px] font-mono uppercase tracking-widest text-[#565E5C]">
+            <span>LOCATION: MUMBAI</span>
+            <span className="hidden md:inline text-[#B4B9B9]">|</span>
             <span className="hidden md:inline">LIFECYCLE: DESIGN &bull; BUILD &bull; OPERATE</span>
           </div>
         </div>
 
-        {/* Asymmetrical Exhibition Grid */}
+        {/* Asymmetrical Editorial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Bold Condensed Headline & Proposition (7 cols) */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
-              <span className="text-xs font-mono uppercase tracking-[0.25em] text-emerald-400 block font-semibold">
-                [ STUDIO IDENTITY & CAPABILITIES ]
+              <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#A66547] block font-bold">
+                [ STUDIO PROFILE & CAPABILITIES ]
               </span>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display uppercase tracking-tight text-white leading-[0.92]">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display uppercase tracking-tight text-[#171A19] leading-[0.92]">
                 Natural History & Living Ecosystem Architecture.
               </h1>
             </div>
 
-            <p className="text-base sm:text-lg text-neutral-300 font-sans font-light leading-relaxed max-w-2xl">
-              BondInWater is an end-to-end design, engineering, and turnkey execution studio. We engineer large-scale aquatic architectures, ethological wildlife habitats, public oceanariums, and custom structural acrylic installations grounded in biological integrity and precision construction.
+            <p className="text-base sm:text-lg text-[#323836] font-sans font-normal leading-relaxed max-w-2xl">
+              BondInWater is an end-to-end design, engineering, and turnkey execution studio. We engineer large-scale aquatic architectures, bio-authentic wildlife habitats, public oceanariums, and custom structural acrylic installations grounded in biological integrity and precision construction.
             </p>
 
             {/* Architectural Discipline Tags */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono uppercase tracking-wider text-neutral-400 border-t border-neutral-800/80 pt-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono uppercase tracking-wider text-[#565E5C] border-t border-[#B4B9B9] pt-6">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-emerald-400" />
-                <span>Zoo Masterplanning</span>
+                <span className="w-1.5 h-1.5 bg-[#79836D]" />
+                <span className="text-[#171A19] font-medium">Zoo Masterplanning</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-emerald-400" />
-                <span>20–300mm PMMA</span>
+                <span className="w-1.5 h-1.5 bg-[#79836D]" />
+                <span className="text-[#171A19] font-medium">20–300mm PMMA</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-emerald-400" />
-                <span>Life Support MEP</span>
+                <span className="w-1.5 h-1.5 bg-[#79836D]" />
+                <span className="text-[#171A19] font-medium">Life Support MEP</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-emerald-400" />
-                <span>Bioactive Vivariums</span>
+                <span className="w-1.5 h-1.5 bg-[#79836D]" />
+                <span className="text-[#171A19] font-medium">Bioactive Vivariums</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-emerald-400" />
-                <span>Natural Koi Ponds</span>
+                <span className="w-1.5 h-1.5 bg-[#79836D]" />
+                <span className="text-[#171A19] font-medium">Natural Koi Ponds</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-emerald-400" />
-                <span>SOP Stewardship</span>
+                <span className="w-1.5 h-1.5 bg-[#79836D]" />
+                <span className="text-[#171A19] font-medium">SOP Stewardship</span>
               </div>
             </div>
 
@@ -83,7 +80,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <a
                 href="#expertise"
-                className="group inline-flex items-center gap-3 bg-white text-neutral-950 hover:bg-neutral-200 text-xs font-mono font-bold uppercase tracking-wider px-7 py-4 transition-all duration-200 border border-white"
+                className="group inline-flex items-center gap-3 bg-[#191C1B] text-[#F1F1ED] hover:bg-[#A66547] text-xs font-mono font-bold uppercase tracking-wider px-7 py-4 transition-all duration-200 border border-[#191C1B]"
               >
                 <span>Inspect 9 Divisions</span>
                 <ArrowDown className="w-4 h-4 transition-transform duration-200 group-hover:translate-y-0.5" />
@@ -91,19 +88,19 @@ export function Hero() {
 
               <a
                 href="#projects"
-                className="inline-flex items-center gap-3 bg-transparent text-neutral-200 hover:text-white hover:border-neutral-500 text-xs font-mono uppercase tracking-wider px-7 py-4 transition-all duration-200 border border-neutral-700"
+                className="inline-flex items-center gap-3 bg-[#F1F1ED] text-[#171A19] hover:bg-white text-xs font-mono uppercase tracking-wider px-7 py-4 transition-all duration-200 border border-[#B4B9B9] shadow-sm"
               >
                 <span>Curated Portfolio</span>
-                <ArrowUpRight className="w-4 h-4 text-neutral-400" />
+                <ArrowUpRight className="w-4 h-4 text-[#A66547]" />
               </a>
             </div>
           </div>
 
-          {/* Right Column: Asymmetric Museum Photographic Composition (5 cols) */}
+          {/* Right Column: Asymmetric Photographic Composition (5 cols, Light Frame, Natural Colors) */}
           <div className="lg:col-span-5 relative space-y-4">
-            {/* Primary Exhibition Plaque */}
-            <div className="relative border border-neutral-800 bg-[#141518] p-3 shadow-2xl">
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+            {/* Primary Drawing Plaque */}
+            <div className="relative border border-[#B4B9B9] bg-[#F1F1ED] p-3 shadow-md">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-white border border-[#D8DCDA]">
                 <Image
                   src="/images/pdf_images/p7_img1.png"
                   alt="Architectural conceptualisation and zoo masterplanning drawing from BondInWater company profile"
@@ -112,23 +109,23 @@ export function Hero() {
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute top-3 left-3 bg-[#0D0E11]/90 border border-neutral-700 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-neutral-300">
-                  FIG. 01 // ARCHITECTURAL SCHEMATIC
+                <div className="absolute top-3 left-3 bg-[#191C1B]/90 text-[#F1F1ED] px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest border border-[#191C1B]">
+                  ARCHITECTURAL CONCEPTUALISATION
                 </div>
               </div>
 
-              {/* Plaque Metadata Caption */}
-              <div className="pt-3 pb-1 px-1 flex items-center justify-between text-[11px] font-mono text-neutral-400">
+              {/* Caption */}
+              <div className="pt-3 pb-1 px-1 flex items-center justify-between text-[11px] font-mono text-[#565E5C]">
                 <span>PROFILE PP. 5–10</span>
-                <span className="uppercase text-neutral-500">Conceptualisation & Zoo Masterplanning</span>
+                <span className="uppercase text-[#171A19] font-medium">Zoo Masterplanning & Design</span>
               </div>
             </div>
 
-            {/* Secondary Asymmetric Split Preview */}
+            {/* Secondary Split Preview */}
             <div className="grid grid-cols-2 gap-4">
               {/* Secondary 1: Living Paludarium */}
-              <div className="border border-neutral-800 bg-[#141518] p-2.5">
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+              <div className="border border-[#B4B9B9] bg-[#F1F1ED] p-2.5 shadow-sm">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-white border border-[#D8DCDA]">
                   <Image
                     src="/images/bondinwater/ef9742_2d866d794aa640bbbf9e0705cabfc77c.jpg"
                     alt="Living bioactive paludarium installation by BondInWater"
@@ -137,14 +134,14 @@ export function Hero() {
                     sizes="20vw"
                   />
                 </div>
-                <div className="pt-2 text-[10px] font-mono text-neutral-400 truncate">
+                <div className="pt-2 text-[10px] font-mono text-[#171A19] font-medium truncate">
                   BIOACTIVE PALUDARIUM
                 </div>
               </div>
 
               {/* Secondary 2: Structural Acrylic Pool */}
-              <div className="border border-neutral-800 bg-[#141518] p-2.5">
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+              <div className="border border-[#B4B9B9] bg-[#F1F1ED] p-2.5 shadow-sm">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-white border border-[#D8DCDA]">
                   <Image
                     src="/images/bondinwater/ef9742_0c82a93844c64e2fa7a9568ba75ebab2.jpg"
                     alt="Structural acrylic infinity pool wall by BondInWater"
@@ -153,7 +150,7 @@ export function Hero() {
                     sizes="20vw"
                   />
                 </div>
-                <div className="pt-2 text-[10px] font-mono text-neutral-400 truncate">
+                <div className="pt-2 text-[10px] font-mono text-[#171A19] font-medium truncate">
                   STRUCTURAL ACRYLIC POOL
                 </div>
               </div>
