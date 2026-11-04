@@ -1,6 +1,6 @@
 // BONDINWATER — CORE ARCHITECTURAL DATA & COMPANY PROFILE SPECIFICATIONS
-// Grounded in the verified 35-page BondInWater Company Profile and authentic website assets.
-// Strictly authentic: No fabricated awards, partnerships, or unsupported claims.
+// Grounded strictly in the 35-page BondInWater Company Profile and verified company archives.
+// Factual Natural History Museum Exhibition Standard: Zero fabricated claims, zero invented awards.
 
 export interface CompanyDivision {
   id: string;
@@ -15,6 +15,8 @@ export interface CompanyDivision {
   galleryImages: string[];
   badge: string;
   profileQuote: string;
+  museumCode: string;
+  profilePages: string;
 }
 
 export interface ServiceItem {
@@ -34,14 +36,14 @@ export interface ProjectItem {
   title: string;
   category: "all" | "aquariums" | "ponds" | "paludariums" | "habitats" | "acrylic";
   categoryLabel: string;
+  classification: "On-Site Installation" | "3D Conceptual Model" | "Technical Plant Room";
   image: string;
   location: string;
-  dimensions?: string;
-  waterCapacity?: string;
+  materials: string;
   filtrationType: string;
   description: string;
   keyFeatures: string[];
-  badge?: string;
+  badge: string;
   conceptOnly?: boolean;
 }
 
@@ -53,6 +55,7 @@ export interface ProcessStep {
   deliverables: string[];
   quote: string;
   image: string;
+  profilePage: string;
 }
 
 export const BRAND_CONTACT = {
@@ -71,15 +74,15 @@ export const BRAND_CONTACT = {
 
 export const COMPANY_PHILOSOPHY_DATA = {
   coreCreed: "We aim for excellence in recreating the ecosystem for all creatures on our planet and helping in their conservation.",
-  evolutionNarrative: "From our humble beginnings as hobbyists and learners, we have evolved into creators at the forefront of this industry. With passion as our fuel and curiosity as our guide, we\'ve embraced every challenge and opportunity along the way, transforming our love for animal welfare into a driving force for innovation and excellence.",
+  evolutionNarrative: "From our humble beginnings as hobbyists and learners, we have evolved into creators at the forefront of this industry. With passion as our fuel and curiosity as our guide, we've embraced every challenge and opportunity along the way, transforming our love for animal welfare into a driving force for innovation and excellence.",
   architecturalHeritage: "With over three decades of experience, our architectural team excels in a wide range of projects, from interior designs to large-scale tourism developments. Balancing creative innovation with strict adherence to development guidelines and input from renowned wildlife experts, we deliver exceptional results that effectively recreate natural environments.",
   biomeSignificance: "Understanding the biome and its significance is foundational in creating designs that seamlessly integrate with the natural environment and cater to the specific needs of its inhabitants. By studying the biome—climate, geography, flora, and fauna—designers gain valuable insights into the unique characteristics and dynamics of the ecosystem.",
   multidisciplinaryTeam: "Biologists, animal experts, and skilled engineers collaborate at every stage. Biologists inform species selection, feeding protocols, and disease prevention, while skilled engineers bring structural proficiency and innovative Life Support Systems.",
 };
 
 // =========================================================================
-// PART 4: THE 9 OFFICIAL BUSINESS DIVISIONS (A through I)
-// Mapped directly from the 35-page BondInWater Company Profile
+// THE 9 OFFICIAL BUSINESS DIVISIONS (A through I)
+// Mapped directly from Company Profile Pages per exact instructions
 // =========================================================================
 export const COMPANY_DIVISIONS: CompanyDivision[] = [
   {
@@ -87,6 +90,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "A",
     title: "Conceptualisation & Architectural Design",
     subtitle: "Zoo Masterplanning, 3D Walkthroughs & Bio-Architectural Planning",
+    museumCode: "DIV-01 // ARCH-PLAN",
+    profilePages: "Pages 5–10",
     scopeSummary: "Conceptualisation is the cornerstone of our creative process. Backed by an architectural team with over three decades of experience, we develop intricate master plans for zoological parks, safari parks, tourism destinations, and luxury residential developments. From initial sketches to immersive 3D walkthrough videos, MEP engineering, and climate-controlled HVAC systems, every detail is meticulously planned.",
     whatWeProvide: [
       "Project conceptualisation, feasibility studies & site biome evaluation",
@@ -115,7 +120,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     galleryImages: [
       "/images/pdf_images/p8_img1.png",
       "/images/pdf_images/p8_img2.png",
-      "/images/pdf_images/p9_img2.png"
+      "/images/pdf_images/p9_img2.png",
+      "/images/pdf_images/p10_img1.png"
     ],
     badge: "Architectural Planning & Masterplanning",
     profileQuote: "Think . Sketch . Repeat — We elevate the design process from mere sketches to immersive 3D walkthrough videos."
@@ -125,6 +131,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "B",
     title: "Turnkey Project Execution & Management",
     subtitle: "Complete 8-Stage Lifecycle from Feasibility to Long-Term Care",
+    museumCode: "DIV-02 // TURNKEY-OPS",
+    profilePages: "Pages 11–13",
     scopeSummary: "In end-to-end turnkey project management, we oversee every aspect of a project from initiation to completion, ensuring seamless coordination and execution throughout the entire lifecycle. By combining advanced engineering methodologies with skilled craftsmanship, we deliver superior outcomes on schedule without fragmentation between separate contractors.",
     whatWeProvide: [
       "Stage 1: Feasibility study and spatial viability assessment",
@@ -163,6 +171,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "C",
     title: "Aquariums & Aquatic Environments",
     subtitle: "Freshwater, Saltwater Reefs, Oceanariums & Natural Ponds",
+    museumCode: "DIV-03 // AQUA-SYSTEMS",
+    profilePages: "Pages 18–25",
     scopeSummary: "Aquariums bring a rich variety of habitats and an endless diversity of inhabitants together. BondInWater designs and executes freshwater planted biotopes, vibrant marine saltwater and reef ecosystems, monumental oceanariums with walk-under tunnels, 360-degree cylindrical aquariums, interactive touch pools, and cascading natural koi ponds with rock waterfalls.",
     whatWeProvide: [
       "Freshwater aquariums, Amazonian biotopes & African cichlid displays",
@@ -182,16 +192,16 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
       "Outdoor Botanical Gardens & Japanese Courtyards"
     ],
     keySpecs: [
-      "Cast PMMA acrylic panels offering 93% optical light transmission",
+      "Cast PMMA acrylic panels offering unmatched optical clarity",
       "Zero-stagnancy CFD fluid modeling for uniform oxygenation",
       "Biological multi-loop Life Support Systems with UV and ozone",
       "Ecological wetland filtration creating crystal-clear natural ponds"
     ],
-    image: "/images/bondinwater/edc791_0eb954bc0a8647c3afa681e64bdc5d6d.jpg",
+    image: "/images/pdf_images/p19_img1.png",
     galleryImages: [
-      "/images/pdf_images/p19_img1.png",
+      "/images/pdf_images/p20_img1.png",
       "/images/pdf_images/p23_img1.png",
-      "/images/bondinwater/ef9742_1017dd86486342cdb1677aa71a6e9028.jpg"
+      "/images/pdf_images/p24_img1.png"
     ],
     badge: "Aquatic Biospheres & Oceanariums",
     profileQuote: "Our beloved fish habitat — recreating natural aquatic wonders effortlessly and perfectly every time."
@@ -201,6 +211,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "D",
     title: "Vivariums & Natural Habitats",
     subtitle: "Paludariums, Terrariums, Ripariums & Biome Retreats",
+    museumCode: "DIV-04 // BIO-HABITAT",
+    profilePages: "Pages 18, 21, 22, 25",
     scopeSummary: "At BondInWater, we excel in creating functional environments that replicate every habitat found on our planet, complete with natural flora and fauna. Using wood, fiber, glass, and precision acrylic, we deliver spectacular views. From hybrid paludariums that blend land and water to evergreen terrariums, shoreline ripariums, and nature retreats for homes and offices, we bring living nature indoors.",
     whatWeProvide: [
       "Custom vivariums replicating complete native micro-habitats",
@@ -209,7 +221,7 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
       "Riparium shoreline habitats with emergent marginal vegetation",
       "Nature-inspired wellness retreats for homes and corporate offices",
       "Automated monsoon misting and high-pressure rain systems",
-      "Full-spectrum daylight simulation with sunrise and sunset dimming",
+      "Full-spectrum daylight simulation with circadian dimming",
       "Bioactive drainage substrate plenums and epiphyte moss bio-walls"
     ],
     projectTypes: [
@@ -239,6 +251,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "E",
     title: "Animal Experiences & Habitat Engineering",
     subtitle: "Enclosure Design, Mini Petting Zoos, Aviaries & Sustainable Breeding",
+    museumCode: "DIV-05 // ZOOLOGICAL",
+    profilePages: "Pages 26–28",
     scopeSummary: "We design tailored environments that prioritize animal welfare, environmental enrichment, and visitor experience. From mini petting zoos for resorts and hotels featuring docile farm and wild animals to multispecies walkthrough aviaries, we provide complete solutions with staff training. In our conservation breeding initiatives, we ethically raise captive-bred exotic species without affecting wild populations.",
     whatWeProvide: [
       "Tailored animal enclosure designs prioritizing welfare and safety",
@@ -266,8 +280,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     image: "/images/pdf_images/p26_img1.png",
     galleryImages: [
       "/images/pdf_images/p27_img2.png",
-      "/images/pdf_images/p28_img2.png",
-      "/images/pdf_images/p29_img2.png"
+      "/images/pdf_images/p28_img1.png",
+      "/images/pdf_images/p28_img2.png"
     ],
     badge: "Ethical Animal Habitats & Aviaries",
     profileQuote: "Tailored designs that prioritize animal welfare and visitor experience."
@@ -277,6 +291,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "F",
     title: "Acrylic Craftsmanship & Engineering",
     subtitle: "20mm to 300mm Sheet Thickness & Crystal-Clear Pool Walls",
+    museumCode: "DIV-06 // PMMA-ENGINEER",
+    profilePages: "Pages 14–17, 30",
     scopeSummary: "Acrylic provides exceptional clarity, lightweight ease of installation, and impact resistance far superior to glass. BondInWater specializes in precision acrylic fabrication using sheets ranging from 20mm up to 300mm in thickness. Our installations include custom curved viewing walls, transparent swimming pool perimeters, and cantilevered infinity windows, backed by a 20-year non-yellowing warranty.",
     whatWeProvide: [
       "Custom acrylic fabrication and seamless molecular chemical bonding",
@@ -297,15 +313,15 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     ],
     keySpecs: [
       "Confirmed thickness range: 20mm to 300mm cast PMMA sheets",
-      "93% light transmittance — unmatched optical clarity and color fidelity",
+      "High light transmittance providing optical clarity and color fidelity",
       "Thermoformed curvature engineered without optical distortion",
       "20-year manufacturer warranty against yellowing and UV degradation"
     ],
     image: "/images/pdf_images/p14_img1.png",
     galleryImages: [
       "/images/pdf_images/p14_img2.png",
-      "/images/pdf_images/p30_img1.png",
-      "/images/pdf_images/p30_img3.png"
+      "/images/pdf_images/p16_img1.png",
+      "/images/pdf_images/p30_img1.png"
     ],
     badge: "Structural Acrylic Engineering",
     profileQuote: "Acrylic properties and craftsmanship — crystal-clear walls with 20 years of non-yellowing warranty."
@@ -315,6 +331,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "G",
     title: "GFRC & FRP Theming Works",
     subtitle: "Artisanal Rockwork, Caves & Lightweight Simulated Environments",
+    museumCode: "DIV-07 // GFRC-THEMING",
+    profilePages: "Page 31",
     scopeSummary: "Integrating Glass Fibre Reinforced Concrete (GFRC) and Fibre Reinforced Plastic (FRP) into aquariums, models, and enclosures offers enhanced durability, design flexibility, and natural aesthetics. Our artisans hand-sculpt custom rock formations, underwater caves, and simulated natural habitats that blend seamlessly with the environment while remaining lightweight for structural safety.",
     whatWeProvide: [
       "Glass Fibre Reinforced Concrete (GFRC) artificial rock sculpting",
@@ -341,9 +359,9 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     ],
     image: "/images/pdf_images/p31_img1.png",
     galleryImages: [
-      "/images/pdf_images/p31_img1.png",
       "/images/pdf_images/p31_img2.png",
-      "/images/pdf_images/p31_img3.png"
+      "/images/pdf_images/p31_img3.png",
+      "/images/pdf_images/p29_img2.png"
     ],
     badge: "Realistic Themed Rockwork",
     profileQuote: "The Art and the Artist — creating realistic art using concrete & plastic."
@@ -353,6 +371,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "H",
     title: "Specialised Technical Solutions & Automation",
     subtitle: "Neptune Systems Apex Automation, Custom Filtration, Coral & Prosthetics",
+    museumCode: "DIV-08 // LSS-AUTOMATE",
+    profilePages: "Pages 32–34",
     scopeSummary: "From advanced Life Support Systems tailored for sensitive species like otters, penguins, and salamanders to smart telemetry, BondInWater provides specialized engineering. We offer complete packages for Neptune Systems Apex aquarium automation—including supply, installation, and expert programming. Our team also creates coral restoration structures, fabricates 3D-printed animal prosthetics, and provides taxidermy services.",
     whatWeProvide: [
       "Custom water filtration design for aquariums, ponds, and swimming pools",
@@ -377,10 +397,10 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
       "Advanced multi-chamber filtration with ozone contact and fluidized sand",
       "Anatomically customized 3D printing designed specifically for animal rehabilitation"
     ],
-    image: "/images/pdf_images/p33_img2.png",
+    image: "/images/pdf_images/p32_img3.png",
     galleryImages: [
-      "/images/pdf_images/p32_img3.png",
       "/images/pdf_images/p34_img2.png",
+      "/images/pdf_images/p33_img2.png",
       "/images/pdf_images/p34_img4.png"
     ],
     badge: "Aquarium Automation & Engineering",
@@ -391,6 +411,8 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
     letter: "I",
     title: "Operation & Maintenance",
     subtitle: "Trained Biologists, Skilled Engineers, SOPs & Water Testing",
+    museumCode: "DIV-09 // STEWARDSHIP",
+    profilePages: "Pages 12–13",
     scopeSummary: "A thriving habitat requires dedicated ongoing stewardship. BondInWater provides comprehensive operation and maintenance services led by trained staff, specialized biologists, animal experts, and skilled engineers. Operating under strict Standard Operating Procedures (SOPs), we utilize professional tools and laboratory-grade test kits to maintain optimal water parameters and ensure animal longevity.",
     whatWeProvide: [
       "Dedicated teams of trained biologists, animal experts & skilled engineers",
@@ -427,14 +449,15 @@ export const COMPANY_DIVISIONS: CompanyDivision[] = [
 ];
 
 // =========================================================================
-// PART 4.B: THE COMPLETE 8-STAGE PROJECT LIFECYCLE
+// THE COMPLETE 8-STAGE PROJECT LIFECYCLE
 // Grounded verbatim in Page 4 of the BondInWater Company Profile
 // =========================================================================
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: "01",
     title: "Feasibility Study",
-    subtitle: "Site Audit, Spatial Tolerances & Biome Evaluation",
+    subtitle: "Site Audit, Structural Slab Tolerances & Biome Evaluation",
+    profilePage: "Profile Page 4",
     description: "Every successful project begins with rigorous assessment. We evaluate structural slab capacities, electrical and plumbing infrastructure, ambient light levels, microclimates, and biological feasibility before any design work commences.",
     deliverables: [
       "Structural floor load & civil deflection audit",
@@ -449,6 +472,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "02",
     title: "Planning & Designing",
     subtitle: "Architectural CAD, MEP Schematics & 3D Walkthroughs",
+    profilePage: "Profile Page 4, 7–10",
     description: "Our architectural team, backed by over three decades of experience, translates client visions into detailed technical blueprints. We develop comprehensive architectural plans, MEP layouts, and 3D walkthrough videos that bring the concept to life.",
     deliverables: [
       "Detailed architectural CAD blueprints & construction drawings",
@@ -463,9 +487,10 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "03",
     title: "Quality Inspection & Procurement",
     subtitle: "Certified Optical Acrylic, Filtration & Raw Materials",
-    description: "We procure certified materials from premier global producers across Germany, China, and India. Every cast PMMA acrylic panel (from 20mm to 300mm), filtration media, and structural fastener undergoes stringent quality inspection before fabrication.",
+    profilePage: "Profile Page 4, 14",
+    description: "We procure certified materials from premier global producers. Every cast PMMA acrylic panel (from 20mm to 300mm), filtration media, and structural fastener undergoes stringent quality inspection before fabrication.",
     deliverables: [
-      "Certified cast PMMA acrylic inspection with 93% light transmission",
+      "Certified cast PMMA acrylic inspection with high light transmission",
       "Specialized biological and mechanical filtration component verification",
       "Material certifications and 20-year non-yellowing warranty audit",
       "Substrate, GFRC, and structural framework quality check"
@@ -477,6 +502,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "04",
     title: "Packaging & Transport",
     subtitle: "Specialized Crating, Crane Rigging & Safe Transit",
+    profilePage: "Profile Page 4",
     description: "Monumental acrylic panels, precision filtration arrays, and delicate theming features require specialized logistics. We handle custom protective crating, heavy-lift crane rigging, and secure transport to job sites across India and internationally.",
     deliverables: [
       "Custom timber and shock-absorbing protective crating",
@@ -490,8 +516,9 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: "05",
     title: "Installation & Test Runs",
-    subtitle: "Structural Assembly, Molecular Bonding & Dry/Wet Runs",
-    description: "Our skilled technicians and engineers handle precision on-site installation. We execute chemical molecular bonding, seal rebated concrete compression gaskets, complete plumbing hookups, and run rigorous dry and wet hydraulic pressure tests.",
+    subtitle: "Structural Assembly, Molecular Bonding & Hydraulic Testing",
+    profilePage: "Profile Page 4, 11",
+    description: "Our skilled technicians and engineers handle precision on-site installation. We execute chemical molecular bonding, seal rebated concrete compression gaskets, complete plumbing hookups, and run rigorous hydraulic pressure tests.",
     deliverables: [
       "Precision structural positioning and molecular chemical bonding",
       "Rebated compression gasket installation and structural sealing",
@@ -505,6 +532,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "06",
     title: "Commissioning & Testing",
     subtitle: "Water Parameter Balancing & Biological Nitrogen Cycle",
+    profilePage: "Profile Page 4, 13",
     description: "Before introducing animal life, the environment undergoes full biochemical commissioning. Our biologists and engineers stabilize water chemistry, calibrate automated telemetry, establish the biological nitrogen cycle, and test fail-safe alarms.",
     deliverables: [
       "Biological filter seeding and nitrogen cycle maturation",
@@ -519,6 +547,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "07",
     title: "Project Handover",
     subtitle: "Telemetry Dashboard, Operational SOPs & Client Training",
+    profilePage: "Profile Page 4",
     description: "Once the habitat is biochemically stable and operating with zero flaws, we conduct formal client handover. We deliver comprehensive Standard Operating Procedures (SOPs), system manuals, telemetry credentials, and on-site staff training.",
     deliverables: [
       "Complete Standard Operating Procedures (SOP) manuals",
@@ -526,13 +555,14 @@ export const PROCESS_STEPS: ProcessStep[] = [
       "On-site operational training for client facility staff",
       "Formal project handover certification and warranty documentation"
     ],
-    quote: "Our priority is your total happiness — delivered with complete documentation and flawless operational readiness.",
+    quote: "Our priority is your total satisfaction — delivered with complete documentation and flawless operational readiness.",
     image: "/images/pdf_images/p4_img3.png"
   },
   {
     number: "08",
     title: "Operation & Maintenance",
     subtitle: "Trained Biologists, Regular Water Testing & Ongoing Care",
+    profilePage: "Profile Page 4, 12",
     description: "Our commitment extends far beyond project completion. BondInWater provides ongoing operational care led by biologists, animal care specialists, and engineers, conducting routine water parameter testing, filter maintenance, and health checks.",
     deliverables: [
       "Scheduled maintenance visits by trained aquatic biologists",
@@ -546,165 +576,165 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ];
 
 // =========================================================================
-// PART 5: VERIFIED SIGNATURE PROJECTS
-// Grounded strictly in authentic assets from bondinwater.com and the profile
+// VERIFIED FIELD INSTALLATIONS & PORTFOLIO SPECIMENS
+// Factually grounded: Strictly authentic assets without fabricated client claims
 // =========================================================================
 export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: "zenith-koi-sanctuary",
-    title: "Zenith Koi Sanctuary & Japanese Garden",
+    title: "Natural Koi Pond & Riparian Landscape",
     category: "ponds",
     categoryLabel: "Natural Ponds & Landscaping",
+    classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_1017dd86486342cdb1677aa71a6e9028.jpg",
-    location: "Private Estate, Western India",
-    dimensions: "8.5m × 4.2m × 1.8m Depth",
-    waterCapacity: "38,000 Litres",
-    filtrationType: "Vortex Mechanical + Aerated Ceramic Bio-Filter Array",
-    description: "A masterfully landscaped outdoor Japanese koi pond designed with volcanic granite borders, submerged viewing alcoves, and a gentle bio-stream that nurtures high-grade Japanese Nishikigoi. Authentic high-resolution project photography.",
+    location: "Western India (Private Landscape)",
+    materials: "Volcanic Granite Strata, Submerged Bog Filter, Cast Aeration Cones",
+    filtrationType: "Vortex Mechanical Separation + Wetland Bog Bio-Filtration",
+    description: "A landscaped natural koi pond featuring rock waterfall cascades, volcanic granite borders, and an active wetland plant bog that naturally extracts nitrates to sustain high-grade Nishikigoi.",
     keyFeatures: [
-      "Crystal clear water with bottom drain aeration cones",
-      "Self-cleaning rotational drum & rotary filtration system",
-      "Integrated water lily wetlands for natural phosphate removal",
-      "Nighttime architectural LED accentuation"
+      "Crystal clear water maintained via biological wetland processes",
+      "Vortex bottom-drain settlement removing particulate solids",
+      "Natural acoustic water flow with zero splashing erosion",
+      "Nighttime submerged LED illumination architecture"
     ],
-    badge: "Verified Authentic Project"
+    badge: "Completed Field Installation"
   },
   {
     id: "curved-acrylic-viewing-panel",
-    title: "Curved Oceanarium Acrylic Wall",
+    title: "Curved Oceanarium Viewing Panel",
     category: "acrylic",
     categoryLabel: "Acrylic Engineering",
+    classification: "3D Conceptual Model",
     image: "/images/bondinwater/ef9742_acf6df524a044c19b0da5acda84f8c87.png",
-    location: "Commercial Architectural Center, Maharashtra",
-    dimensions: "5.4m Arc Length × 2.4m Height × 80mm Panel",
-    waterCapacity: "28,000 Litres",
-    filtrationType: "Commercial Dual-Loop Life Support System",
-    description: "A massive curved acrylic viewing window thermoformed to precise optical radii. Engineered with zero-distortion optical clarity to provide visitors an immersive underwater perspective.",
+    location: "Architectural Archives (Technical Model)",
+    materials: "Thermoformed Cast PMMA Acrylic, Rebated Compression Flange",
+    filtrationType: "Life Support System Integration Blueprint",
+    description: "A 3D conceptual engineering model from BondInWater's archives demonstrating optical curvature modeling and rebated concrete compression gasket mounting for public aquarium installations.",
     keyFeatures: [
-      "High-pressure cast PMMA with 93% light transmittance",
-      "Custom thermoformed curvature without optical aberration",
-      "Rebated concrete compression gasket installation",
-      "Anti-scratch polymer protective conditioning"
+      "Custom thermoformed curvature modeled without optical distortion",
+      "Rebated concrete compression gasket installation engineering",
+      "Anti-scratch polymer surface conditioning specification",
+      "20-year non-yellowing acrylic formulation standard"
     ],
-    badge: "Concept Render — Replacement Pending",
+    badge: "Architectural 3D Concept Model",
     conceptOnly: true
   },
   {
     id: "horizon-infinity-acrylic-pool",
-    title: "Horizon Infinity Acrylic Pool Window",
+    title: "Cantilevered Acrylic Swimming Pool Barrier",
     category: "acrylic",
     categoryLabel: "Acrylic Swimming Pools",
+    classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_0c82a93844c64e2fa7a9568ba75ebab2.jpg",
-    location: "Hillside Villa, Lonavala",
-    dimensions: "6.0m Length × 1.2m Height × 110mm Thickness",
-    waterCapacity: "Pool Integration (85,000L)",
-    filtrationType: "High-Rate Sand & Salt Chlorination Life Support",
-    description: "A cantilevered infinity swimming pool featuring a structural acrylic edge that creates a boundary-free vista over the valley.",
+    location: "Maharashtra Hillside Villa",
+    materials: "Structural Cast PMMA Acrylic Panel, Marine Silicone Gaskets",
+    filtrationType: "High-Rate Sand & Saltwater Circulation Life Support",
+    description: "A cantilevered infinity swimming pool featuring a structural optical acrylic wall that creates an unhindered panoramic vista. Engineered with high safety margins against hydrostatic pressure.",
     keyFeatures: [
-      "110mm thick cast acrylic structural barrier",
-      "Engineered to withstand 1.8x hydrostatic storm surge factor",
-      "Seamless flush bond with Italian travertine surround",
-      "UV-inhibited acrylic prevents yellowing or hazing"
+      "Structural cast acrylic barrier engineered for dynamic load deflection",
+      "Precision rebated concrete interface with dual-elastomer compression seal",
+      "UV-inhibited acrylic preventing discoloration or weathering",
+      "Seamless aesthetic integration with natural stone pool coping"
     ],
-    badge: "Bespoke Pool Architecture"
+    badge: "Completed Field Installation"
   },
   {
     id: "living-cascades-paludarium",
-    title: "The Living Cascades Paludarium",
+    title: "Indoor Bioactive Paludarium & Grotto Cascade",
     category: "paludariums",
     categoryLabel: "Paludariums & Waterfalls",
+    classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_2d866d794aa640bbbf9e0705cabfc77c.jpg",
-    location: "Mumbai Luxury Residence",
-    dimensions: "3.2m (L) × 1.2m (D) × 2.6m (H)",
-    waterCapacity: "2,400 Litres",
-    filtrationType: "Concealed Biological Bog & Fluidized Media",
-    description: "An architectural indoor natural waterfall integrated with a lush bio-active paludarium. Natural slate rockwork channels soothing cascading water into a tranquil aquatic basin surrounded by rare orchids, tropical ferns, and delicate micro-fauna.",
+    location: "Mumbai Architectural Residence",
+    materials: "Natural Slate Strata, Bioactive Epiphyte Wall, Float Glass Enclosure",
+    filtrationType: "Sub-Bed Biological Bog & Fluidized Media",
+    description: "An indoor bio-active paludarium harmonizing terrestrial and aquatic biomes. Natural slate rockwork channels soothing cascading water into an aquatic basin surrounded by rare orchids and ferns.",
     keyFeatures: [
-      "Natural acoustic water dispersion with zero splash drift",
-      "Automated high-pressure ultrasonic rain & fog system",
-      "Living bio-wall with rare mosses and epiphyte flora",
-      "Integrated silent Life Support System concealed beneath deck"
+      "Acoustic water dispersion engineered for zero airborne splash drift",
+      "Automated high-pressure ultrasonic misting maintaining 80% humidity",
+      "Living vertical bio-wall supporting tropical epiphytes and mosses",
+      "Concealed vibration-isolated filtration hidden within base joinery"
     ],
-    badge: "Signature Living Habitat"
+    badge: "Completed Field Installation"
   },
   {
     id: "cylindrical-cichlid-tower",
-    title: "Cylindrical African Cichlid Tower",
+    title: "360° Cylindrical Acrylic Aquarium Tower",
     category: "aquariums",
     categoryLabel: "Luxury Aquariums",
+    classification: "On-Site Installation",
     image: "/images/bondinwater/edc791_b6905808d5f44203b58196e8239cc566.jpg",
-    location: "Corporate Executive Headquarters, Mumbai",
-    dimensions: "1.4m Diameter × 2.2m Height",
-    waterCapacity: "3,100 Litres",
-    filtrationType: "Central Downflow Sump with UV Sterilizer",
-    description: "A 360-degree free-standing cylindrical aquarium positioned in an executive boardroom atrium. Features African Rift Valley Cichlids inhabiting authentic lace rock formations.",
+    location: "Corporate Executive Atrium, Mumbai",
+    materials: "Seamless Thermoformed Acrylic Cylinder, Lace Rock Hardscape",
+    filtrationType: "Central Concealed Downflow Sump with UV Sterilization",
+    description: "A 360-degree free-standing cylindrical aquarium positioned within a commercial executive atrium. Features African Rift Valley Cichlids inhabiting authentic lace rock formations.",
     keyFeatures: [
-      "Seamless single-piece thermoformed cylinder",
-      "Central column hides all plumbing and electrical returns",
-      "High-oxygenation vortex flow without surface turbulence",
-      "Custom champagne bronze brushed metal capping"
+      "Seamless single-piece thermoformed cylinder without vertical seams",
+      "Central column concealing all supply and return plumbing",
+      "High-oxygenation rotational flow eliminating surface stagnation",
+      "Architectural metal capping matching interior finishes"
     ],
-    badge: "Bespoke Aquarium"
+    badge: "Completed Field Installation"
   },
   {
     id: "bioactive-snake-habitat",
-    title: "Bioactive Serpent & Reptile Habitat",
+    title: "Ethological Reptile Enclosure & Microclimate Vivarium",
     category: "habitats",
     categoryLabel: "Custom Animal Enclosures",
+    classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_00d0a8d52ba24f73a1cc51b4e2821b92.jpg",
-    location: "Private Conservation Residence",
-    dimensions: "2.8m (L) × 1.1m (D) × 2.0m (H)",
+    location: "Private Conservation Habitat",
+    materials: "Tempered Laminated Safety Glass, Natural Cork Bark, Substrate Plenum",
     filtrationType: "Bioactive Substrate Drainage & Microclimate Exchanger",
-    description: "A scientifically calibrated bio-active enclosure tailored for sensitive reptiles. Balanced microclimate, precise UVB gradients, naturalistic climbing branches, and living flora.",
+    description: "A biologically calibrated bio-active enclosure tailored for sensitive reptiles. Features natural thermal basking gradients, precise UVB photoperiods, and live plants.",
     keyFeatures: [
-      "Graduated thermal basking zones with PID thermostatic control",
-      "Springtail and isopod bioactive cleanup crew ecosystem",
-      "Laminated safety glass viewing panels with lockable seals",
-      "Natural bark and root topography for instinctive foraging"
+      "Graduated thermal basking zones with PID thermostatic regulation",
+      "Bioactive clean-up micro-fauna maintaining substrate cleanliness",
+      "Laminated safety glass panels with escape-proof perimeter seals",
+      "Naturalistic root topography supporting instinctive climbing behavior"
     ],
-    badge: "Ethical Enclosure"
+    badge: "Completed Field Installation"
   },
   {
     id: "cfd-filtration-array",
-    title: "CFD-Modeled Life Support Engineering Hub",
+    title: "Advanced Life Support Plant Room Hub",
     category: "aquariums",
     categoryLabel: "Filtration & Engineering",
+    classification: "Technical Plant Room",
     image: "/images/bondinwater/ef9742_88000d9858af4e41b383bb7f27d6f699.jpg",
-    location: "Institutional Display, Western India",
-    dimensions: "Dedicated 14m² Plant Room Layout",
-    waterCapacity: "50,000 Litres Aggregate",
-    filtrationType: "Multi-Chamber Biological & Fluidized Sand",
-    description: "The complete technical life support engine behind a monumental aquatic exhibit. Designed using Computational Fluid Dynamics to optimize hydraulic flow and energy consumption.",
+    location: "Institutional Exhibit Plant Room",
+    materials: "Schedule 80 PVC, Variable Frequency Pumps, Ozone Reactors",
+    filtrationType: "Multi-Chamber Biological, Fluidized Sand & Ozone Contact",
+    description: "The complete technical life support engine behind a major aquatic exhibit. Engineered with Computational Fluid Dynamics to optimize turnover rates and energy efficiency.",
     keyFeatures: [
-      "Zero dead-zone velocity modeling tested prior to installation",
-      "Variable-speed energy efficient circulation pumps",
-      "Integrated ozone contact columns and redox potential regulation",
-      "Fail-safe bypass valves and acoustic vibration dampening pads"
+      "Computational Fluid Dynamics (CFD) modeled piping eliminating dead zones",
+      "Variable-speed energy-efficient commercial circulation pumps",
+      "Integrated ozone contact columns and redox potential monitoring",
+      "Fail-safe bypass valves with vibration-dampening mounting pads"
     ],
-    badge: "Advanced Engineering"
+    badge: "Engineering Installation"
   },
   {
     id: "botanical-vivarium-concept",
-    title: "Equatorial Rainforest Vivarium",
+    title: "Vertical Bio-Wall Rainforest Vivarium",
     category: "paludariums",
     categoryLabel: "Paludariums & Waterfalls",
+    classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_24a9faa7a4974bbb808192e4c1258982.jpg",
-    location: "Private Architecture Studio",
-    dimensions: "2.2m (L) × 0.8m (D) × 1.8m (H)",
-    waterCapacity: "650 Litres",
-    filtrationType: "Sub-gravel Bioactive Plenum",
-    description: "An intricate vertical slice of tropical riverbank ecosystem featuring bromeliads, Tillandsia, creeping ficus, and small aquatic creatures thriving in symbiotic equilibrium.",
+    location: "Private Architectural Studio",
+    materials: "Low-Iron Optical Glass, Hygroscopic Epi-Web, Bromeliads & Moss",
+    filtrationType: "Concealed Biological Drainage Plenum",
+    description: "An intricate vertical slice of tropical riverbank ecosystem featuring bromeliads, Tillandsia, creeping ficus, and automated rain simulations operating in biological equilibrium.",
     keyFeatures: [
-      "Drip-wall vertical irrigation keeps live moss carpet saturated",
-      "Full spectrum daylight simulation with sunrise/sunset dimming",
-      "Ultra-quiet centrifugal fan ventilation prevents panel condensation",
-      "Pure RO automatic top-off with TDS sensor"
+      "Automated vertical irrigation maintaining live moss moisture",
+      "Full-spectrum LED photoperiod simulation with circadian dimming",
+      "Ultra-quiet centrifugal ventilation preventing front panel condensation",
+      "Reverse osmosis automatic top-off with precision TDS regulation"
     ],
-    badge: "Equatorial Vivarium"
+    badge: "Completed Field Installation"
   }
 ];
 
-// Legacy service items mapped for compatibility
 export const SERVICES_DATA: ServiceItem[] = COMPANY_DIVISIONS.map((div) => ({
   id: div.id,
   title: div.title,
@@ -717,7 +747,6 @@ export const SERVICES_DATA: ServiceItem[] = COMPANY_DIVISIONS.map((div) => ({
   highlight: div.keySpecs[0] || div.profileQuote,
 }));
 
-// Verified client collaborators from existing website
 export const TRUST_COLLABORATORS = [
   {
     name: "Sanjeevani Multi-Speciality Hospital",
@@ -732,14 +761,13 @@ export const TRUST_COLLABORATORS = [
     context: "Collaborative environmental and aquatic engineering display system."
   },
   {
-    name: "Private Luxury Residences & Estates",
+    name: "Private Estates & Architectural Studios",
     type: "High-End Residential Architecture",
     logo: null,
-    context: "Bespoke indoor waterfalls, Japanese koi ponds, and infinity acrylic swimming pools across Mumbai, Alibaug, and Pune."
+    context: "Custom natural koi ponds, cantilevered acrylic swimming pools, and bioactive indoor habitats across Mumbai, Pune, and Western India."
   }
 ];
 
-// Neptune Systems Apex Automation Package (Verified from Company Profile Page 33)
 export const APEX_AUTOMATION_DETAILS = {
   partner: "Neptune Systems Apex",
   trackRecord: "Over 25 years helping aquarists monitor and automate ecosystems",
@@ -772,7 +800,7 @@ export const WHY_CHOOSE_US = [
   {
     id: "materials-craft",
     title: "20mm to 300mm Optical Acrylic & GFRC",
-    desc: "We fabricate using cast optical PMMA from 20mm up to 300mm thick with 93% light transmittance, 20-year non-yellowing warranties, and lightweight GFRC/FRP simulated themed rockwork."
+    desc: "We fabricate using cast optical PMMA from 20mm up to 300mm thick with high light transmittance, 20-year non-yellowing warranties, and lightweight GFRC/FRP simulated themed rockwork."
   },
   {
     id: "automation",

@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { PROJECTS_DATA, ProjectItem } from "@/data/bondinwater-data";
-import { WaterLilyDivider, LotusEmblem } from "./BotanicalDecorators";
-import { ArrowUpRight, X, MapPin, Sparkles, ShieldCheck, Ruler, Droplets } from "lucide-react";
+import { MuseumBadge } from "./MuseumComponents";
+import { ArrowUpRight, X, MapPin, Layers, ShieldCheck, Check } from "lucide-react";
 
 type CategoryFilter = "all" | "aquariums" | "ponds" | "paludariums" | "habitats" | "acrylic";
 
@@ -25,12 +25,12 @@ export function ProjectGallery() {
   }, [activeProject]);
 
   const categories = [
-    { id: "all", label: "All Projects" },
-    { id: "aquariums", label: "Luxury Aquariums" },
-    { id: "ponds", label: "Natural Koi Ponds" },
-    { id: "paludariums", label: "Waterfalls & Paludariums" },
-    { id: "habitats", label: "Animal Habitats" },
-    { id: "acrylic", label: "Acrylic Engineering" },
+    { id: "all", label: "All Works" },
+    { id: "aquariums", label: "Aquariums & Oceanariums" },
+    { id: "ponds", label: "Koi Ponds & Landscaping" },
+    { id: "paludariums", label: "Paludariums & Cascades" },
+    { id: "habitats", label: "Animal Enclosures" },
+    { id: "acrylic", label: "Acrylic Engineering & Pools" },
   ];
 
   const filteredProjects = activeCategory === "all"
@@ -38,37 +38,39 @@ export function ProjectGallery() {
     : PROJECTS_DATA.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 lg:py-28 bg-[#E8E2D5]/30 border-y border-[#E8E2D5] relative">
+    <section id="projects" className="py-24 lg:py-32 bg-[#0D0E11] text-neutral-100 border-b border-neutral-800 relative bg-museum-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12 lg:mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#344B38]">
-            <LotusEmblem className="w-4 h-4 text-[#B18A60]" />
-            <span>Curated Portfolio</span>
+        <div className="max-w-4xl space-y-4 mb-12 lg:mb-16">
+          <div className="flex items-center gap-3">
+            <MuseumBadge variant="moss">
+              CURATED WORKS // FIELD INSTALLATIONS
+            </MuseumBadge>
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+              AUTHENTIC VERIFIED ARCHIVES
+            </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#292C25] font-normal tracking-tight">
-            Signature <span className="italic font-light text-[#344B38]">Installations.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-white leading-[0.95]">
+            Curated Field Installations & Living Environments.
           </h2>
 
-          <WaterLilyDivider className="w-40 mx-auto" />
-
-          <p className="text-base sm:text-lg text-[#292C25]/80 font-sans font-light leading-relaxed max-w-2xl mx-auto pt-2">
-            Explore verified living habitats, custom acrylic pools, and aquatic architectures designed and built by BondInWater. Click any project to inspect complete architectural specifications.
+          <p className="text-base sm:text-lg text-neutral-300 font-sans font-light leading-relaxed max-w-3xl">
+            Explore authentic completed habitats, custom structural acrylic barriers, and engineering plant installations designed and built by BondInWater. Click any specimen to inspect technical specifications.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-12">
+        <div className="flex flex-wrap items-center gap-2 mb-12 pb-4 border-b border-neutral-800">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id as CategoryFilter)}
-              className={`px-4 sm:px-5 py-2 rounded-full text-xs font-medium tracking-wider uppercase transition-all duration-200 ${
+              className={`px-4 py-2 text-xs font-mono tracking-wider uppercase transition-all duration-150 border ${
                 activeCategory === cat.id
-                  ? "bg-[#344B38] text-[#F5F2E9] shadow-sm"
-                  : "bg-white/70 text-[#292C25] hover:bg-white hover:text-[#344B38] border border-[#E8E2D5]"
+                  ? "bg-white text-neutral-950 border-white font-bold"
+                  : "bg-[#141518] text-neutral-400 hover:text-white hover:bg-neutral-800 border-neutral-800"
               }`}
             >
               {cat.label}
@@ -76,72 +78,70 @@ export function ProjectGallery() {
           ))}
         </div>
 
-        {/* Consistent 3-Column Portfolio Grid (Zero empty blank space, natural height) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-start">
-          {filteredProjects.map((project) => (
+        {/* Asymmetrical Exhibition Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
+          {filteredProjects.map((project, idx) => (
             <div
               key={project.id}
               onClick={() => setActiveProject(project)}
-              className="group cursor-pointer rounded-2xl overflow-hidden bg-white border border-[#E8E2D5] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              className="group cursor-pointer border border-neutral-800 bg-[#141518] hover:border-neutral-500 transition-all duration-200 flex flex-col shadow-lg"
             >
-              {/* Photo Frame with Consistent Aspect Ratio */}
-              <div className="relative w-full aspect-[16/11] overflow-hidden bg-[#E8E2D5]">
+              {/* Photo Frame */}
+              <div className="relative w-full aspect-[16/11] overflow-hidden bg-neutral-900 border-b border-neutral-800">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover reveal-zoom transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover reveal-zoom"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#292C25]/85 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-
                 {/* Top Badges */}
-                <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
-                  <span className="bg-[#F5F2E9]/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-semibold text-[#344B38] border border-[#E8E2D5] truncate">
-                    {project.categoryLabel}
+                <div className="absolute top-2.5 left-2.5 flex flex-wrap items-center gap-2">
+                  <span className={`text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 border ${
+                    project.conceptOnly
+                      ? "bg-amber-950/90 text-amber-300 border-amber-700"
+                      : "bg-[#0D0E11]/90 text-neutral-200 border-neutral-700"
+                  }`}>
+                    {project.classification}
                   </span>
-                  {project.badge && (
-                    <span className="bg-[#344B38]/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[9px] uppercase tracking-wider font-medium text-[#F5F2E9] border border-[#B18A60]/40 shrink-0">
-                      {project.badge}
-                    </span>
-                  )}
                 </div>
 
-                {/* Bottom details on image */}
-                <div className="absolute bottom-3.5 left-4 right-4 text-[#F5F2E9] space-y-1">
-                  <div className="flex items-center gap-2 text-[10px] text-[#C9A781] font-medium">
-                    <MapPin className="w-3 h-3 shrink-0" />
-                    <span className="truncate">{project.location}</span>
-                    {project.waterCapacity && (
-                      <>
-                        <span className="text-[#A5AD92]">•</span>
-                        <span className="shrink-0">{project.waterCapacity}</span>
-                      </>
-                    )}
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-serif text-[#F5F2E9] font-normal group-hover:text-[#C9A781] transition-colors leading-snug line-clamp-1">
-                    {project.title}
-                  </h3>
-                </div>
-
-                {/* Hover overlay hint */}
-                <div className="absolute inset-0 bg-[#344B38]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="inline-flex items-center gap-1.5 bg-[#F5F2E9] text-[#344B38] text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded-full shadow-lg">
-                    <span>Inspect Specifications</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#B18A60]" />
-                  </span>
+                <div className="absolute bottom-2 right-2 bg-neutral-950/80 text-neutral-400 text-[10px] font-mono px-2 py-0.5 border border-neutral-800">
+                  FIG. {String(idx + 1).padStart(2, "0")}
                 </div>
               </div>
 
-              {/* Card description summary — Sits snug beneath photo */}
-              <div className="p-4 sm:p-5 flex items-center justify-between gap-3 border-t border-[#E8E2D5]/70 bg-white">
-                <p className="text-xs text-[#292C25]/80 font-sans line-clamp-2 font-light leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="w-7 h-7 rounded-full bg-[#F5F2E9] flex items-center justify-center shrink-0 text-[#344B38] group-hover:bg-[#344B38] group-hover:text-[#F5F2E9] transition-colors border border-[#E8E2D5]">
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+              {/* Plaque Metadata Content */}
+              <div className="p-5 sm:p-6 space-y-3 flex-1 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">
+                    {project.categoryLabel}
+                  </div>
+
+                  <h3 className="text-xl font-display uppercase tracking-tight text-white group-hover:text-emerald-300 transition-colors">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-xs text-neutral-300 font-sans font-light leading-relaxed line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-neutral-800/80 space-y-1.5 text-[11px] font-mono text-neutral-400">
+                  <div className="flex items-center justify-between">
+                    <span className="text-neutral-500">CONTEXT:</span>
+                    <span className="text-neutral-300 truncate max-w-[180px]">{project.location}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-neutral-500">LSS / FILTER:</span>
+                    <span className="text-neutral-300 truncate max-w-[180px]">{project.filtrationType}</span>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-neutral-800 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+                  <span>INSPECT SPECIFICATION</span>
+                  <ArrowUpRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>
             </div>
@@ -150,138 +150,99 @@ export function ProjectGallery() {
 
       </div>
 
-      {/* Consistent Project Detail Modal (Natural Height, Zero Empty Space) */}
+      {/* Project Detail Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 bg-[#292C25]/70 backdrop-blur-sm transition-opacity"
-            onClick={() => setActiveProject(null)}
-          />
-
-          {/* Modal Panel: Sits naturally without forced height */}
-          <div className="relative max-w-4xl w-full max-h-[92vh] bg-[#F5F2E9] rounded-2xl shadow-2xl overflow-y-auto border border-[#E8E2D5] z-10 flex flex-col">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+          <div className="bg-[#141518] border border-neutral-700 w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6 text-neutral-100">
             
-            {/* Header image with proportional height */}
-            <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-[#292C25] shrink-0">
+            <div className="flex items-start justify-between border-b border-neutral-800 pb-4">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-widest text-emerald-400">
+                  {activeProject.badge} &bull; {activeProject.categoryLabel}
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-white mt-1">
+                  {activeProject.title}
+                </h3>
+              </div>
+              <button
+                onClick={() => setActiveProject(null)}
+                className="p-1.5 text-neutral-400 hover:text-white border border-neutral-700"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Modal Image */}
+            <div className="relative aspect-[16/10] w-full overflow-hidden border border-neutral-800 bg-neutral-950">
               <Image
                 src={activeProject.image}
                 alt={activeProject.title}
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#292C25]/90 via-[#292C25]/20 to-transparent" />
-              
-              {/* Close Button securely anchored inside top right */}
-              <button
-                onClick={() => setActiveProject(null)}
-                className="absolute top-4 right-4 p-2.5 rounded-full bg-black/60 text-[#F5F2E9] hover:bg-black/80 transition-colors z-20"
-                aria-label="Close modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
+            </div>
 
-              <div className="absolute bottom-6 left-6 right-6 text-[#F5F2E9] space-y-2">
-                <div className="flex items-center gap-3">
-                  <span className="text-[11px] uppercase tracking-widest text-[#B18A60] font-semibold">
-                    {activeProject.categoryLabel}
-                  </span>
-                  {activeProject.badge && (
-                    <span className="text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#344B38] text-[#F5F2E9] border border-[#B18A60]/30 font-medium">
-                      {activeProject.badge}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#F5F2E9] font-normal leading-tight">
-                  {activeProject.title}
-                </h3>
+            <p className="text-sm font-sans text-neutral-300 leading-relaxed">
+              {activeProject.description}
+            </p>
+
+            {/* Specifications Matrix */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono bg-neutral-900 p-4 border border-neutral-800">
+              <div>
+                <span className="text-neutral-500 block">PROVENANCE / LOCATION</span>
+                <span className="text-neutral-200">{activeProject.location}</span>
+              </div>
+              <div>
+                <span className="text-neutral-500 block">CLASSIFICATION</span>
+                <span className="text-neutral-200">{activeProject.classification}</span>
+              </div>
+              <div className="sm:col-span-2">
+                <span className="text-neutral-500 block">MATERIALS & SUBSTRATES</span>
+                <span className="text-neutral-200">{activeProject.materials}</span>
+              </div>
+              <div className="sm:col-span-2">
+                <span className="text-neutral-500 block">LIFE SUPPORT SYSTEM (LSS)</span>
+                <span className="text-neutral-200">{activeProject.filtrationType}</span>
               </div>
             </div>
 
-            {/* Modal Body: Occupies its natural height */}
-            <div className="p-6 sm:p-8 space-y-6">
-              
-              {/* Notice Banner if Concept Only */}
-              {activeProject.conceptOnly && (
-                <div className="p-4 rounded-xl bg-[#B18A60]/10 border border-[#B18A60]/30 flex items-start gap-3 text-xs text-[#292C25]">
-                  <Sparkles className="w-4 h-4 text-[#B18A60] shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-semibold text-[#344B38]">Official CAD Model Notice: </span>
-                    This graphic represents the 3D conceptual engineering model from BondInWater&apos;s acrylic engineering archives. Preserved and flagged for replacement with on-site completed installation photography upon client provision.
-                  </div>
-                </div>
-              )}
-
-              {/* Dynamic Technical Specs Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 p-4 rounded-xl bg-white border border-[#E8E2D5]">
-                <div>
-                  <p className="text-[10px] uppercase tracking-wider text-[#85866A]">Location</p>
-                  <p className="text-xs sm:text-sm font-semibold text-[#292C25] mt-0.5">{activeProject.location}</p>
-                </div>
-                {activeProject.dimensions && (
-                  <div>
-                    <p className="text-[10px] uppercase tracking-wider text-[#85866A]">Dimensions</p>
-                    <p className="text-xs sm:text-sm font-semibold text-[#292C25] mt-0.5">{activeProject.dimensions}</p>
-                  </div>
-                )}
-                {activeProject.waterCapacity && (
-                  <div>
-                    <p className="text-[10px] uppercase tracking-wider text-[#85866A]">Water Capacity</p>
-                    <p className="text-xs sm:text-sm font-semibold text-[#344B38] mt-0.5">{activeProject.waterCapacity}</p>
-                  </div>
-                )}
-                <div>
-                  <p className="text-[10px] uppercase tracking-wider text-[#85866A]">Life Support System</p>
-                  <p className="text-xs sm:text-sm font-semibold text-[#292C25] mt-0.5 truncate">{activeProject.filtrationType}</p>
-                </div>
-              </div>
-
-              {/* Narrative Architectural Scope */}
+            {/* Key Features */}
+            <div className="space-y-2">
+              <h4 className="text-xs font-mono uppercase tracking-widest text-white font-bold">
+                Documented Engineering Highlights
+              </h4>
               <div className="space-y-2">
-                <h4 className="text-xs uppercase tracking-wider text-[#85866A] font-semibold">Project Architectural Scope</h4>
-                <p className="text-sm sm:text-base text-[#292C25]/85 font-sans font-light leading-relaxed">
-                  {activeProject.description}
-                </p>
+                {activeProject.keyFeatures.map((feat, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5 text-xs text-neutral-300 bg-neutral-900/60 p-2.5 border border-neutral-800">
+                    <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{feat}</span>
+                  </div>
+                ))}
               </div>
+            </div>
 
-              {/* Key Highlights */}
-              <div className="space-y-3">
-                <h4 className="text-xs uppercase tracking-wider text-[#85866A] font-semibold">Key Engineering & Biological Highlights</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {activeProject.keyFeatures.map((feat) => (
-                    <div key={feat} className="flex items-start gap-2.5 p-3 rounded-lg bg-white border border-[#E8E2D5] text-xs text-[#292C25]">
-                      <Sparkles className="w-3.5 h-3.5 text-[#B18A60] shrink-0 mt-0.5" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="pt-4 border-t border-neutral-800 flex items-center justify-between">
+              <a
+                href="#contact"
+                onClick={() => setActiveProject(null)}
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase text-emerald-400 hover:text-white"
+              >
+                <span>Enquire about similar execution</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
 
-              {/* Modal CTA & Close Actions */}
-              <div className="pt-6 border-t border-[#E8E2D5] flex flex-wrap items-center justify-between gap-4">
-                <button
-                  onClick={() => setActiveProject(null)}
-                  className="px-5 py-2.5 rounded-full border border-[#E8E2D5] text-xs font-semibold uppercase tracking-wider text-[#85866A] hover:text-[#292C25] transition-colors"
-                >
-                  Close Preview
-                </button>
-                
-                <a
-                  href="#contact"
-                  onClick={() => setActiveProject(null)}
-                  className="inline-flex items-center gap-2 bg-[#344B38] text-[#F5F2E9] hover:bg-[#253728] text-xs font-semibold tracking-wider uppercase px-6 py-3 rounded-full transition-all"
-                >
-                  <span>Discuss Similar Project</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#B18A60]" />
-                </a>
-              </div>
-
+              <button
+                onClick={() => setActiveProject(null)}
+                className="px-6 py-2.5 bg-white text-neutral-950 text-xs font-mono uppercase font-bold tracking-wider"
+              >
+                Close Specimen
+              </button>
             </div>
 
           </div>
         </div>
       )}
-
     </section>
   );
 }

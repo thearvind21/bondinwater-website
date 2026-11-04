@@ -12,20 +12,20 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "Our Expertise", href: "#expertise" },
-    { name: "Projects", href: "#projects" },
-    { name: "The Story", href: "#story" },
-    { name: "Our Process", href: "#process" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "Contact", href: "#contact" },
+    { name: "Overview", href: "#hero", code: "00" },
+    { name: "Capabilities", href: "#expertise", code: "01" },
+    { name: "Portfolio", href: "#projects", code: "02" },
+    { name: "Studio Ethos", href: "#story", code: "03" },
+    { name: "Methodology", href: "#process", code: "04" },
+    { name: "Engineering", href: "#automation", code: "05" },
+    { name: "Contact", href: "#contact", code: "06" },
   ];
 
   return (
@@ -33,131 +33,104 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#F5F2E9]/95 backdrop-blur-md py-3 shadow-sm border-b border-[#E8E2D5]"
-            : "bg-[#F5F2E9]/90 backdrop-blur-sm py-4 border-b border-[#E8E2D5]/70"
+            ? "bg-[#0D0E11]/95 backdrop-blur-md py-3 shadow-2xl border-b border-neutral-800"
+            : "bg-[#0D0E11]/90 backdrop-blur-sm py-4 border-b border-neutral-800/80"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             
-            {/* Left: Brand Logo (Always left-aligned, no tagline) */}
+            {/* Left: Brand Logo (Left-aligned, architectural mark) */}
             <BrandLogo variant="dark" />
 
-            {/* Center: Desktop Navigation Links (Single line, balanced spacing) */}
-            <nav className="hidden lg:flex items-center gap-3.5 xl:gap-5 2xl:gap-6">
+            {/* Center: Desktop Navigation Links (Single line, museum catalog styling) */}
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-xs xl:text-[13px] tracking-[0.06em] font-medium text-[#292C25] hover:text-[#344B38] transition-colors py-1 whitespace-nowrap relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#344B38] hover:after:w-full after:transition-all after:duration-200"
+                  className="group flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white transition-colors py-1 whitespace-nowrap"
                 >
-                  {link.name}
+                  <span className="text-[10px] text-neutral-500 group-hover:text-emerald-400 font-mono transition-colors">
+                    {link.code}
+                  </span>
+                  <span>{link.name}</span>
                 </a>
               ))}
             </nav>
 
-            {/* Right: Actions & CTAs (Strictly non-wrapping) */}
-            <div className="hidden sm:flex items-center gap-3 shrink-0">
-              
-              {/* Phone number (Ensured strictly single line) */}
+            {/* Right: Actions & CTAs (Single-line, non-wrapping) */}
+            <div className="hidden sm:flex items-center gap-4 shrink-0">
+              {/* Direct Phone Line */}
               <a
                 href={`tel:${BRAND_CONTACT.phoneRaw}`}
-                className="hidden xl:inline-flex items-center gap-2 text-xs font-medium text-[#85866A] hover:text-[#344B38] transition-colors px-3 py-1.5 rounded-full border border-[#E8E2D5] bg-white/40 whitespace-nowrap shrink-0"
-                title="Direct Phone Inquiry"
+                className="flex items-center gap-2 text-xs font-mono text-neutral-300 hover:text-white transition-colors whitespace-nowrap px-2 py-1"
+                title="Direct Studio Desk"
               >
-                <Phone className="w-3.5 h-3.5 text-[#B18A60] shrink-0" />
-                <span className="whitespace-nowrap">{BRAND_CONTACT.phone}</span>
+                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span className="tabular-nums tracking-wide">{BRAND_CONTACT.phone}</span>
               </a>
 
-              {/* Primary CTA (Ensured strictly single line, no wrapping) */}
+              {/* Action Button: Start Project */}
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 bg-[#344B38] text-[#F5F2E9] hover:bg-[#253728] text-xs font-semibold tracking-[0.08em] uppercase px-4.5 xl:px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow whitespace-nowrap shrink-0"
+                className="inline-flex items-center gap-2 bg-white text-neutral-950 hover:bg-neutral-200 text-xs font-mono uppercase font-bold tracking-wider px-4 py-2.5 transition-all duration-200 shrink-0 border border-white"
               >
-                <span className="whitespace-nowrap">Start Your Project</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#B18A60] shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span>Consult Studio</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-neutral-950" />
               </a>
             </div>
 
-            {/* Mobile / Tablet Menu Button */}
-            <div className="flex items-center gap-2 lg:hidden">
-              <a
-                href="#contact"
-                className="text-[11px] font-semibold tracking-wider uppercase px-3 py-1.5 bg-[#344B38] text-[#F5F2E9] rounded-full whitespace-nowrap sm:hidden"
-              >
-                Enquire
-              </a>
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-lg text-[#292C25] hover:text-[#344B38] hover:bg-[#E8E2D5]/50 transition-colors"
-                aria-label="Toggle mobile menu"
-              >
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
-            </div>
-
+            {/* Mobile Hamburger Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-neutral-300 hover:text-white border border-neutral-800 bg-[#16181C]"
+              aria-label="Toggle Navigation Menu"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile / Tablet Drawer */}
+      {/* Responsive Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div
-            className="fixed inset-0 bg-[#292C25]/50 backdrop-blur-sm transition-opacity"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-
-          <div className="fixed inset-y-0 right-0 max-w-xs w-full bg-[#F5F2E9] shadow-2xl p-6 flex flex-col justify-between overflow-y-auto border-l border-[#E8E2D5]">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-[#E8E2D5]">
-                <BrandLogo variant="dark" />
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-1.5 rounded-full hover:bg-[#E8E2D5] text-[#292C25]"
-                  aria-label="Close menu"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Navigation Links */}
-              <div className="flex flex-col space-y-3">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-base font-serif tracking-wide text-[#292C25] hover:text-[#344B38] py-1.5 border-b border-[#E8E2D5]/40 transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </div>
+        <div className="fixed inset-0 z-40 bg-[#0D0E11]/98 backdrop-blur-xl lg:hidden pt-24 px-6 pb-10 flex flex-col justify-between border-b border-neutral-800">
+          <div className="space-y-4">
+            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500 border-b border-neutral-800 pb-2">
+              Exhibition Navigation Index
             </div>
-
-            {/* Bottom Contact inside Drawer */}
-            <div className="pt-6 border-t border-[#E8E2D5] space-y-4">
-              <div className="space-y-1">
-                <p className="text-[10px] uppercase tracking-wider text-[#85866A] font-medium">Direct Telephone</p>
+            <nav className="flex flex-col space-y-3">
+              {navLinks.map((link) => (
                 <a
-                  href={`tel:${BRAND_CONTACT.phoneRaw}`}
-                  className="text-sm font-semibold text-[#292C25] block hover:text-[#344B38] whitespace-nowrap"
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between text-base font-display uppercase tracking-wider text-neutral-200 hover:text-white py-2 border-b border-neutral-900"
                 >
-                  {BRAND_CONTACT.phone}
+                  <span>{link.name}</span>
+                  <span className="font-mono text-xs text-neutral-500">{link.code}</span>
                 </a>
-                <p className="text-xs text-[#85866A]">Mumbai, Maharashtra</p>
-              </div>
+              ))}
+            </nav>
+          </div>
 
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#344B38] text-[#F5F2E9] text-xs font-semibold tracking-wider uppercase py-3 rounded-full hover:bg-[#253728] transition-colors whitespace-nowrap"
-              >
-                <span>Start Your Project</span>
-                <ArrowUpRight className="w-4 h-4 text-[#B18A60]" />
-              </a>
-            </div>
+          <div className="space-y-4 pt-6 border-t border-neutral-800">
+            <a
+              href={`tel:${BRAND_CONTACT.phoneRaw}`}
+              className="flex items-center gap-3 text-xs font-mono text-neutral-300 py-2"
+            >
+              <Phone className="w-4 h-4 text-emerald-400" />
+              <span>{BRAND_CONTACT.phone}</span>
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full bg-white text-neutral-950 text-xs font-mono uppercase font-bold tracking-wider py-3 border border-white"
+            >
+              <span>Consult Studio</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       )}

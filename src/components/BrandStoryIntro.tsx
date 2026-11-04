@@ -1,142 +1,131 @@
 import React from "react";
 import Image from "next/image";
-import { WaterLilyDivider, LotusEmblem, SwimmingKoiSilhouette } from "./BotanicalDecorators";
-import { Compass, Heart, Layers, Cpu, Trees } from "lucide-react";
+import { MuseumBadge, HairlineDivider } from "./MuseumComponents";
+import { Compass, Eye, ShieldCheck, Activity, Cpu, Trees } from "lucide-react";
+import { COMPANY_PHILOSOPHY_DATA } from "@/data/bondinwater-data";
 
 export function BrandStoryIntro() {
   const pillars = [
     {
+      code: "01",
+      title: "Biome Evaluation & Science",
+      desc: "Understanding the biome—climate, geography, flora, and fauna—is foundational. Designers gain valuable insights into the dynamics of the ecosystem to create habitats that cater specifically to the needs of its inhabitants.",
+      tag: "Ethological Science",
       icon: Trees,
-      title: "Nature & Biodiversity",
-      desc: "Authentic living flora, epiphyte mosses, and balanced aquatic microclimates that mimic pristine natural ecosystems."
     },
     {
+      code: "02",
+      title: "30+ Years Architectural Heritage",
+      desc: "With over three decades of experience, our architectural team excels from luxury interior installations to large-scale tourism developments, balancing creative innovation with strict wildlife development guidelines.",
+      tag: "Masterplanning",
       icon: Compass,
-      title: "Architectural Integration",
-      desc: "Harmonizing with interior structures, structural tolerances, lighting ambient channels, and high-end residential interiors."
     },
     {
+      code: "03",
+      title: "Turnkey Engineering & MEP",
+      desc: "Complete mechanical, electrical, plumbing, and HVAC calculations. Computational Fluid Dynamics (CFD) water modeling, bio-filtration arrays, and automation systems engineered for long-term structural integrity.",
+      tag: "Life Support Systems",
       icon: Cpu,
-      title: "Intelligent Engineering",
-      desc: "Computational Fluid Dynamics (CFD), multi-loop life support systems, and automated precision telemetry."
     },
     {
-      icon: Heart,
-      title: "Ethical Animal Wellbeing",
-      desc: "Every habitat is calibrated to the natural behaviors, sensory comfort, and long-term health of its living inhabitants."
-    }
+      code: "04",
+      title: "Multidisciplinary Collaboration",
+      desc: "Biologists, animal experts, and skilled engineers collaborate at every stage. Biologists inform species selection, feeding protocols, and disease prevention, while engineers guarantee hydraulic reliability.",
+      tag: "Biological Oversight",
+      icon: ShieldCheck,
+    },
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-[#E8E2D5]/35 border-y border-[#E8E2D5] relative overflow-hidden">
-      {/* Subtle background motif */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none hidden xl:block">
-        <SwimmingKoiSilhouette className="w-80 h-80 text-[#85866A]" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 lg:py-32 bg-[#F3F4F6] text-neutral-900 border-b border-neutral-300 relative bg-museum-grid-light">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#344B38]">
-            <LotusEmblem className="w-4 h-4 text-[#B18A60]" />
-            <span>The Living Philosophy</span>
+        <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
+          <div className="flex items-center gap-3">
+            <MuseumBadge variant="light">
+              STUDIO PHILOSOPHY // ETHOS
+            </MuseumBadge>
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-500">
+              DOCUMENTED PROFILE STANDARDS
+            </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#292C25] font-normal tracking-tight">
-            More Than an Aquarium. <br className="hidden sm:inline" />
-            <span className="italic font-light text-[#344B38]">A Living Experience.</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-neutral-950 leading-[0.95]">
+            Precision Engineering Rooted in Biome Science.
           </h2>
 
-          <WaterLilyDivider className="w-40 mx-auto" />
-
-          <p className="text-base sm:text-lg text-[#292C25]/80 font-sans font-light leading-relaxed max-w-2xl mx-auto pt-2">
-            BondInWater transforms ordinary spaces into immersive natural environments. We believe that bringing living nature into contemporary architecture is not merely decorative—it renews our essential human connection to the wild.
+          <p className="text-base sm:text-lg text-neutral-700 font-sans font-light leading-relaxed max-w-3xl pt-2">
+            “{COMPANY_PHILOSOPHY_DATA.coreCreed}” — BondInWater
           </p>
         </div>
 
-        {/* Asymmetrical Editorial Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        {/* Asymmetrical Editorial Composition */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
-          {/* Left Asymmetric Photo Composition (5 cols) */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative">
-              {/* Primary Large Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-[#E8E2D5]">
+          {/* Left Column: Authentic Photography Exhibition (5 cols) */}
+          <div className="lg:col-span-5 space-y-4">
+            <div className="border border-neutral-300 bg-white p-3 shadow-lg">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-neutral-200">
                 <Image
-                  src="/images/bondinwater/ef9742_d41c5589ef3548f1890a925f493a7b35.jpg"
-                  alt="Architecture and living water integration at BondInWater"
+                  src="/images/pdf_images/p10_img1.png"
+                  alt="Understanding the biome and architectural integration from BondInWater profile"
                   fill
                   className="object-cover reveal-zoom"
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#292C25]/60 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 text-[#F5F2E9]">
-                  <p className="text-xs uppercase tracking-widest text-[#C9A781] font-semibold">Architectural Integration</p>
-                  <p className="text-base font-serif font-light text-[#F5F2E9]">Seamless harmony between structural civil design and living biology.</p>
+                <div className="absolute bottom-3 left-3 right-3 bg-neutral-950/85 text-white p-3 border border-neutral-700">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400 block">
+                    BIOME STUDY // PROFILE PAGE 10
+                  </span>
+                  <p className="text-xs font-sans text-neutral-200 mt-1 leading-snug">
+                    Studying microclimate, water currents, and ethological behavior before spatial fabrication.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              {/* Overlapping Secondary Image */}
-              <div className="absolute -bottom-8 -right-6 sm:-right-8 w-48 sm:w-56 aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-[#F5F2E9] hidden sm:block">
-                <Image
-                  src="/images/bondinwater/ef9742_c32b726e4ec643ffbcc5a3f5cd647b0f.jpg"
-                  alt="Black Oscar fish thriving in balanced habitat"
-                  fill
-                  className="object-cover reveal-zoom"
-                  sizes="240px"
-                />
-                <div className="absolute inset-0 bg-[#344B38]/20" />
-              </div>
+            <div className="border border-neutral-300 bg-white p-3 flex items-center justify-between text-xs font-mono text-neutral-600">
+              <span>MULTIDISCIPLINARY COHESION</span>
+              <span className="uppercase text-neutral-500">Biologists &bull; Architects &bull; Engineers</span>
             </div>
           </div>
 
-          {/* Right Content & Pillars (7 cols) */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B18A60]">
-                Design → Build → Operate
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-serif text-[#292C25] font-normal leading-snug">
-                Where Living Biology Coexists with Architectural Precision.
-              </h3>
-              <p className="text-[#292C25]/80 font-sans text-sm sm:text-base leading-relaxed font-light">
-                BondInWater unites multidisciplinary disciplines under one roof: landscape architecture, biochemical water engineering, custom thermoformed acrylic fabrication, and animal ethology. Every habitat we engineer is designed to sustain itself gracefully while becoming the defining aesthetic signature of the space.
-              </p>
-            </div>
-
-            {/* The 4 Harmonic Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#E8E2D5]">
-              {pillars.map((pillar) => {
-                const Icon = pillar.icon;
-                return (
-                  <div key={pillar.title} className="space-y-2 p-4 rounded-xl bg-white/40 border border-[#E8E2D5]/70 hover:bg-white/80 transition-colors duration-300">
-                    <div className="flex items-center gap-2.5">
-                      <div className="p-2 rounded-lg bg-[#344B38]/10 text-[#344B38]">
-                        <Icon className="w-4 h-4" />
-                      </div>
-                      <h4 className="text-sm font-semibold text-[#292C25] font-sans">
-                        {pillar.title}
-                      </h4>
+          {/* Right Column: 4 Museum Pillar Blocks (7 cols) */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {pillars.map((pillar) => {
+              const Icon = pillar.icon;
+              return (
+                <div
+                  key={pillar.code}
+                  className="border border-neutral-300 bg-white p-6 flex flex-col justify-between hover:border-neutral-900 transition-colors shadow-sm"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between border-b border-neutral-200 pb-3">
+                      <span className="text-xs font-mono font-bold text-neutral-950">
+                        [{pillar.code}]
+                      </span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500">
+                        {pillar.tag}
+                      </span>
                     </div>
-                    <p className="text-xs text-[#292C25]/75 font-sans leading-relaxed">
+
+                    <h3 className="text-lg font-display uppercase tracking-tight text-neutral-950 font-bold">
+                      {pillar.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-neutral-600 font-sans leading-relaxed">
                       {pillar.desc}
                     </p>
                   </div>
-                );
-              })}
-            </div>
 
-            {/* Company Creed Callout */}
-            <div className="p-6 rounded-2xl bg-[#344B38]/5 border border-[#344B38]/15 space-y-2">
-              <p className="text-sm sm:text-base font-serif italic text-[#344B38] leading-relaxed">
-                “We aim for excellence in recreating the ecosystem for all creatures on our planet and helping in their conservation.”
-              </p>
-              <p className="text-[11px] font-sans uppercase tracking-widest font-semibold text-[#85866A]">
-                — BondInWater Company Philosophy
-              </p>
-            </div>
-
+                  <div className="pt-4 mt-4 border-t border-neutral-100 flex items-center gap-2 text-[11px] font-mono text-neutral-500">
+                    <Icon className="w-3.5 h-3.5 text-neutral-700" />
+                    <span>VERIFIED STANDARD</span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
         </div>

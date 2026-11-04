@@ -3,11 +3,11 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { BrandStoryIntro } from "@/components/BrandStoryIntro";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
+import { ProcessSection } from "@/components/ProcessSection";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { FounderStory } from "@/components/FounderStory";
-import { ProcessSection } from "@/components/ProcessSection";
-import { WhyBondInWater } from "@/components/WhyBondInWater";
 import { SmartAquariumSection } from "@/components/SmartAquariumSection";
+import { WhyBondInWater } from "@/components/WhyBondInWater";
 import { ClientTrustSection } from "@/components/ClientTrustSection";
 import { InteractiveHabitatEstimator } from "@/components/InteractiveHabitatEstimator";
 import { ContactSection } from "@/components/ContactSection";
@@ -15,44 +15,44 @@ import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#F5F2E9] text-[#292C25] selection:bg-[#344B38] selection:text-[#F5F2E9]">
-      {/* Section 1: Navigation */}
+    <main className="min-h-screen bg-[#0D0E11] text-neutral-100 selection:bg-[#3D4B3E] selection:text-white">
+      {/* 00: Navigation Bar */}
       <Navbar />
 
-      {/* Section 2: Cinematic Hero */}
+      {/* 01: Hero Entrance (Dark Exhibition) */}
       <Hero />
 
-      {/* Section 3: Brand Introduction & Philosophy */}
+      {/* 02: Studio Identity & Biome Ethos (Cool Light Grey) */}
       <BrandStoryIntro />
 
-      {/* Section 4: Master Capabilities (9 Official Divisions A through I) */}
+      {/* 03: Master Capabilities — The 9 Divisions A through I (Dark Carbon Exhibition) */}
       <ExpertiseSection />
 
-      {/* Section 5: Signature Projects & Portfolio Gallery */}
-      <ProjectGallery />
-
-      {/* Section 6: Company Story & Philosophy (From Hobbyists to Creators) */}
-      <FounderStory />
-
-      {/* Section 7: Our Turnkey Architectural Process (8-Stage Lifecycle) */}
+      {/* 04: The 8-Stage Turnkey Methodology (Cool Light Grey / White) */}
       <ProcessSection />
 
-      {/* Section 8: Why Choose BondInWater? */}
-      <WhyBondInWater />
+      {/* 05: Curated Field Installations & Living Environments (Dark Charcoal Gallery) */}
+      <ProjectGallery />
 
-      {/* Section 9: Specialised Technical Solutions & Neptune Systems Apex Automation */}
+      {/* 06: Company Story & Documented Strengths (Cool Light Grey) */}
+      <FounderStory />
+
+      {/* 07: Specialised Technical Solutions & Apex Automation (Dark Engineering Vault) */}
       <SmartAquariumSection />
 
-      {/* Section 10: Client Trust & Verified Collaborators */}
+      {/* 08: Why Choose BondInWater Differentiators (Cool Light Grey) */}
+      <WhyBondInWater />
+
+      {/* 09: Verified Client Collaborations & Institutional Trust (Dark Charcoal) */}
       <ClientTrustSection />
 
-      {/* Bonus Interactive Feature: Living Habitat Spatial Estimator */}
+      {/* 10: Interactive Living Habitat Feasibility Calculator (Cool Light Grey) */}
       <InteractiveHabitatEstimator />
 
-      {/* Section 11: Contact & Project Consultation Enquiry */}
+      {/* 11: Project Feasibility & Design Consultation Desk (Dark Carbon Split) */}
       <ContactSection />
 
-      {/* Section 12: Premium Footer */}
+      {/* 12: Museum Exhibition Directory Footer (Pitch Black) */}
       <Footer />
     </main>
   );

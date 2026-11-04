@@ -1,18 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Barlow_Condensed, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-manrope",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -23,13 +30,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "BondInWater | Bespoke Aquariums, Koi Ponds & Aquatic Habitats",
-  description: "Where Living Nature Meets Intelligent Design. Bespoke luxury acrylic aquariums, natural koi ponds, waterfalls, paludariums, and architectural aquatic engineering.",
-  keywords: "BondInWater, Luxury Aquariums, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Aquatic Engineering, Karan Tak, Mumbai",
+  title: "BondInWater — Natural History & Habitat Engineering Studio | Official Website",
+  description: "BondInWater specializes in large-scale aquatic architecture, zoo masterplanning, custom acrylic engineering, bio-authentic habitats, and lifelong biological maintenance.",
+  keywords: "BondInWater, Aquarium Architecture, Zoo Masterplanning, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Aquatic Engineering, Life Support Systems, Mumbai",
   authors: [{ name: "BondInWater" }],
   openGraph: {
-    title: "BondInWater | Bespoke Aquariums, Koi Ponds & Aquatic Habitats",
-    description: "Where Living Nature Meets Intelligent Design. Bespoke luxury acrylic aquariums, natural koi ponds, and architectural ecosystems.",
+    title: "BondInWater — Natural History & Habitat Engineering Studio",
+    description: "Design, build, and operate turnkey aquatic architectures, public oceanariums, and wildlife habitats.",
     type: "website",
     locale: "en_US",
   },
@@ -43,9 +50,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${manrope.variable} scroll-smooth antialiased`}
+      className={`${barlowCondensed.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#F5F2E9] text-[#292C25] font-sans selection:bg-[#344B38] selection:text-[#F5F2E9]">
+      <body className="min-h-screen bg-[#0D0E11] text-neutral-200 font-sans selection:bg-[#3D4B3E] selection:text-white">
         {children}
       </body>
     </html>

@@ -1,117 +1,101 @@
 import React from "react";
 import Link from "next/link";
 import { BrandLogo } from "./BrandLogo";
-import { BRAND_CONTACT, SERVICES_DATA } from "@/data/bondinwater-data";
-import { LotusEmblem, SwimmingKoiSilhouette, FernFrondAccent } from "./BotanicalDecorators";
-import { Phone, Mail, MapPin, ArrowUpRight, MessageSquare, Globe, Sparkles } from "lucide-react";
+import { BRAND_CONTACT, COMPANY_DIVISIONS } from "@/data/bondinwater-data";
+import { Phone, Mail, MapPin, ArrowUpRight, MessageSquare, ShieldCheck } from "lucide-react";
 
 export function Footer() {
   const currentYear = 2026;
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "Our Expertise", href: "#expertise" },
-    { name: "Signature Projects", href: "#projects" },
-    { name: "The Atelier Story", href: "#story" },
-    { name: "Turnkey Process", href: "#process" },
+    { name: "Overview", href: "#hero" },
+    { name: "Capabilities (9 Divisions)", href: "#expertise" },
+    { name: "Field Installations", href: "#projects" },
+    { name: "Studio Ethos & Heritage", href: "#story" },
+    { name: "8-Stage Methodology", href: "#process" },
+    { name: "Apex Automation & LSS", href: "#automation" },
     { name: "Why BondInWater", href: "#why-us" },
-    { name: "Project Enquiry", href: "#contact" },
+    { name: "Project Consultation", href: "#contact" },
   ];
 
   return (
-    <footer className="bg-[#292C25] text-[#F5F2E9] pt-20 pb-12 relative overflow-hidden border-t border-[#344B38]/40">
-      {/* Background botanical line art */}
-      <div className="absolute top-8 right-8 opacity-10 pointer-events-none hidden lg:block">
-        <FernFrondAccent className="w-72 h-72 text-[#A5AD92]" />
-      </div>
-      <div className="absolute bottom-12 left-10 opacity-10 pointer-events-none hidden md:block">
-        <SwimmingKoiSilhouette className="w-64 h-64 text-[#B18A60]" />
-      </div>
-
+    <footer className="bg-[#08090B] text-neutral-300 pt-20 pb-12 relative overflow-hidden border-t border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Atelier Brand Banner */}
-        <div className="pb-16 border-b border-white/10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          <div className="lg:col-span-6 space-y-4">
-            <BrandLogo variant="light" />
-            <p className="text-sm text-[#E8E2D5]/80 font-sans font-light leading-relaxed max-w-md pt-2">
-              Custom acrylic aquariums, natural koi ponds, waterfalls, paludariums, precision engineering, and ethical animal habitats.
+        {/* Top Studio Brand Banner */}
+        <div className="pb-14 border-b border-neutral-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 space-y-3">
+            <BrandLogo variant="dark" />
+            <p className="text-xs sm:text-sm text-neutral-400 font-sans font-light leading-relaxed max-w-xl">
+              Turnkey aquatic architecture, zoo masterplanning, custom optical PMMA acrylic engineering (20mm to 300mm), bio-authentic vivariums, and lifelong biologist-led stewardship.
             </p>
           </div>
 
-          <div className="lg:col-span-6 flex flex-wrap items-center lg:justify-end gap-4">
+          <div className="lg:col-span-5 flex flex-wrap items-center lg:justify-end gap-3 text-xs font-mono">
             <a
               href={`tel:${BRAND_CONTACT.phoneRaw}`}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/10 hover:bg-white/15 text-xs font-medium text-[#F5F2E9] border border-white/15 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-neutral-200 border border-neutral-800 transition-colors"
             >
-              <Phone className="w-4 h-4 text-[#B18A60]" />
+              <Phone className="w-3.5 h-3.5 text-emerald-400" />
               <span>{BRAND_CONTACT.phone}</span>
             </a>
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#B18A60] hover:bg-[#C9A781] text-xs font-semibold uppercase tracking-wider text-[#292C25] transition-all shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-neutral-200 text-neutral-950 font-bold uppercase tracking-wider transition-colors border border-white"
             >
-              <span>Start Your Project</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <span>Consult Studio</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
-
         </div>
 
-        {/* 4-Column Directory */}
-        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* 4-Column Museum Directory Grid */}
+        <div className="py-14 border-b border-neutral-800 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           
-          {/* Col 1: Disciplines */}
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A781]">
-              Our Disciplines
-            </p>
-            <ul className="space-y-2.5 text-xs text-[#E8E2D5]/75 font-sans font-light">
-              {SERVICES_DATA.slice(0, 5).map((srv) => (
-                <li key={srv.id}>
-                  <a href="#expertise" className="hover:text-[#F5F2E9] transition-colors flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-[#B18A60]" />
-                    <span>{srv.title}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Column 1: Studio Identity (4 cols) */}
+          <div className="lg:col-span-4 space-y-4 text-xs font-mono">
+            <span className="text-[10px] uppercase tracking-widest text-emerald-400 block font-bold">
+              STUDIO IDENTIFICATION // MUMBAI
+            </span>
+            <div className="space-y-2 text-neutral-400 font-sans leading-relaxed">
+              <p>
+                BondInWater operates across India and international markets, delivering biological integrity and structural excellence for public oceanariums, luxury estates, and zoological parks.
+              </p>
+              <p className="text-neutral-500 font-mono text-[11px] pt-1">
+                DESIGN &bull; BUILD &bull; OPERATE &bull; MAINTAIN
+              </p>
+            </div>
           </div>
 
-          {/* Col 2: Engineering & Services */}
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A781]">
-              Engineering & Care
-            </p>
-            <ul className="space-y-2.5 text-xs text-[#E8E2D5]/75 font-sans font-light">
-              {SERVICES_DATA.slice(5).map((srv) => (
-                <li key={srv.id}>
-                  <a href="#expertise" className="hover:text-[#F5F2E9] transition-colors flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-[#B18A60]" />
-                    <span>{srv.title}</span>
-                  </a>
-                </li>
-              ))}
-              <li>
-                <a href="#expertise" className="hover:text-[#F5F2E9] transition-colors flex items-center gap-1.5">
-                  <span className="w-1 h-1 rounded-full bg-[#B18A60]" />
-                  <span>Neptune Systems Apex Automation</span>
+          {/* Column 2: 9 Capability Divisions (4 cols) */}
+          <div className="lg:col-span-4 space-y-4">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block font-bold">
+              09 CAPABILITY DIVISIONS
+            </span>
+            <div className="grid grid-cols-1 gap-1.5 text-xs font-mono text-neutral-400">
+              {COMPANY_DIVISIONS.map((div) => (
+                <a
+                  key={div.id}
+                  href="#expertise"
+                  className="hover:text-white transition-colors truncate flex items-center gap-2"
+                >
+                  <span className="text-neutral-600 text-[10px]">[{div.letter}]</span>
+                  <span>{div.title}</span>
                 </a>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
 
-          {/* Col 3: Navigation */}
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A781]">
-              Studio Navigation
-            </p>
-            <ul className="space-y-2.5 text-xs text-[#E8E2D5]/75 font-sans font-light">
+          {/* Column 3: Navigation Index (2 cols) */}
+          <div className="lg:col-span-2 space-y-4">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400 block font-bold">
+              DIRECTORY
+            </span>
+            <ul className="space-y-2 text-xs font-mono text-neutral-400">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="hover:text-[#F5F2E9] transition-colors">
+                  <a href={link.href} className="hover:text-white transition-colors">
                     {link.name}
                   </a>
                 </li>
@@ -119,52 +103,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Atelier Details */}
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C9A781]">
-              Atelier Location
-            </p>
-            <div className="space-y-3 text-xs text-[#E8E2D5]/80 font-sans font-light leading-relaxed">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#B18A60] shrink-0 mt-0.5" />
-                <span>Mumbai, Maharashtra, India</span>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#B18A60] shrink-0 mt-0.5" />
-                <a href={`mailto:${BRAND_CONTACT.email}`} className="hover:text-[#F5F2E9] transition-colors">
-                  {BRAND_CONTACT.email}
-                </a>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <MessageSquare className="w-4 h-4 text-[#B18A60] shrink-0 mt-0.5" />
-                <a href={BRAND_CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#F5F2E9] transition-colors">
-                  WhatsApp Concierge
-                </a>
-              </div>
-            </div>
-
-            <div className="pt-2">
-              <p className="text-[11px] text-[#A5AD92]">
-                Mon - Fri: 10am - 7pm | Sat: 10am - 5pm
+          {/* Column 4: Contact & Disclosures (2 cols) */}
+          <div className="lg:col-span-2 space-y-4 text-xs font-mono">
+            <span className="text-[10px] uppercase tracking-widest text-neutral-400 block font-bold">
+              HEADQUARTERS
+            </span>
+            <div className="space-y-2 text-neutral-400">
+              <p className="text-white font-bold">{BRAND_CONTACT.location}</p>
+              <p className="text-neutral-500 text-[11px] leading-snug">
+                {BRAND_CONTACT.hours.weekdays}
               </p>
+              <a
+                href={`mailto:${BRAND_CONTACT.email}`}
+                className="text-emerald-400 hover:underline block pt-1 break-all"
+              >
+                {BRAND_CONTACT.email}
+              </a>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Bar: Copyright & Ethics */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E8E2D5]/60 font-sans font-light">
-          <div className="flex items-center gap-2">
-            <LotusEmblem className="w-3.5 h-3.5 text-[#B18A60]" />
-            <span>© {currentYear} BondInWater. All Rights Reserved.</span>
+        {/* Bottom Disclosures Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-neutral-500">
+          <div>
+            &copy; {currentYear} BondInWater. All Rights Reserved. Turnkey Aquatic Architecture & Habitat Engineering.
           </div>
-
-          <div className="flex items-center gap-6 text-[11px]">
-            <span>Privacy Policy</span>
-            <span className="text-[#85866A]">•</span>
-            <span>Animal Welfare Commitment</span>
-            <span className="text-[#85866A]">•</span>
-            <span>CFD Engineering Standards</span>
+          <div className="flex items-center gap-4 text-neutral-500">
+            <span>COMPANY PROFILE COMPLIANT</span>
+            <span>&bull;</span>
+            <span>VERIFIED FACTUAL ARCHIVE</span>
           </div>
         </div>
 
