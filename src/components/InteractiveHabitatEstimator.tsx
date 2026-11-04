@@ -91,25 +91,25 @@ export function InteractiveHabitatEstimator() {
   const estimatedVolumeLitres = Math.round(lengthMeters * widthMeters * heightMeters * 1000);
 
   return (
-    <section className="py-24 lg:py-32 bg-[#CED2D2] text-[#171A19] border-b border-[#B4B9B9] relative bg-editorial-grid">
+    <section className="py-24 lg:py-32 bg-[#F3F3EC] text-[#202820] border-b border-[#DADDD3] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
           <div className="flex items-center gap-3">
-            <EditorialBadge variant="moss">
-              INTERACTIVE TOOL &bull; FEASIBILITY CALCULATOR
+            <EditorialBadge variant="natural">
+              FEASIBILITY &bull; SPATIAL ESTIMATOR
             </EditorialBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#5A625E]">
-              PRELIMINARY SPATIAL ESTIMATION
+            <span className="text-xs font-mono uppercase tracking-widest text-[#667367]">
+              PRELIMINARY ENGINEERING SIZING
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#171A19] leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#172D24] leading-[0.95]">
             Living Habitat Spatial &amp; Engineering Estimator.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#4B5350] font-sans font-light leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-[#3E4A3F] font-sans font-light leading-relaxed max-w-3xl">
             Simulate spatial footprint, hydraulic requirements, Life Support System parameters, and preliminary project timelines for your upcoming architectural installation.
           </p>
         </div>
@@ -118,15 +118,15 @@ export function InteractiveHabitatEstimator() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
           {/* Left Column: Interactive Inputs (7 cols) */}
-          <div className="lg:col-span-7 space-y-8 bg-white p-6 sm:p-8 lg:p-10 border border-[#B4B9B9] shadow-sm">
+          <div className="lg:col-span-7 space-y-8 bg-white p-6 sm:p-8 lg:p-10 border border-[#DADDD3] shadow-sm">
             
             {/* Step 1: Select Spatial Environment */}
             <div className="space-y-3">
-              <div className="flex items-center justify-between border-b border-[#D8DDD8] pb-2">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#171A19]">
+              <div className="flex items-center justify-between border-b border-[#E5E7DF] pb-2">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#172D24]">
                   01 // SELECT SPATIAL ENVIRONMENT
                 </span>
-                <span className="text-[10px] font-mono text-[#5A625E]">CIVIL SETTING</span>
+                <span className="text-[10px] font-mono text-[#667367]">CIVIL SETTING</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {SPACES.map((s) => (
@@ -135,8 +135,8 @@ export function InteractiveHabitatEstimator() {
                     onClick={() => setSelectedSpace(s.id)}
                     className={`text-left p-3 border transition-all ${
                       selectedSpace === s.id
-                        ? "bg-[#171A19] text-[#F1F1ED] border-[#171A19] shadow-sm"
-                        : "bg-[#F7F8F6] text-[#171A19] hover:bg-[#EAECE9] border-[#CED2D2]"
+                        ? "bg-[#172D24] text-[#F3F3EC] border-[#172D24] shadow-sm"
+                        : "bg-[#F3F3EC] text-[#202820] hover:bg-[#EBEBE3] border-[#DADDD3]"
                     }`}
                   >
                     <div className="text-xs font-display uppercase tracking-tight font-bold">{s.name}</div>
@@ -148,11 +148,11 @@ export function InteractiveHabitatEstimator() {
 
             {/* Step 2: Select Habitat Typology */}
             <div className="space-y-3">
-              <div className="flex items-center justify-between border-b border-[#D8DDD8] pb-2">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#171A19]">
+              <div className="flex items-center justify-between border-b border-[#E5E7DF] pb-2">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#172D24]">
                   02 // SELECT HABITAT TYPOLOGY
                 </span>
-                <span className="text-[10px] font-mono text-[#5A625E]">BIOLOGICAL CLASSIFICATION</span>
+                <span className="text-[10px] font-mono text-[#667367]">BIOLOGICAL CLASSIFICATION</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {HABITATS.map((h) => (
@@ -161,8 +161,8 @@ export function InteractiveHabitatEstimator() {
                     onClick={() => setSelectedHabitat(h.id)}
                     className={`text-left p-3 border transition-all ${
                       selectedHabitat === h.id
-                        ? "bg-[#171A19] text-[#F1F1ED] border-[#171A19] shadow-sm"
-                        : "bg-[#F7F8F6] text-[#171A19] hover:bg-[#EAECE9] border-[#CED2D2]"
+                        ? "bg-[#172D24] text-[#F3F3EC] border-[#172D24] shadow-sm"
+                        : "bg-[#F3F3EC] text-[#202820] hover:bg-[#EBEBE3] border-[#DADDD3]"
                     }`}
                   >
                     <div className="text-xs font-display uppercase tracking-tight font-bold">{h.name}</div>
@@ -174,18 +174,18 @@ export function InteractiveHabitatEstimator() {
 
             {/* Step 3: Spatial Dimensions */}
             <div className="space-y-4">
-              <div className="flex items-center justify-between border-b border-[#D8DDD8] pb-2">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#171A19]">
+              <div className="flex items-center justify-between border-b border-[#E5E7DF] pb-2">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#172D24]">
                   03 // ESTIMATED DIMENSIONS (METERS)
                 </span>
-                <span className="text-[10px] font-mono text-[#5A625E]">L &bull; W &bull; H</span>
+                <span className="text-[10px] font-mono text-[#667367]">L &bull; W &bull; H</span>
               </div>
 
               <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-1.5">
                   <div className="flex justify-between text-xs font-mono">
-                    <span className="text-[#5A625E]">LENGTH</span>
-                    <span className="font-bold text-[#171A19]">{lengthMeters} m</span>
+                    <span className="text-[#667367]">LENGTH</span>
+                    <span className="font-bold text-[#172D24]">{lengthMeters} m</span>
                   </div>
                   <input
                     type="range"
@@ -194,14 +194,14 @@ export function InteractiveHabitatEstimator() {
                     step="0.5"
                     value={lengthMeters}
                     onChange={(e) => setLengthMeters(parseFloat(e.target.value))}
-                    className="w-full accent-[#171A19]"
+                    className="w-full accent-[#172D24]"
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <div className="flex justify-between text-xs font-mono">
-                    <span className="text-[#5A625E]">WIDTH / DEPTH</span>
-                    <span className="font-bold text-[#171A19]">{widthMeters} m</span>
+                    <span className="text-[#667367]">WIDTH / DEPTH</span>
+                    <span className="font-bold text-[#172D24]">{widthMeters} m</span>
                   </div>
                   <input
                     type="range"
@@ -210,14 +210,14 @@ export function InteractiveHabitatEstimator() {
                     step="0.2"
                     value={widthMeters}
                     onChange={(e) => setWidthMeters(parseFloat(e.target.value))}
-                    className="w-full accent-[#171A19]"
+                    className="w-full accent-[#172D24]"
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <div className="flex justify-between text-xs font-mono">
-                    <span className="text-[#5A625E]">HEIGHT</span>
-                    <span className="font-bold text-[#171A19]">{heightMeters} m</span>
+                    <span className="text-[#667367]">HEIGHT</span>
+                    <span className="font-bold text-[#172D24]">{heightMeters} m</span>
                   </div>
                   <input
                     type="range"
@@ -226,7 +226,7 @@ export function InteractiveHabitatEstimator() {
                     step="0.2"
                     value={heightMeters}
                     onChange={(e) => setHeightMeters(parseFloat(e.target.value))}
-                    className="w-full accent-[#171A19]"
+                    className="w-full accent-[#172D24]"
                   />
                 </div>
               </div>
@@ -235,69 +235,69 @@ export function InteractiveHabitatEstimator() {
           </div>
 
           {/* Right Column: Calculated Specification Plaque (5 cols) */}
-          <div className="lg:col-span-5 bg-[#191C1B] text-[#F1F1ED] p-6 sm:p-8 lg:p-10 border border-[#2D3230] shadow-2xl space-y-6">
-            <div className="border-b border-[#2D3230] pb-4">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-[#79836D] block font-bold">
+          <div className="lg:col-span-5 bg-[#172D24] text-[#F3F3EC] p-6 sm:p-8 lg:p-10 border border-[#2E4739] shadow-2xl space-y-6">
+            <div className="border-b border-[#2E4739] pb-4">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#B4BEA5] block font-bold">
                 ENGINEERING PROJECTION PLAQUE
               </span>
-              <h3 className="text-2xl font-display uppercase tracking-tight text-[#F1F1ED] mt-1 font-bold">
+              <h3 className="text-2xl font-display uppercase tracking-tight text-[#F3F3EC] mt-1 font-bold">
                 {habitat.name}
               </h3>
-              <p className="text-xs font-mono text-[#9AA39E] mt-0.5">
+              <p className="text-xs font-mono text-[#DADDD3] mt-0.5">
                 Target: {space.name}
               </p>
             </div>
 
             {/* Calculated Metrics Grid */}
-            <div className="grid grid-cols-2 gap-4 py-2 border-b border-[#2D3230]">
+            <div className="grid grid-cols-2 gap-4 py-2 border-b border-[#2E4739]">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#9AA39E] block">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#B4BEA5] block">
                   ESTIMATED VOLUME
                 </span>
-                <span className="text-2xl font-display uppercase tracking-tight text-[#F1F1ED] font-bold">
+                <span className="text-2xl font-display uppercase tracking-tight text-[#F3F3EC] font-bold">
                   {estimatedVolumeLitres.toLocaleString()} L
                 </span>
-                <span className="text-[10px] font-mono text-[#9AA39E] block">({estimatedVolumeM3} m³)</span>
+                <span className="text-[10px] font-mono text-[#DADDD3] block">({estimatedVolumeM3} m³)</span>
               </div>
 
               <div className="space-y-1">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#9AA39E] block">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#B4BEA5] block">
                   SURFACE FOOTPRINT
                 </span>
-                <span className="text-2xl font-display uppercase tracking-tight text-[#F1F1ED] font-bold">
+                <span className="text-2xl font-display uppercase tracking-tight text-[#F3F3EC] font-bold">
                   {estimatedSurfaceArea} m²
                 </span>
-                <span className="text-[10px] font-mono text-[#9AA39E] block">Slab Footprint</span>
+                <span className="text-[10px] font-mono text-[#DADDD3] block">Slab Footprint</span>
               </div>
             </div>
 
             {/* Engineering Specifications */}
             <div className="space-y-3 text-xs font-mono">
               <div className="space-y-1">
-                <span className="text-[#9AA39E] text-[10px] uppercase tracking-wider block">RECOMMENDED MATERIAL SPEC</span>
-                <span className="text-[#F1F1ED] block bg-[#212524] p-2.5 border border-[#2D3230]">
+                <span className="text-[#B4BEA5] text-[10px] uppercase tracking-wider block">RECOMMENDED MATERIAL SPEC</span>
+                <span className="text-[#F3F3EC] block bg-[#294333] p-2.5 border border-[#3D5E4A]">
                   {habitat.recommendedPMMA}
                 </span>
               </div>
 
               <div className="space-y-1">
-                <span className="text-[#9AA39E] text-[10px] uppercase tracking-wider block">LIFE SUPPORT SYSTEM (LSS) DESIGN</span>
-                <span className="text-[#F1F1ED] block bg-[#212524] p-2.5 border border-[#2D3230] leading-snug">
+                <span className="text-[#B4BEA5] text-[10px] uppercase tracking-wider block">LIFE SUPPORT SYSTEM (LSS) DESIGN</span>
+                <span className="text-[#F3F3EC] block bg-[#294333] p-2.5 border border-[#3D5E4A] leading-snug">
                   {habitat.lssType}
                 </span>
               </div>
 
               <div className="flex items-center justify-between pt-1">
-                <span className="text-[#9AA39E] text-[10px] uppercase tracking-wider">PROJECT LIFECYCLE</span>
-                <span className="text-[#79836D] font-bold">{habitat.timeline}</span>
+                <span className="text-[#B4BEA5] text-[10px] uppercase tracking-wider">PROJECT LIFECYCLE</span>
+                <span className="text-[#F3F3EC] font-bold">{habitat.timeline}</span>
               </div>
             </div>
 
             {/* CTA */}
-            <div className="pt-4 border-t border-[#2D3230]">
+            <div className="pt-4 border-t border-[#2E4739]">
               <a
                 href="#contact"
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#F1F1ED] text-[#171A19] font-mono text-xs uppercase font-bold py-3.5 px-4 tracking-wider hover:bg-white transition-colors border border-[#F1F1ED]"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#F3F3EC] text-[#172D24] font-mono text-xs uppercase font-bold py-3.5 px-4 tracking-wider hover:bg-white transition-colors border border-[#F3F3EC]"
               >
                 <span>Request Feasibility Study</span>
                 <ArrowRight className="w-4 h-4" />

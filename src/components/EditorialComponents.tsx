@@ -2,23 +2,32 @@ import React from "react";
 
 export function EditorialBadge({
   children,
-  variant = "light",
+  variant = "natural",
   className = "",
 }: {
   children: React.ReactNode;
-  variant?: "light" | "dark" | "moss" | "earth";
+  variant?: "forest" | "secondary" | "natural" | "sage" | "earth" | "stone" | "light" | "white" | "dark" | "moss";
   className?: string;
 }) {
-  const styles = {
-    light: "bg-[#F1F1ED] text-[#171A19] border-[#B4B9B9]",
-    dark: "bg-[#191C1B] text-[#F1F1ED] border-[#2D3331]",
-    moss: "bg-[#79836D]/15 text-[#58614E] border-[#79836D]/40 font-semibold",
-    earth: "bg-[#A66547]/15 text-[#8A4F34] border-[#A66547]/40 font-semibold",
+  const styles: Record<string, string> = {
+    forest: "bg-[#172D24] text-[#F3F3EC] border-[#2E4739]",
+    secondary: "bg-[#294333] text-[#F3F3EC] border-[#3D5E4A]",
+    natural: "bg-[#46634B]/15 text-[#2B4430] border-[#46634B]/40 font-semibold",
+    sage: "bg-[#B4BEA5]/30 text-[#172D24] border-[#B4BEA5]/70 font-semibold",
+    earth: "bg-[#A87952]/15 text-[#7A4B29] border-[#A87952]/40 font-semibold",
+    stone: "bg-[#DADDD3] text-[#202820] border-[#C7CBC0] font-semibold",
+    light: "bg-[#F3F3EC] text-[#202820] border-[#DADDD3]",
+    white: "bg-white text-[#202820] border-[#DADDD3]",
+    // Compatibility fallbacks
+    dark: "bg-[#172D24] text-[#F3F3EC] border-[#2E4739]",
+    moss: "bg-[#46634B]/15 text-[#2B4430] border-[#46634B]/40 font-semibold",
   };
+
+  const selectedStyle = styles[variant] || styles.natural;
 
   return (
     <span
-      className={`inline-flex items-center gap-2 px-3 py-1 text-[11px] font-mono tracking-wider uppercase border ${styles[variant]} ${className}`}
+      className={`inline-flex items-center gap-2 px-3 py-1 text-[11px] font-mono tracking-wider uppercase border ${selectedStyle} ${className}`}
     >
       <span className="w-1.5 h-1.5 bg-current opacity-80" />
       {children}
@@ -39,7 +48,7 @@ export function HairlineDivider({
   return (
     <div
       className={`w-full h-[1px] ${
-        dark ? "bg-[#2D3331]" : "bg-[#B4B9B9]"
+        dark ? "bg-[#2E4739]" : "bg-[#DADDD3]"
       } ${className}`}
     />
   );

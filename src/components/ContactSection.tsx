@@ -53,25 +53,25 @@ export function ContactSection() {
   )}`;
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[#F1F1ED] text-[#171A19] border-b border-[#CED2D2] relative bg-editorial-grid">
+    <section id="contact" className="py-24 lg:py-32 bg-[#F3F3EC] text-[#202820] border-b border-[#DADDD3] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
           <div className="flex items-center gap-3">
-            <EditorialBadge variant="moss">
+            <EditorialBadge variant="natural">
               STUDIO DESK &bull; PROJECT ENQUIRY
             </EditorialBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#5A625E]">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#667367]">
               DIRECT TRANSMISSION TO SALES@BONDINWATER.COM
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#171A19] leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#172D24] leading-[0.95]">
             Initiate Project Feasibility &amp; Design Consultation.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#4B5350] font-sans font-light leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-[#3E4A3F] font-sans font-light leading-relaxed max-w-3xl">
             From preliminary concept viability to long-term water parameter testing and habitat maintenance, BondInWater provides single-source accountability. Connect directly with our engineering desk.
           </p>
         </div>
@@ -81,12 +81,12 @@ export function ContactSection() {
           
           {/* Left Column: Direct Studio Channels (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="border border-[#CED2D2] bg-white p-6 sm:p-8 space-y-6 shadow-sm">
-              <div className="border-b border-[#CED2D2] pb-4">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#79836D] block font-bold">
+            <div className="border border-[#DADDD3] bg-white p-6 sm:p-8 space-y-6 shadow-sm">
+              <div className="border-b border-[#DADDD3] pb-4">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#46634B] block font-bold">
                   COMMUNICATION DESK
                 </span>
-                <h3 className="text-xl font-display uppercase tracking-tight text-[#171A19] mt-1 font-bold">
+                <h3 className="text-xl font-display uppercase tracking-tight text-[#172D24] mt-1 font-bold">
                   BondInWater Headquarters
                 </h3>
               </div>
@@ -94,40 +94,40 @@ export function ContactSection() {
               <div className="space-y-4 text-xs font-mono">
                 <a
                   href={`tel:${BRAND_CONTACT.phoneRaw}`}
-                  className="flex items-start gap-3 p-3 bg-[#F7F8F6] border border-[#CED2D2] hover:border-[#171A19] transition-colors"
+                  className="flex items-start gap-3 p-3 bg-[#F3F3EC] border border-[#DADDD3] hover:border-[#172D24] transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-[#79836D] shrink-0 mt-0.5" />
+                  <Phone className="w-4 h-4 text-[#46634B] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[#5A625E] block text-[10px] font-bold">DIRECT TELEPHONE DESK</span>
-                    <span className="text-[#171A19] text-sm tracking-wide font-bold">{BRAND_CONTACT.phone}</span>
+                    <span className="text-[#667367] block text-[10px] font-bold">DIRECT TELEPHONE DESK</span>
+                    <span className="text-[#172D24] text-sm tracking-wide font-bold">{BRAND_CONTACT.phone}</span>
                   </div>
                 </a>
 
                 <a
                   href={`mailto:${BRAND_CONTACT.email}`}
-                  className="flex items-start gap-3 p-3 bg-[#F7F8F6] border border-[#CED2D2] hover:border-[#171A19] transition-colors"
+                  className="flex items-start gap-3 p-3 bg-[#F3F3EC] border border-[#DADDD3] hover:border-[#172D24] transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-[#79836D] shrink-0 mt-0.5" />
+                  <Mail className="w-4 h-4 text-[#46634B] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[#5A625E] block text-[10px] font-bold">ELECTRONIC CORRESPONDENCE</span>
-                    <span className="text-[#171A19] text-sm">{BRAND_CONTACT.email}</span>
+                    <span className="text-[#667367] block text-[10px] font-bold">ELECTRONIC CORRESPONDENCE</span>
+                    <span className="text-[#172D24] text-sm">{BRAND_CONTACT.email}</span>
                   </div>
                 </a>
 
-                <div className="flex items-start gap-3 p-3 bg-[#F7F8F6] border border-[#CED2D2]">
-                  <MapPin className="w-4 h-4 text-[#79836D] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-3 bg-[#F3F3EC] border border-[#DADDD3]">
+                  <MapPin className="w-4 h-4 text-[#46634B] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[#5A625E] block text-[10px] font-bold">OPERATIONAL HEADQUARTERS</span>
-                    <span className="text-[#171A19]">{BRAND_CONTACT.location}</span>
+                    <span className="text-[#667367] block text-[10px] font-bold">OPERATIONAL HEADQUARTERS</span>
+                    <span className="text-[#172D24]">{BRAND_CONTACT.location}</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 bg-[#F7F8F6] border border-[#CED2D2]">
-                  <Clock className="w-4 h-4 text-[#79836D] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-3 bg-[#F3F3EC] border border-[#DADDD3]">
+                  <Clock className="w-4 h-4 text-[#46634B] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[#5A625E] block text-[10px] font-bold">STUDIO CONSULTATION HOURS</span>
-                    <span className="text-[#171A19] block">{BRAND_CONTACT.hours.weekdays}</span>
-                    <span className="text-[#5A625E] text-[10px] block mt-0.5">{BRAND_CONTACT.hours.saturday}</span>
+                    <span className="text-[#667367] block text-[10px] font-bold">STUDIO CONSULTATION HOURS</span>
+                    <span className="text-[#172D24] block">{BRAND_CONTACT.hours.weekdays}</span>
+                    <span className="text-[#667367] text-[10px] block mt-0.5">{BRAND_CONTACT.hours.saturday}</span>
                   </div>
                 </div>
               </div>
@@ -138,9 +138,9 @@ export function ContactSection() {
                   href={BRAND_CONTACT.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#212524] text-[#F1F1ED] hover:bg-[#171A19] border border-[#2D3230] text-xs font-mono uppercase font-bold py-3.5 px-4 tracking-wider transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#172D24] text-[#F3F3EC] hover:bg-[#294333] border border-[#172D24] text-xs font-mono uppercase font-bold py-3.5 px-4 tracking-wider transition-colors shadow-sm"
                 >
-                  <MessageSquare className="w-4 h-4 text-[#79836D]" />
+                  <MessageSquare className="w-4 h-4 text-[#B4BEA5]" />
                   <span>Connect on Official WhatsApp</span>
                 </a>
               </div>
@@ -148,17 +148,17 @@ export function ContactSection() {
           </div>
 
           {/* Right Column: Interactive Consultation Form (7 cols) */}
-          <div className="lg:col-span-7 border border-[#CED2D2] bg-white p-6 sm:p-8 lg:p-10 shadow-sm">
+          <div className="lg:col-span-7 border border-[#DADDD3] bg-white p-6 sm:p-8 lg:p-10 shadow-sm">
             {isSubmitted ? (
               <div className="py-12 text-center space-y-4">
-                <div className="w-12 h-12 bg-[#F1F1ED] border border-[#79836D] mx-auto flex items-center justify-center text-[#79836D]">
+                <div className="w-12 h-12 bg-[#F3F3EC] border border-[#46634B] mx-auto flex items-center justify-center text-[#46634B]">
                   <Check className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-display uppercase tracking-tight text-[#171A19] font-bold">
+                <h3 className="text-2xl font-display uppercase tracking-tight text-[#172D24] font-bold">
                   Consultation Request Ready for Transmission
                 </h3>
-                <p className="text-xs sm:text-sm text-[#4B5350] font-sans max-w-md mx-auto leading-relaxed">
-                  Thank you, <strong className="text-[#171A19]">{formData.fullName}</strong>. Select your preferred transmission channel below:
+                <p className="text-xs sm:text-sm text-[#3E4A3F] font-sans max-w-md mx-auto leading-relaxed">
+                  Thank you, <strong className="text-[#172D24]">{formData.fullName}</strong>. Select your preferred transmission channel below:
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
@@ -166,15 +166,15 @@ export function ContactSection() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-[#79836D] text-white hover:bg-[#68725C] text-xs font-mono uppercase font-bold tracking-wider py-3.5 px-6 shadow-sm"
+                    className="inline-flex items-center justify-center gap-2 bg-[#294333] text-white hover:bg-[#172D24] text-xs font-mono uppercase font-bold tracking-wider py-3.5 px-6 shadow-sm"
                   >
-                    <MessageSquare className="w-4 h-4" />
+                    <MessageSquare className="w-4 h-4 text-[#B4BEA5]" />
                     <span>Send via WhatsApp</span>
                   </a>
 
                   <a
                     href={mailtoUrl}
-                    className="inline-flex items-center justify-center gap-2 bg-[#191C1B] text-[#F1F1ED] hover:bg-[#171A19] text-xs font-mono uppercase font-bold tracking-wider py-3.5 px-6"
+                    className="inline-flex items-center justify-center gap-2 bg-[#172D24] text-[#F3F3EC] hover:bg-[#294333] text-xs font-mono uppercase font-bold tracking-wider py-3.5 px-6"
                   >
                     <Mail className="w-4 h-4" />
                     <span>Send via Email Client</span>
@@ -183,25 +183,25 @@ export function ContactSection() {
 
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="text-xs font-mono text-[#5A625E] hover:text-[#171A19] uppercase tracking-widest pt-4 block mx-auto underline"
+                  className="text-xs font-mono text-[#667367] hover:text-[#172D24] uppercase tracking-widest pt-4 block mx-auto underline"
                 >
                   Edit Submission Details
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="border-b border-[#CED2D2] pb-3">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#79836D] block font-bold">
+                <div className="border-b border-[#DADDD3] pb-3">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#46634B] block font-bold">
                     PROJECT INTAKE SPECIFICATION
                   </span>
-                  <h3 className="text-xl font-display uppercase tracking-tight text-[#171A19] mt-0.5 font-bold">
+                  <h3 className="text-xl font-display uppercase tracking-tight text-[#172D24] mt-0.5 font-bold">
                     Consultation Brief
                   </h3>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#5A625E] block font-bold">
+                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#667367] block font-bold">
                       Full Name *
                     </label>
                     <input
@@ -210,12 +210,12 @@ export function ContactSection() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. Architect Rajesh Mehta"
-                      className="w-full bg-[#F7F8F6] border border-[#CED2D2] text-[#171A19] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#171A19]"
+                      className="w-full bg-[#F3F3EC] border border-[#DADDD3] text-[#202820] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#172D24]"
                     />
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#5A625E] block font-bold">
+                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#667367] block font-bold">
                       Email Address *
                     </label>
                     <input
@@ -224,14 +224,14 @@ export function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. rajesh@studio.com"
-                      className="w-full bg-[#F7F8F6] border border-[#CED2D2] text-[#171A19] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#171A19]"
+                      className="w-full bg-[#F3F3EC] border border-[#DADDD3] text-[#202820] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#172D24]"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#5A625E] block font-bold">
+                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#667367] block font-bold">
                       Phone Number
                     </label>
                     <input
@@ -239,12 +239,12 @@ export function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="e.g. +91 98765 43210"
-                      className="w-full bg-[#F7F8F6] border border-[#CED2D2] text-[#171A19] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#171A19]"
+                      className="w-full bg-[#F3F3EC] border border-[#DADDD3] text-[#202820] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#172D24]"
                     />
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#5A625E] block font-bold">
+                    <label className="text-[11px] font-mono uppercase tracking-wider text-[#667367] block font-bold">
                       Project Location / City
                     </label>
                     <input
@@ -252,22 +252,22 @@ export function ContactSection() {
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                       placeholder="e.g. Mumbai, Pune, Goa"
-                      className="w-full bg-[#F7F8F6] border border-[#CED2D2] text-[#171A19] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#171A19]"
+                      className="w-full bg-[#F3F3EC] border border-[#DADDD3] text-[#202820] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#172D24]"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[11px] font-mono uppercase tracking-wider text-[#5A625E] block font-bold">
+                  <label className="text-[11px] font-mono uppercase tracking-wider text-[#667367] block font-bold">
                     Capability Division of Interest *
                   </label>
                   <select
                     value={formData.requirementType}
                     onChange={(e) => setFormData({ ...formData, requirementType: e.target.value })}
-                    className="w-full bg-[#F7F8F6] border border-[#CED2D2] text-[#171A19] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#171A19]"
+                    className="w-full bg-[#F3F3EC] border border-[#DADDD3] text-[#202820] px-3.5 py-2.5 text-xs font-sans focus:outline-none focus:border-[#172D24]"
                   >
                     {requirementOptions.map((opt, idx) => (
-                      <option key={idx} value={opt} className="bg-white text-[#171A19]">
+                      <option key={idx} value={opt} className="bg-white text-[#202820]">
                         {opt}
                       </option>
                     ))}
@@ -275,7 +275,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[11px] font-mono uppercase tracking-wider text-[#5A625E] block font-bold">
+                  <label className="text-[11px] font-mono uppercase tracking-wider text-[#667367] block font-bold">
                     Project Scope, Dimensions &amp; Site Requirements
                   </label>
                   <textarea
@@ -283,13 +283,13 @@ export function ContactSection() {
                     value={formData.projectDetails}
                     onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
                     placeholder="Describe spatial footprint, indoor/outdoor civil conditions, target species, or architectural timelines..."
-                    className="w-full bg-[#F7F8F6] border border-[#CED2D2] text-[#171A19] p-3.5 text-xs font-sans focus:outline-none focus:border-[#171A19]"
+                    className="w-full bg-[#F3F3EC] border border-[#DADDD3] text-[#202820] p-3.5 text-xs font-sans focus:outline-none focus:border-[#172D24]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#191C1B] text-[#F1F1ED] font-mono text-xs uppercase font-bold py-3.5 px-6 tracking-wider hover:bg-[#171A19] transition-colors border border-[#191C1B]"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#172D24] text-[#F3F3EC] font-mono text-xs uppercase font-bold py-3.5 px-6 tracking-wider hover:bg-[#294333] transition-colors border border-[#172D24]"
                 >
                   <Send className="w-4 h-4" />
                   <span>Transmit Consultation Request</span>

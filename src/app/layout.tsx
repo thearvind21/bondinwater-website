@@ -30,13 +30,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "BondInWater — Aquatic Design, Habitat Engineering & Turnkey Solutions",
-  description: "BondInWater specializes in custom acrylic aquariums, natural koi ponds, bio-authentic vivariums, zoo masterplanning, and turnkey aquatic engineering.",
-  keywords: "BondInWater, Aquatic Design, Habitat Engineering, Zoo Masterplanning, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Life Support Systems, Mumbai",
+  title: "BondInWater — Nature Engineered | Aquatic Architecture & Habitat Engineering",
+  description: "From bespoke aquatic environments and natural habitats to architectural planning and precision engineering, BondInWater designs, builds and maintains extraordinary environments inspired by nature.",
+  keywords: "BondInWater, Nature Engineered, Aquatic Design, Habitat Engineering, Zoo Masterplanning, Acrylic Swimming Pools, Natural Koi Ponds, Paludariums, Animal Enclosures, Life Support Systems, Mumbai",
   authors: [{ name: "BondInWater" }],
   openGraph: {
-    title: "BondInWater — Aquatic Design, Habitat Engineering & Turnkey Solutions",
-    description: "Design, build, and maintain turnkey aquatic architecture, public oceanariums, and living habitats.",
+    title: "BondInWater — Nature Engineered | Aquatic Architecture & Habitat Engineering",
+    description: "Design, build, and maintain turnkey aquatic architecture, public oceanariums, and living habitats inspired by nature.",
     type: "website",
     locale: "en_US",
   },
@@ -52,7 +52,7 @@ export default function RootLayout({
       lang="en"
       className={`${barlowCondensed.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#CED2D2] text-[#171A19] font-sans selection:bg-[#171A19] selection:text-[#F1F1ED]">
+      <body className="min-h-screen bg-[#F3F3EC] text-[#202820] font-sans selection:bg-[#172D24] selection:text-[#F3F3EC]">
         {children}
       </body>
     </html>

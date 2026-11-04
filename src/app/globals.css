@@ -1,30 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  /* BondInWater Light Natural History Editorial Palette */
-  --color-canvas: #CED2D2;
-  --color-canvas-light: #F1F1ED;
+  /* BondInWater — Nature Engineered Brand Identity Palette */
+  --color-forest-deep: #172D24;
+  --color-forest-secondary: #294333;
+  --color-forest-natural: #46634B;
+  --color-sage-muted: #B4BEA5;
+  --color-natural-white: #F3F3EC;
+  --color-natural-stone: #DADDD3;
+  --color-earth-accent: #A87952;
+  --color-charcoal: #202522;
+  --color-brand-text: #202820;
+
+  /* Semantic UI Tokens */
+  --color-canvas: #F3F3EC;
+  --color-canvas-alt: #EBEBE3;
   --color-canvas-white: #FFFFFF;
-  --color-canvas-border: #B4B9B9;
-  --color-canvas-border-light: #D8DCDA;
+  --color-canvas-stone: #DADDD3;
+  --color-canvas-border: #DADDD3;
+  --color-canvas-border-light: #E5E7DF;
 
-  --color-charcoal-primary: #171A19;
-  --color-charcoal-body: #323836;
-  --color-charcoal-muted: #565E5C;
+  --color-text-primary: #202820;
+  --color-text-body: #3E4A3F;
+  --color-text-muted: #667367;
 
-  --color-panel-dark: #191C1B;
-  --color-panel-dark-surface: #212524;
-  --color-panel-dark-border: #2D3331;
-  --color-panel-dark-text: #F1F1ED;
-  --color-panel-dark-muted: #A1A8A6;
-
-  --color-accent-moss: #79836D;
-  --color-accent-moss-dark: #58614E;
-  --color-accent-moss-light: #949F86;
-
-  --color-accent-earth: #A66547;
-  --color-accent-earth-dark: #8A4F34;
-  --color-accent-earth-light: #C07957;
+  --color-panel-forest: #172D24;
+  --color-panel-forest-secondary: #294333;
+  --color-panel-forest-border: #2E4739;
+  --color-panel-forest-text: #F3F3EC;
+  --color-panel-forest-muted: #B4BEA5;
 
   --font-display: var(--font-display), "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -33,8 +37,8 @@
 
 @layer base {
   :root {
-    --background: #CED2D2;
-    --foreground: #171A19;
+    --background: #F3F3EC;
+    --foreground: #202820;
   }
   
   html {
@@ -44,8 +48,8 @@
   }
 
   body {
-    background-color: #CED2D2;
-    color: #171A19;
+    background-color: #F3F3EC;
+    color: #202820;
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
@@ -61,34 +65,21 @@
   }
 }
 
-/* Crisp Editorial Scrollbar */
+/* Polished Nature Engineered Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #CED2D2;
+  background: #F3F3EC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #A1A8A6;
+  background: #B4BEA5;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #79836D;
+  background: #46634B;
 }
 
-/* Subtle architectural grid textures */
-.bg-editorial-grid {
-  background-image: linear-gradient(to right, rgba(23, 26, 25, 0.05) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(23, 26, 25, 0.05) 1px, transparent 1px);
-  background-size: 44px 44px;
-}
-
-.bg-editorial-grid-dark {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 44px 44px;
-}
-
-/* Crisp image presentation */
+/* Clean Image Presentation */
 .reveal-zoom {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }

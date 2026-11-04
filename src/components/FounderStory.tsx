@@ -5,9 +5,9 @@ import { COMPANY_PHILOSOPHY_DATA } from "@/data/bondinwater-data";
 
 export function FounderStory() {
   const documentedStrengths = [
-    { title: "Conceptualisation & Masterplanning", desc: "Feasibility audits, spatial masterplanning for zoos and tourism, and 3D architectural walkthroughs." },
-    { title: "Architectural & Civil Expertise", desc: "Over three decades of multidisciplinary experience across luxury interiors and public attractions." },
-    { title: "Zoo Masterplanning & Enclosures", desc: "Ethological animal enclosure planning prioritizing welfare, environmental enrichment, and visitor flow." },
+    { title: "Conceptualisation & Masterplanning", desc: "Feasibility audits, spatial masterplanning for zoos and tourism destinations, and 3D architectural walkthroughs." },
+    { title: "30+ Years Architectural Heritage", desc: "Over three decades of multidisciplinary experience across luxury interiors and public zoological attractions." },
+    { title: "Zoo Masterplanning & Enclosures", desc: "Ethological animal enclosure planning prioritizing species welfare, environmental enrichment, and visitor flow." },
     { title: "Turnkey Project Execution", desc: "Single-source general contracting across the 8 verified lifecycle stages from procurement to commissioning." },
     { title: "Precision Acrylic Craftsmanship", desc: "Cast PMMA sheets from 20mm to 300mm thick with molecular chemical bonding and 20-year UV warranties." },
     { title: "Aquatic Environments & Ponds", desc: "Freshwater biotopes, marine reef tanks, public oceanariums, and self-filtering natural koi ponds." },
@@ -17,25 +17,25 @@ export function FounderStory() {
   ];
 
   return (
-    <section id="story" className="py-24 lg:py-32 bg-[#191C1B] text-[#F1F1ED] border-b border-[#2A2E2C] relative bg-editorial-grid">
+    <section id="story" className="py-24 lg:py-32 bg-[#202522] text-[#F3F3EC] border-b border-[#2E3631] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
           <div className="flex items-center gap-3">
-            <EditorialBadge variant="moss">
-              STUDIO PHILOSOPHY &bull; CORE CAPABILITIES
+            <EditorialBadge variant="sage">
+              COMPANY STORY &bull; PHILOSOPHY &amp; HERITAGE
             </EditorialBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#9AA39E]">
-              VERIFIED BUSINESS STRENGTHS
+            <span className="text-xs font-mono uppercase tracking-widest text-[#B4BEA5]">
+              OVER THREE DECADES OF EXPERTISE
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#F1F1ED] leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#F3F3EC] leading-[0.95]">
             From Biological Empathy to Turnkey Engineering.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#CED2D2] font-sans font-light leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-[#DADDD3] font-sans font-light leading-relaxed max-w-3xl">
             {COMPANY_PHILOSOPHY_DATA.evolutionNarrative}
           </p>
         </div>
@@ -45,38 +45,38 @@ export function FounderStory() {
           
           {/* Left Column: Authentic Photography & Biome Philosophy (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="border border-[#2D3230] bg-[#212524] p-3 shadow-2xl">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#141615]">
+            <div className="border border-[#2E3631] bg-[#172D24] p-3 shadow-2xl">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#151816]">
                 <Image
                   src="/images/bondinwater/ef9742_d41c5589ef3548f1890a925f493a7b35.jpg"
-                  alt="BondInWater living architecture"
+                  alt="BondInWater on-site living architecture"
                   fill
                   className="object-cover reveal-zoom"
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
-                <div className="absolute bottom-3 left-3 right-3 bg-[#191C1B]/90 text-[#F1F1ED] p-3.5 border border-[#353B39]">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#79836D] block font-bold">
+                <div className="absolute bottom-3 left-3 right-3 bg-[#172D24]/90 text-[#F3F3EC] p-3.5 border border-[#2E4739]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#B4BEA5] block font-bold">
                     BIOLOGICAL CONSERVATION FOCUS
                   </span>
-                  <p className="text-xs font-sans text-[#CED2D2] mt-1 leading-snug">
+                  <p className="text-xs font-sans text-[#DADDD3] mt-1 leading-snug">
                     Recreating natural micro-environments where living organisms flourish through scientific life support.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-4 bg-[#212524] border border-[#2D3230] text-xs font-mono text-[#CED2D2] leading-relaxed border-l-2 border-l-[#A66547]">
+            <div className="p-4 bg-[#172D24] border border-[#2E3631] text-xs font-mono text-[#DADDD3] leading-relaxed border-l-2 border-l-[#A87952]">
               &ldquo;{COMPANY_PHILOSOPHY_DATA.architecturalHeritage}&rdquo;
             </div>
           </div>
 
           {/* Right Column: 9 Documented Strengths Matrix (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="border-b border-[#2D3230] pb-4">
-              <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-[#F1F1ED]">
-                Documented Studio Strengths & Scope
+            <div className="border-b border-[#2E3631] pb-4">
+              <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-[#F3F3EC]">
+                Documented Studio Strengths &amp; Scope
               </h3>
-              <p className="text-xs font-mono uppercase tracking-wider text-[#9AA39E] mt-1">
+              <p className="text-xs font-mono uppercase tracking-wider text-[#B4BEA5] mt-1">
                 Verified against the 35-page company profile
               </p>
             </div>
@@ -85,16 +85,16 @@ export function FounderStory() {
               {documentedStrengths.map((strength, idx) => (
                 <div
                   key={idx}
-                  className="p-4 bg-[#212524] border border-[#2D3230] shadow-sm flex flex-col justify-between hover:border-[#79836D] transition-colors"
+                  className="p-4 bg-[#172D24] border border-[#2E3631] shadow-sm flex flex-col justify-between hover:border-[#B4BEA5] transition-colors"
                 >
                   <div className="space-y-1.5">
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#79836D] font-bold">
+                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#B4BEA5] font-bold">
                       [{String(idx + 1).padStart(2, "0")}] STRENGTH
                     </div>
-                    <h4 className="text-sm font-display uppercase tracking-tight text-[#F1F1ED] font-bold">
+                    <h4 className="text-sm font-display uppercase tracking-tight text-[#F3F3EC] font-bold">
                       {strength.title}
                     </h4>
-                    <p className="text-xs text-[#9AA39E] font-sans leading-relaxed">
+                    <p className="text-xs text-[#DADDD3] font-sans font-light leading-relaxed">
                       {strength.desc}
                     </p>
                   </div>
