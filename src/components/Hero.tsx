@@ -1,31 +1,90 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 export function Hero() {
+  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    // Respect prefers-reduced-motion for accessibility
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    let rafId: number;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!heroRef.current) return;
+      const rect = heroRef.current.getBoundingClientRect();
+      if (e.clientY > rect.bottom) return;
+
+      // Subtle normalized mouse parallax (-8px to +8px max)
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const targetX = ((e.clientX - centerX) / (rect.width / 2)) * -8;
+      const targetY = ((e.clientY - centerY) / (rect.height / 2)) * -6;
+
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        setMouseOffset({ x: targetX, y: targetY });
+      });
+    };
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll < 1200) {
+        setScrollY(currentScroll * 0.12); // Subtle 12% scroll depth
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   return (
     <section
+      ref={heroRef}
       id="hero"
       className="relative min-h-[90vh] lg:min-h-[85vh] pt-28 pb-16 lg:pt-36 lg:pb-24 flex items-center bg-[#1F4338] text-white overflow-hidden"
     >
-      {/* Background Image Container with Gradient Fade on Left */}
-      <div className="absolute inset-0 z-0">
-        <div className="relative w-full h-full">
-          {/* Authentic BondInWater Aquatic Environment Installation Image (Source: PDF Cover Page 1) */}
+      {/* Background Image Container with Cinematic Composition & Subtle Parallax */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+          className="relative w-full h-full will-change-transform transition-transform duration-700 ease-out"
+          style={{
+            transform: `translate3d(${mouseOffset.x}px, ${mouseOffset.y + scrollY}px, 0) scale(1.04)`,
+            transformOrigin: "70% center",
+          }}
+        >
+          {/* Authentic BondInWater Clownfish & Sea Anemone (Company Profile Cover Master) */}
           <Image
-            src="/images/pdf_images/p1_img2.png"
-            alt="BondInWater authentic aquatic ecosystem from Company Profile cover"
+            src="/images/hero_clownfish_cinematic.png"
+            alt="BondInWater authentic clownfish and sea anemone aquatic ecosystem from Company Profile cover"
             fill
-            className="object-cover object-[center_right] lg:object-[80%_center] opacity-85"
+            className="object-cover object-[70%_center] sm:object-[75%_center] lg:object-[80%_center]"
             priority
             sizes="100vw"
+            quality={95}
           />
-          {/* Gradients matching the approved reference: Deep Canopy (#1F4338) fading from left and top */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1F4338] via-[#1F4338]/95 to-transparent lg:w-[65%]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338] via-transparent to-[#1F4338]/60 lg:hidden" />
-          <div className="absolute inset-0 bg-[#1F4338]/15 mix-blend-multiply" />
+
+          {/* Left Gradient Overlay: Preserves Deep Canopy #1F4338 for perfect text legibility while keeping right side vivid */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1F4338] via-[#1F4338]/90 via-35% lg:via-45% to-transparent lg:w-[70%]" />
+          
+          {/* Mobile bottom-to-top gradient for small screen vertical readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338] via-[#1F4338]/60 to-transparent lg:hidden" />
+          
+          {/* Subtle natural underwater vignette at top and bottom edges */}
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#1F4338]/70 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#1F4338]/60 to-transparent" />
         </div>
       </div>
 
@@ -61,7 +120,7 @@ export function Hero() {
               <ArrowUpRight className="w-4 h-4 text-white" />
             </a>
 
-            {/* Secondary CTA (Replaced Watch Story video CTA with authentic company link) */}
+            {/* Secondary CTA */}
             <a
               href="#story"
               className="inline-flex items-center gap-2 text-white/90 hover:text-white text-sm sm:text-base font-sans font-medium transition-colors group py-2"
