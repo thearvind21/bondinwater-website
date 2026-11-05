@@ -10,22 +10,25 @@ export function ContactSection() {
     email: "",
     phone: "",
     location: "",
-    requirementType: "A. Conceptualisation & Architectural Design",
+    requirementType: "01. Conceptualisation Services",
     projectDetails: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const requirementOptions = [
-    "A. Conceptualisation & Architectural Design (Zoo Masterplanning, 3D Walkthroughs)",
-    "B. Turnkey Project Execution & Management (Complete 8-Stage Lifecycle)",
-    "C. Aquariums & Aquatic Environments (Freshwater, Marine Reefs, Oceanariums, Ponds)",
-    "D. Vivariums & Natural Habitats (Paludariums, Terrariums, Biome Retreats)",
-    "E. Animal Experiences & Habitat Engineering (Enclosures, Petting Zoos, Aviaries)",
-    "F. Acrylic Craftsmanship & Engineering (Pool Walls, 20mm-300mm Cast Sheets)",
-    "G. GFRC & FRP Theming Works (Artificial Rockwork, Caves & Themed Habitats)",
-    "H. Specialised Technical Solutions (Neptune Systems Apex Automation, Coral)",
-    "I. Operation & Maintenance (Biologists, Water Testing, SOP Husbandry)"
+    "01. Conceptualisation Services (Visionary Architecture, 3D Walkthroughs)",
+    "02. Designing Services (Zoo Masterplanning, Animal Enclosures, MEP & HVAC)",
+    "03. Execution & Management Services (Advanced Engineering & Timelines)",
+    "04. Operation & Maintenance (Biologists, Water Testing & SOP Husbandry)",
+    "05. Acrylic Craftsmanship (20mm to 300mm Cast PMMA Sheets)",
+    "06. Vivarium, Terrarium, Ponds & Aquatic Environments (Reefs, Biotopes)",
+    "07. Mini Petting Zoo (Docile Animal Interaction for Resorts & Hotels)",
+    "08. Aviary Engineering (Multispecies Walkthroughs & Aviary Mesh)",
+    "09. Captive Breeding of Exotic Species (Freshwater Stingrays)",
+    "10. Acrylic Swimming Pools (Crystal Clear Transparent Walls)",
+    "11. GFRC & FRP Theming Works (Artificial Rock Formations & Caves)",
+    "12. Customised Solutions (Filtration, Apex Automation, Taxidermy & Prosthetics)"
   ];
 
   const handleSubmit = (e: React.FormEvent) => {

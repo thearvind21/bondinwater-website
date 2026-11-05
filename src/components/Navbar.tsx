@@ -19,9 +19,9 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "#hero", active: true },
+    { name: "Services", href: "#expertise" },
     { name: "Our Work", href: "#approach" },
-    { name: "What We Do", href: "#capabilities" },
-    { name: "About", href: "#nature-meet" },
+    { name: "About", href: "#story" },
     { name: "Our Process", href: "#process" },
     { name: "Contact", href: "#contact" },
   ];

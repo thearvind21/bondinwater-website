@@ -66,10 +66,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: 9 Capability Divisions (4 cols) */}
+          {/* Column 2: 12 Capability Services (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#E9EFE7] block font-bold">
-              09 CAPABILITY DIVISIONS
+              12 CAPABILITY SERVICES
             </span>
             <div className="grid grid-cols-1 gap-1.5 text-xs font-mono text-[#E9EFE7]/80">
               {COMPANY_DIVISIONS.map((div) => (

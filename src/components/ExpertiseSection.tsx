@@ -6,7 +6,7 @@ import { COMPANY_DIVISIONS, CompanyDivision } from "@/data/bondinwater-data";
 import { Check, ChevronRight, FileText, X } from "lucide-react";
 
 export function ExpertiseSection() {
-  const [activeDivisionId, setActiveDivisionId] = useState<string>("conceptualisation-architectural-design");
+  const [activeDivisionId, setActiveDivisionId] = useState<string>("01-conceptualisation");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [modalDivision, setModalDivision] = useState<CompanyDivision | null>(null);
 
@@ -39,23 +39,23 @@ export function ExpertiseSection() {
         <div className="max-w-4xl space-y-3 mb-12 lg:mb-14">
           <div className="flex items-center gap-3">
             <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#4F8278] font-semibold">
-              CAPABILITIES &bull; NINE DIVISIONS
+              CAPABILITIES &bull; TWELVE ORIGINAL SERVICES
             </span>
             <span className="text-xs font-mono uppercase tracking-widest text-[#8CA477]">
-              VERIFIED 35-PAGE COMPANY PROFILE SCOPE
+              35-PAGE COMPANY PROFILE TABLE OF CONTENTS
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-serif font-normal text-[#1F4338] leading-[1.12] tracking-[-0.01em]">
-            Nine Multidisciplinary Capability Divisions.
+            Twelve Documented Capability Services
           </h2>
 
           <p className="text-sm sm:text-base text-[#27302B]/85 font-sans font-light leading-relaxed max-w-3xl">
-            BondInWater provides comprehensive architectural masterplanning, turnkey general contracting, custom thermoformed acrylic fabrication, ethological vivariums, and lifelong biologist-led stewardship.
+            From initial conceptualisation, zoo masterplanning and 300mm cast acrylic craftsmanship to ethical captive breeding, aviary engineering, and lifelong biologist-led stewardship.
           </p>
         </div>
 
-        {/* Division Tab Selector (A through I) */}
+        {/* Division Tab Selector (01 through 12) */}
         <div className="mb-10 overflow-x-auto pb-2 scrollbar-none border-b border-[#8CA477]/30">
           <div className="flex items-center gap-2 min-w-max pb-3">
             {COMPANY_DIVISIONS.map((div) => {
@@ -92,7 +92,7 @@ export function ExpertiseSection() {
               {/* Header Badges */}
               <div className="flex items-center justify-between text-xs font-mono">
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#1F4338] text-white font-medium uppercase tracking-wider text-[10px] rounded-[3px]">
-                  DIVISION {activeDivision.letter}
+                  SERVICE {activeDivision.letter}
                 </span>
                 <span className="text-[#4F8278] tracking-wider font-semibold">
                   {activeDivision.profilePages}

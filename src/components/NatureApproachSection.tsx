@@ -7,25 +7,29 @@ export function NatureApproachSection() {
     {
       id: "aquariums",
       title: "Aquariums",
-      image: "/images/bondinwater/ef9742_00d0a8d52ba24f73a1cc51b4e2821b92.jpg",
+      image: "/images/pdf_images/p19_img2.png",
+      pageRef: "PDF Page 19",
       href: "#expertise",
     },
     {
-      id: "reptiles",
-      title: "Reptile Habitats",
-      image: "/images/pdf_images/p27_img2.png",
+      id: "vivariums",
+      title: "Vivariums & Natural Habitats",
+      image: "/images/pdf_images/p18_img3.png",
+      pageRef: "PDF Page 18",
       href: "#expertise",
     },
     {
-      id: "aviaries",
-      title: "Aviaries",
-      image: "/images/pdf_images/p28_img2.png",
+      id: "petting-zoo",
+      title: "Petting Zoo & Animal Experiences",
+      image: "/images/pdf_images/p26_img1.png",
+      pageRef: "PDF Page 26",
       href: "#expertise",
     },
     {
       id: "ponds",
-      title: "Ponds & Water Features",
-      image: "/images/bondinwater/22553ed11ea647cdaa83b3af08f66f04.jpg",
+      title: "Nature Ponds",
+      image: "/images/pdf_images/p24_img1.png",
+      pageRef: "PDF Page 24",
       href: "#expertise",
     },
   ];
@@ -35,11 +39,11 @@ export function NatureApproachSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Column: Heading, Copy & CTA (4.5 cols) */}
+          {/* Left Column: Heading, Copy & CTA (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-3">
               <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#4F8278] font-semibold block">
-                OUR APPROACH
+                OUR PHILOSOPHY &bull; CONSERVATION CREED
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-serif font-normal leading-[1.12] text-[#1F4338] tracking-[-0.01em]">
@@ -50,7 +54,7 @@ export function NatureApproachSection() {
             </div>
 
             <p className="text-sm sm:text-base text-[#27302B]/85 font-sans font-light leading-relaxed max-w-md">
-              We combine a deep respect for wildlife with technical expertise and creative design to create immersive, sustainable environments for people and animals alike.
+              We aim for excellence in recreating the ecosystem for all creatures on our planet and helping in their conservation. A journey that originates from the inception of your dreams shaped by our craftsmanship and delivered to the customer&apos;s delight.
             </p>
 
             <div className="pt-2">
@@ -64,7 +68,7 @@ export function NatureApproachSection() {
             </div>
           </div>
 
-          {/* Right Column: Four Photographic Category Cards (7.5 cols) */}
+          {/* Right Column: Four Photographic Service Cards (7 cols) */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
               {categoryCards.map((card) => (
@@ -76,14 +80,14 @@ export function NatureApproachSection() {
                   {/* Photo Frame */}
                   <Image
                     src={card.image}
-                    alt={`${card.title} - BondInWater authentic installation`}
+                    alt={`${card.title} - BondInWater Company Profile ${card.pageRef}`}
                     fill
                     className="object-cover reveal-zoom"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
 
                   {/* Gradient Overlay for Text Contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent transition-opacity group-hover:from-black/90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent transition-opacity group-hover:from-black/95" />
 
                   {/* Card Title & Arrow */}
                   <div className="relative z-10 flex items-end justify-between gap-1 w-full text-white">

@@ -97,372 +97,451 @@ export const COMPANY_PHILOSOPHY_DATA = {
 // =========================================================================
 export const COMPANY_DIVISIONS: CompanyDivision[] = [
   {
-    id: "conceptualisation-architectural-design",
-    letter: "A",
-    title: "Conceptualisation & Architectural Design",
-    subtitle: "Zoo Masterplanning, 3D Walkthroughs & Bio-Architectural Planning",
-    museumCode: "DIV-01 // ARCH-PLAN",
-    profilePages: "Pages 5–10",
-    scopeSummary: "Conceptualisation is the cornerstone of our creative process. Backed by an architectural team with over three decades of experience, we develop intricate master plans for zoological parks, safari parks, tourism destinations, and luxury residential developments. From initial sketches to immersive 3D walkthrough videos, MEP engineering, and climate-controlled HVAC systems, every detail is meticulously planned.",
+    id: "01-conceptualisation",
+    letter: "01",
+    title: "Conceptualisation Services",
+    subtitle: "Visionary Architecture, Creative Idea Development & Initial Visualisation",
+    museumCode: "CAT-01 // CONCEPT",
+    profilePages: "Pages 5–7",
+    scopeSummary: "Conceptualisation is not just the first step, it's the cornerstone of our creative process. We pride ourselves on our ability to envision innovative solutions that redefine industry standards and captivate audiences. From the initial spark of an idea to its fully realized manifestation, our team of visionary thinkers meticulously crafts concepts that inspire, provoke, and ultimately drive success. Conceptualisation isn't just about generating ideas, it's about cultivating dreams and bringing them to life.",
     whatWeProvide: [
-      "Project conceptualisation, feasibility studies & site biome evaluation",
-      "Architectural planning from luxury interiors to large-scale tourism developments",
-      "Zoo masterplanning designed for sustainable, engaging animal-friendly environments",
-      "Tailored animal enclosure design prioritizing animal welfare and visitor flow",
-      "MEP engineering (water supply, filtration conduits, waste & electrical systems)",
-      "HVAC systems maintaining optimal climate conditions for animals and visitors",
-      "Concept sketches and design development (Think . Sketch . Repeat)",
-      "Photorealistic 3D rendering and cinematic walkthrough video production"
+      "Creative idea development and visionary architectural concepts",
+      "Initial project concepts and architectural feasibility studies",
+      "Project visualisation from initial hand sketches to CAD",
+      "Think . Sketch . Repeat . Construct methodology",
+      "From sketches to immersive 3D walkthrough video production"
     ],
     projectTypes: [
-      "Zoological & Safari Parks (Government & Private)",
-      "Tourism & Eco-Resort Developments",
-      "Luxury Residential & Penthouse Architecture",
-      "Corporate Headquarters & Boardroom Atriums",
-      "Public Science & Natural History Centers"
+      "Public Zoos & Animal Enclosures",
+      "Commercial Oceanariums & Marine Exhibits",
+      "Luxury Nature Retreats & Private Estates",
+      "Eco-Tourism Masterplans"
     ],
     keySpecs: [
-      "Architectural team with over three decades of multidisciplinary experience",
-      "Balancing creative innovation with strict adherence to wildlife development guidelines",
-      "Full 3D, CAD and VFX walkthrough production to preview spatial flow",
-      "Custom MEP & HVAC calculations tailored to specific animal biomes"
+      "Think • Sketch • Repeat • Construct",
+      "From Sketch to 3D Walkthrough Videos",
+      "Meticulous Attention to Every Detail",
+      "Visionary Architecture and Feasibility"
     ],
-    image: "/images/pdf_images/p7_img1.png",
+    image: "/images/pdf_images/p5_img1.png",
     galleryImages: [
-      "/images/pdf_images/p8_img1.png",
-      "/images/pdf_images/p8_img2.png",
-      "/images/pdf_images/p9_img2.png",
-      "/images/pdf_images/p10_img1.png"
+      "/images/pdf_images/p5_img1.png",
+      "/images/pdf_images/p6_img1.png",
+      "/images/pdf_images/p7_img1.png"
     ],
-    badge: "Architectural Planning & Masterplanning",
-    profileQuote: "Think . Sketch . Repeat — We elevate the design process from mere sketches to immersive 3D walkthrough videos."
+    badge: "Conceptualisation Services",
+    profileQuote: "Conceptualisation isn't just about generating ideas, it's about cultivating dreams and bringing them to life."
   },
   {
-    id: "turnkey-execution-management",
-    letter: "B",
-    title: "Turnkey Project Execution & Management",
-    subtitle: "Complete 8-Stage Lifecycle from Feasibility to Long-Term Care",
-    museumCode: "DIV-02 // TURNKEY-OPS",
-    profilePages: "Pages 11–13",
-    scopeSummary: "In end-to-end turnkey project management, we oversee every aspect of a project from initiation to completion, ensuring seamless coordination and execution throughout the entire lifecycle. By combining advanced engineering methodologies with skilled craftsmanship, we deliver superior outcomes on schedule without fragmentation between separate contractors.",
+    id: "02-designing-services",
+    letter: "02",
+    title: "Designing Services",
+    subtitle: "Architectural Planning, Zoo Masterplanning, MEP & HVAC Systems",
+    museumCode: "CAT-02 // DESIGN",
+    profilePages: "Pages 8–10",
+    scopeSummary: "With over three decades of experience, our architectural team excels in a wide range of projects, from interior designs to large-scale tourism developments. Utilizing cutting-edge technology and proven methodologies, we ensure seamless coordination and optimal performance throughout each project. By balancing creative innovation with strict adherence to development guidelines and input from renowned wildlife experts, we optimize resource allocation, mitigate risks, and deliver exceptional results that exceed expectations, effectively recreating natural environments.",
     whatWeProvide: [
-      "Stage 1: Feasibility study and spatial viability assessment",
-      "Stage 2: Planning and designing (architectural CAD and MEP blueprints)",
-      "Stage 3: Quality inspection and material procurement (certified PMMA and filtration)",
-      "Stage 4: Specialized packaging and transport logistics for heavy panels",
-      "Stage 5: On-site installation, structural anchoring and test runs",
-      "Stage 6: Multi-stage commissioning and biological nitrogen cycle balancing",
-      "Stage 7: Project handover with full operational documentation and client training",
-      "Stage 8: Ongoing operation, water parameter testing and maintenance stewardship"
+      "Architectural expertise backed by over three decades of professional experience",
+      "Zoo masterplanning designed for sustainable, engaging animal-friendly environments",
+      "Animal enclosure designs prioritizing animal welfare and visitor experience",
+      "Architectural and landscape design for immersive exhibits and educational spaces",
+      "MEP engineering (water supply, waste management, electrical systems)",
+      "HVAC climate control systems maintaining optimal conditions for animals and visitors",
+      "Biome understanding and integration tailored to climate, flora and fauna",
+      "3D and VFX walkthrough videos producing realistic perspectives of client vision"
     ],
     projectTypes: [
-      "Turnkey Oceanariums & Giant Displays",
-      "High-End Residential Estates & Penthouses",
-      "Resort Aquatic Features & Public Attractions",
-      "Institutional Exhibit Life Support Systems",
-      "Commercial Architecture Integrations"
+      "Zoological Parks & Safari Parks (Government & Private)",
+      "Large-Scale Tourism Developments & Eco-Resorts",
+      "Public Aquariums & Bio-Authentic Habitats",
+      "Specialist Animal Sanctuaries"
     ],
     keySpecs: [
-      "Rigorous adherence to the 8 verified stages documented in the profile",
-      "Single-source accountability eliminating contractor misalignments",
-      "Advanced project scheduling ensuring timely delivery",
-      "Factory pressure testing prior to transport and rigging"
+      "Over Three Decades of Architectural Team Experience",
+      "Input from Renowned Wildlife Experts",
+      "Integrated MEP & HVAC Climate Systems",
+      "Foundational Biome & Environmental Enrichment"
+    ],
+    image: "/images/pdf_images/p8_img2.png",
+    galleryImages: [
+      "/images/pdf_images/p8_img2.png",
+      "/images/pdf_images/p9_img1.png",
+      "/images/pdf_images/p10_img1.png"
+    ],
+    badge: "Designing Services",
+    profileQuote: "With over three decades of experience, our architectural team excels in a wide range of projects, recreating natural environments."
+  },
+  {
+    id: "03-execution-management",
+    letter: "03",
+    title: "Execution & Management Services",
+    subtitle: "End-to-End Project Coordination, Advanced Engineering & Quality",
+    museumCode: "CAT-03 // EXECUTION",
+    profilePages: "Page 11",
+    scopeSummary: "In end-to-end project management, we encompass and oversee every aspect of a project from initiation to completion, ensuring seamless coordination and execution throughout the entire project lifecycle. We blend advanced technology with proven methods for seamless coordination and peak performance, optimizing resources and minimizing risks to deliver exceptional results.",
+    whatWeProvide: [
+      "Advanced engineering techniques blending technology with proven methods",
+      "Unmatched quality craftsmanship setting new benchmarks in execution",
+      "Streamlined systems and processes enhancing efficiency throughout lifecycle",
+      "Meticulous timeline planning ensuring timely completion of projects",
+      "End-to-end management overseeing all aspects from initiation to completion"
+    ],
+    projectTypes: [
+      "Turnkey Commercial Oceanariums",
+      "Zoological Habitat Construction",
+      "Complex Acrylic Panel Installations",
+      "Public Infrastructure Developments"
+    ],
+    keySpecs: [
+      "Advanced Engineering Techniques",
+      "Unmatched Quality Benchmarks",
+      "Adaptive Continuous Improvement",
+      "Strict Timeline Adherence"
     ],
     image: "/images/pdf_images/p11_img1.png",
     galleryImages: [
+      "/images/pdf_images/p11_img1.png",
       "/images/pdf_images/p4_img1.png",
-      "/images/pdf_images/p4_img2.png",
-      "/images/pdf_images/p4_img3.png"
+      "/images/pdf_images/p17_img1.png"
     ],
-    badge: "Turnkey Project Management",
-    profileQuote: "From vision to vibrant reality — your complete design and build service destination."
+    badge: "Execution & Management",
+    profileQuote: "Delivering excellence through meticulous planning and precise execution, ensuring timely completion of projects."
   },
   {
-    id: "aquariums-aquatic-environments",
-    letter: "C",
-    title: "Aquariums & Aquatic Environments",
-    subtitle: "Freshwater, Saltwater Reefs, Oceanariums & Natural Ponds",
-    museumCode: "DIV-03 // AQUA-SYSTEMS",
+    id: "04-operation-maintenance",
+    letter: "04",
+    title: "Operation & Maintenance",
+    subtitle: "Biologists, Water Parameter Testing, SOPs & Skilled Engineering",
+    museumCode: "CAT-04 // O&M",
+    profilePages: "Pages 12–13",
+    scopeSummary: "Love for animals fuels a deep commitment to their well-being and conservation. Biologists and animal experts possess specialized knowledge of aquatic ecosystems, species behavior, and habitat requirements. Their expertise informs key aspects of aquarium management, including water quality monitoring, species selection, feeding protocols, environmental enrichment, and disease prevention. Skilled engineers bring technical proficiency, while trained staff follow rigorous Standard Operating Procedures.",
+    whatWeProvide: [
+      "Expert care guided by trained biologists and animal specialists",
+      "Water parameter testing using the highest-quality test kits available",
+      "Standard Operating Procedures (SOPs) for daily care and emergency protocols",
+      "Skilled engineering oversight of filtration, hydraulics and structural safety",
+      "Professional tools and gadgets for cleaning, testing, and aquascaping",
+      "Preventative equipment maintenance, feeding schedules and husbandry"
+    ],
+    projectTypes: [
+      "Public Aquariums & Oceanariums",
+      "Private Estate Aquatic Features",
+      "Zoological Animal Enclosures",
+      "Resort Aquatic Installations"
+    ],
+    keySpecs: [
+      "Biologists & Animal Experts On-Staff",
+      "Highest-Quality Water Testing Kits",
+      "Documented SOPs for Daily & Emergency Care",
+      "Skilled Structural & Filtration Engineers"
+    ],
+    image: "/images/pdf_images/p13_img1.png",
+    galleryImages: [
+      "/images/pdf_images/p13_img1.png",
+      "/images/pdf_images/p12_img2.png",
+      "/images/pdf_images/p13_img4.png"
+    ],
+    badge: "Operation & Maintenance",
+    profileQuote: "Love for animals fuels a deep commitment to their well-being and conservation, fostering exemplary care and advocacy for animal life."
+  },
+  {
+    id: "05-acrylic-craftsmanship",
+    letter: "05",
+    title: "Acrylic Craftsmanship",
+    subtitle: "Optical Cast Acrylic Sheets from 20mm to 300mm Thickness",
+    museumCode: "CAT-05 // ACRYLIC",
+    profilePages: "Pages 14–17",
+    scopeSummary: "Acrylic provides exceptional clarity and transparency, offering a crystal-clear view. It is significantly lighter than glass, making it easier to transport, handle, and install. Highly durable and impact-resistant, acrylic can be easily molded, shaped, and fabricated into various forms and sizes, allowing for greater design flexibility. Excellent UV stability prevents yellowing or discoloration over time when exposed to sunlight. Sourced from the best producers in India, China, and Germany with a 20 years of non-yellowing warranty*.",
+    whatWeProvide: [
+      "Cast acrylic sheets from 20mm to 300mm thickness",
+      "Sourced from the best acrylic producers in India, China, Germany",
+      "20 years of non-yellowing warranty* on certified acrylic panels",
+      "Exceptional clarity, transparency and lightweight structural handling",
+      "High impact resistance and durability compared to traditional glass",
+      "Custom thermoforming into curved, cylindrical and tunnel configurations",
+      "Skilled workforce for precision chemical bonding and on-site assembly"
+    ],
+    projectTypes: [
+      "Oceanarium Panoramic Viewing Panels",
+      "Cylindrical & Spherical Aquariums",
+      "Underwater Walkthrough Tunnels",
+      "Swimming Pool Transparent Walls"
+    ],
+    keySpecs: [
+      "20mm to 300mm Thickness Availability",
+      "20-Year Non-Yellowing Warranty*",
+      "Significantly Lighter & Stronger Than Glass",
+      "Producers in India, China, Germany"
+    ],
+    image: "/images/pdf_images/p16_img1.png",
+    galleryImages: [
+      "/images/pdf_images/p16_img1.png",
+      "/images/pdf_images/p14_img1.png",
+      "/images/pdf_images/p17_img1.png"
+    ],
+    badge: "Acrylic Craftsmanship",
+    profileQuote: "Acrylic provides exceptional clarity and transparency, offering a crystal-clear view with 20 years of non-yellowing warranty*."
+  },
+  {
+    id: "06-vivarium-terrarium-ponds",
+    letter: "06",
+    title: "Vivarium, Terrarium, Ponds & Aquatic Environments",
+    subtitle: "Freshwater, Saltwater, Reefs, Paludariums & Riverine Biotopes",
+    museumCode: "CAT-06 // VIVARIUM-PONDS",
     profilePages: "Pages 18–25",
-    scopeSummary: "Aquariums bring a rich variety of habitats and an endless diversity of inhabitants together. BondInWater designs and executes freshwater planted biotopes, vibrant marine saltwater and reef ecosystems, monumental oceanariums with walk-under tunnels, 360-degree cylindrical aquariums, interactive touch pools, and cascading natural koi ponds with rock waterfalls.",
+    scopeSummary: "At Bondinwater, we excel in creating functional environments that replicate every habitat found on our planet, complete with natural flora and fauna. Using wood, fiber, glass, and the wonder material acrylic, we deliver spectacular views: specialty freshwater and saltwater aquariums, marine reefs, paludariums combining land and water, planted terrariums, nature ponds with riverine ecosystems, and nature-inspired themes for home and office that revive you mentally and physically.",
     whatWeProvide: [
-      "Freshwater aquariums, Amazonian biotopes & African cichlid displays",
-      "Saltwater marine ecosystems & complex coral reef habitats",
-      "Monumental oceanariums and walkthrough underwater tunnels",
-      "Interactive touch pools designed for public and resort education",
-      "360-degree free-standing cylindrical acrylic aquarium towers",
-      "Natural koi ponds with wetland bog and vortex bio-filtration",
-      "Natural rock waterfalls and riverine acoustic stream ecosystems",
-      "Swimming pool to natural pond conversions with crystal-clear clarity"
+      "Vivariums ('Life in a container') replicating global habitats with flora & fauna",
+      "Aquariums: Freshwater, Saltwater (Marine), Reefs and Aquatic Biotopes",
+      "Paludariums: Specialized land-and-water hybrid self-sustaining ecosystems",
+      "Terrariums: Beautifully crafted planted ecosystems bringing nature indoors",
+      "Oceanariums: Design, installation and maintenance of large-scale marine exhibits",
+      "Nature Ponds: Pond and riverine ecosystems, waterfalls, and koi environments",
+      "Swimming Pool to Nature Pond conversions",
+      "Nature-inspired biophilic themes tailored for homes and workplaces"
     ],
     projectTypes: [
-      "Commercial Oceanariums & Marine Pavilions",
-      "Luxury Residential Penthouses & Villas",
-      "Hospitality Resorts, Hotels & Atriums",
-      "Corporate Headquarters & Reception Displays",
-      "Outdoor Botanical Gardens & Japanese Courtyards"
+      "Luxury Residential Vivarium Displays",
+      "Commercial Reef & Biotope Aquariums",
+      "Corporate Office Biophilic Retreats",
+      "Garden Nature Ponds & Waterfalls"
     ],
     keySpecs: [
-      "Cast PMMA acrylic panels offering unmatched optical clarity",
-      "Zero-stagnancy CFD fluid modeling for uniform oxygenation",
-      "Biological multi-loop Life Support Systems with UV and ozone",
-      "Ecological wetland filtration creating crystal-clear natural ponds"
+      "Functional Multi-Habitat Replication",
+      "Self-Sustaining Biotope Ecosystems",
+      "Comprehensive Water Chemistry Balance",
+      "Convert Swimming Pools to Nature Ponds"
     ],
-    image: "/images/pdf_images/p19_img1.png",
+    image: "/images/pdf_images/p19_img2.png",
     galleryImages: [
-      "/images/pdf_images/p20_img1.png",
-      "/images/pdf_images/p23_img1.png",
-      "/images/pdf_images/p24_img1.png"
-    ],
-    badge: "Aquatic Biospheres & Oceanariums",
-    profileQuote: "Our beloved fish habitat — recreating natural aquatic wonders effortlessly and perfectly every time."
-  },
-  {
-    id: "vivariums-natural-habitats",
-    letter: "D",
-    title: "Vivariums & Natural Habitats",
-    subtitle: "Paludariums, Terrariums, Ripariums & Biome Retreats",
-    museumCode: "DIV-04 // BIO-HABITAT",
-    profilePages: "Pages 18, 21, 22, 25",
-    scopeSummary: "At BondInWater, we excel in creating functional environments that replicate every habitat found on our planet, complete with natural flora and fauna. Using wood, fiber, glass, and precision acrylic, we deliver spectacular views. From hybrid paludariums that blend land and water to evergreen terrariums, shoreline ripariums, and nature retreats for homes and offices, we bring living nature indoors.",
-    whatWeProvide: [
-      "Custom vivariums replicating complete native micro-habitats",
-      "Specialized paludariums combining aquatic and terrestrial ecosystems",
-      "Custom terrariums creating beautifully crafted planted ecosystems",
-      "Riparium shoreline habitats with emergent marginal vegetation",
-      "Nature-inspired wellness retreats for homes and corporate offices",
-      "Automated monsoon misting and high-pressure rain systems",
-      "Full-spectrum daylight simulation with circadian dimming",
-      "Bioactive drainage substrate plenums and epiphyte moss bio-walls"
-    ],
-    projectTypes: [
-      "Executive Office Retreats & Boardrooms",
-      "Luxury Private Residences & Villas",
-      "Bespoke Interior Architectural Features",
-      "Wellness Centers, Spas & Rejuvenation Retreats",
-      "Private Botanical Collectors & Bio-Architects"
-    ],
-    keySpecs: [
-      "Self-sustaining bioactive clean-up micro-fauna (springtails & isopods)",
-      "Ultra-quiet centrifugal ventilation preventing panel condensation",
-      "Pure RO automatic top-off with precision TDS regulation",
-      "Living flora integration: bromeliads, orchids, ferns, and creeping ficus"
-    ],
-    image: "/images/pdf_images/p21_img1.png",
-    galleryImages: [
+      "/images/pdf_images/p19_img2.png",
       "/images/pdf_images/p18_img3.png",
-      "/images/pdf_images/p22_img1.png",
-      "/images/pdf_images/p25_img1.png"
+      "/images/pdf_images/p21_img3.png"
     ],
-    badge: "Bioactive Terrestrial & Aquatic Habitats",
-    profileQuote: "Life in a container — functional environments that replicate every habitat found on our planet."
+    badge: "Aquatic Environments & Vivariums",
+    profileQuote: "At Bondinwater, we excel in creating functional environments that replicate every habitat found on our planet, complete with natural flora and fauna."
   },
   {
-    id: "animal-experiences-habitat-engineering",
-    letter: "E",
-    title: "Animal Experiences & Habitat Engineering",
-    subtitle: "Enclosure Design, Mini Petting Zoos, Aviaries & Sustainable Breeding",
-    museumCode: "DIV-05 // ZOOLOGICAL",
-    profilePages: "Pages 26–28",
-    scopeSummary: "We design tailored environments that prioritize animal welfare, environmental enrichment, and visitor experience. From mini petting zoos for resorts and hotels featuring docile farm and wild animals to multispecies walkthrough aviaries, we provide complete solutions with staff training. In our conservation breeding initiatives, we ethically raise captive-bred exotic species without affecting wild populations.",
+    id: "07-mini-petting-zoo",
+    letter: "07",
+    title: "Mini Petting Zoo",
+    subtitle: "Docile Animal Interactions for Resorts, Hotels & Public Spaces",
+    museumCode: "CAT-07 // PETTING-ZOO",
+    profilePages: "Pages 26–27",
+    scopeSummary: "A fairly new concept introduced for resorts, public spaces, and hotels allows visitors to interact with a combination of farm, pet, and wild animals that are docile. At Bondinwater, we provide a complete end-to-end solution along with training and expert guidance for resort staff and visitors to help them achieve ideal interaction. Our combination of terrestrial, avian, reptilian, and invertebrate species provides a unique opportunity for guests to witness the lives of species never seen before.",
     whatWeProvide: [
-      "Tailored animal enclosure designs prioritizing welfare and safety",
-      "Mini petting zoo concepts for resorts, hotels, and public spaces",
-      "Staff training and expert guidance for smooth visitor interaction",
-      "Hands-on educational encounters with gentle reptiles and small mammals",
-      "Aviary engineering: Walkthrough aviaries, balcony habitats & flight mesh",
-      "Specialized aviary mesh and species-specific flight enrichment perches",
-      "Ethical captive breeding of exotic species (e.g. freshwater stingrays)",
-      "Sustainable procurement ensuring healthy, disease-free livestock"
+      "End-to-end petting zoo planning, enclosure design and execution",
+      "Training and expert guidance for resort staff and visitors",
+      "Safe, docile animal selection across terrestrial, avian, and reptilian species",
+      "Reptile interaction areas: friendly snakes, intriguing lizards, and calm turtles",
+      "Mammal encounter habitats: cuddly bunnies, friendly goats, playful guinea pigs, soft lambs",
+      "Child-friendly educational spaces ensuring smooth visitor flow and cherished memories"
     ],
     projectTypes: [
-      "Destination Resorts, Hotels & Agritourism Estates",
-      "Public Wildlife & Safari Parks",
-      "Private Zoological Sanctuaries",
-      "Avian Walkthrough Aviaries & Conservatories",
-      "Educational Petting Facilities"
+      "Luxury Resorts & Hospitality Destinations",
+      "Family Theme Parks & Public Attractions",
+      "Eco-Retreats & Agro-Tourism Venues",
+      "Educational Children's Sanctuaries"
     ],
     keySpecs: [
-      "Species-specific thermal basking and calibrated UVB photoperiod zones",
-      "Escape-proof stainless mesh and impact-resistant barrier engineering",
-      "Documented flow layouts separating animal retreat zones from public pathways",
-      "Captive-bred livestock protocols raised ethically and sustainably"
+      "Docile Animal Selection (Terrestrial, Avian, Reptilian)",
+      "Resort Staff Training & Husbandry Protocols",
+      "Smooth Visitor Flow & Safety Engineering",
+      "Hands-On Educational Interaction"
     ],
     image: "/images/pdf_images/p26_img1.png",
     galleryImages: [
-      "/images/pdf_images/p27_img2.png",
-      "/images/pdf_images/p28_img1.png",
-      "/images/pdf_images/p28_img2.png"
+      "/images/pdf_images/p26_img1.png",
+      "/images/pdf_images/p26_img2.png",
+      "/images/pdf_images/p27_img2.png"
     ],
-    badge: "Ethical Animal Habitats & Aviaries",
-    profileQuote: "Tailored designs that prioritize animal welfare and visitor experience."
+    badge: "Mini Petting Zoo",
+    profileQuote: "Children delight in interacting with our mini petting zoo, fostering a love for animals and creating cherished memories in a safe, thoughtfully designed space."
   },
   {
-    id: "acrylic-craftsmanship-engineering",
-    letter: "F",
-    title: "Acrylic Craftsmanship & Engineering",
-    subtitle: "20mm to 300mm Sheet Thickness & Crystal-Clear Pool Walls",
-    museumCode: "DIV-06 // PMMA-ENGINEER",
-    profilePages: "Pages 14–17, 30",
-    scopeSummary: "Acrylic provides exceptional clarity, lightweight ease of installation, and impact resistance far superior to glass. BondInWater specializes in precision acrylic fabrication using sheets ranging from 20mm up to 300mm in thickness. Our installations include custom curved viewing walls, transparent swimming pool perimeters, and cantilevered infinity windows, backed by a 20-year non-yellowing warranty.",
+    id: "08-aviary-engineering",
+    letter: "08",
+    title: "Aviary Engineering",
+    subtitle: "Space, Freedom, Environmental Enrichment & Aviary Mesh",
+    museumCode: "CAT-08 // AVIARY",
+    profilePages: "Page 28",
+    scopeSummary: "For all avian enthusiasts, the most important factors for the health of their birds are space, freedom, and sufficient enrichment and nutrients for their mental and physical well-being. At Bondinwater, we meticulously assess the needs of every species throughout its life cycle, incorporating these requirements into our designs. Whether converting existing enclosures into functional ecosystems, transforming balconies into avian habitats, or building multispecies walkthrough aviaries with feeding and interactive perches, we do it all.",
     whatWeProvide: [
-      "Custom acrylic fabrication and seamless molecular chemical bonding",
-      "Thermoformed curved and cylindrical panels without optical aberration",
-      "Structural acrylic sheets ranging from 20mm to 300mm thickness",
-      "Acrylic swimming pools featuring crystal-clear transparent walls",
-      "Cantilevered infinity pool windows and see-through pool floor viewing",
-      "Rebated concrete compression gasket installation & engineering",
-      "Anti-scratch polymer protective conditioning and optical polishing",
-      "20-year warranty against discoloration, yellowing, or hazing"
+      "Architectural expertise tailored for avian flight space and freedom",
+      "Life-cycle needs assessment for every individual bird species",
+      "Multispecies walkthrough aviaries with interactive perches",
+      "Balcony-to-avian habitat architectural transformations",
+      "Conversion of existing enclosures into functional bird ecosystems",
+      "High-tensile, durable aviary mesh installation for flight safety"
     ],
     projectTypes: [
-      "Luxury Residential Cantilevered Swimming Pools",
-      "Commercial Oceanariums & Marine Exhibits",
-      "Rooftop Hospitality & Resort Infinity Pools",
-      "Public Aquarium Tunnels & Large Viewing Windows",
-      "High-Pressure Hydrostatic Viewing Ports"
+      "Public Walkthrough Aviaries",
+      "Private Estate Avian Sanctuaries",
+      "Residential Balcony Conversions",
+      "Eco-Resort Interactive Bird Features"
     ],
     keySpecs: [
-      "Confirmed thickness range: 20mm to 300mm cast PMMA sheets",
-      "High light transmittance providing optical clarity and color fidelity",
-      "Thermoformed curvature engineered without optical distortion",
-      "20-year manufacturer warranty against yellowing and UV degradation"
+      "Space & Freedom Sizing for Avian Mental & Physical Health",
+      "High-Tensile Stainless Aviary Mesh",
+      "Multispecies Interactive Perches",
+      "Environmental & Nutritional Enrichment"
     ],
-    image: "/images/pdf_images/p14_img1.png",
+    image: "/images/pdf_images/p28_img2.png",
     galleryImages: [
-      "/images/pdf_images/p14_img2.png",
-      "/images/pdf_images/p16_img1.png",
-      "/images/pdf_images/p30_img1.png"
+      "/images/pdf_images/p28_img2.png",
+      "/images/pdf_images/p28_img3.png",
+      "/images/pdf_images/p28_img4.png"
     ],
-    badge: "Structural Acrylic Engineering",
-    profileQuote: "Acrylic properties and craftsmanship — crystal-clear walls with 20 years of non-yellowing warranty."
+    badge: "Aviary Engineering",
+    profileQuote: "For all avian enthusiasts, the most important factors are space, freedom, and sufficient enrichment for their mental and physical well-being."
   },
   {
-    id: "gfrc-frp-theming",
-    letter: "G",
-    title: "GFRC & FRP Theming Works",
-    subtitle: "Artisanal Rockwork, Caves & Lightweight Simulated Environments",
-    museumCode: "DIV-07 // GFRC-THEMING",
-    profilePages: "Page 31",
-    scopeSummary: "Integrating Glass Fibre Reinforced Concrete (GFRC) and Fibre Reinforced Plastic (FRP) into aquariums, models, and enclosures offers enhanced durability, design flexibility, and natural aesthetics. Our artisans hand-sculpt custom rock formations, underwater caves, and simulated natural habitats that blend seamlessly with the environment while remaining lightweight for structural safety.",
+    id: "09-captive-breeding",
+    letter: "09",
+    title: "Captive Breeding of Exotic Species",
+    subtitle: "World's Best Freshwater Stingrays, Ethical & Sustainable Sourcing",
+    museumCode: "CAT-09 // BREEDING",
+    profilePages: "Page 29",
+    scopeSummary: "We respect and value the bond every organism shares on this planet. Sustainability and conservation reside at the heart of our every process. Our team of aquarists, aviculturists, biologists, and engineers specializes in ensuring that the livestock provided has been procured and raised ethically and sustainably, without affecting wild populations, and is disease-free. We have successfully bred and raised many exotic species in captivity, supplying the world's best freshwater stingrays.",
     whatWeProvide: [
-      "Glass Fibre Reinforced Concrete (GFRC) artificial rock sculpting",
-      "Fibre Reinforced Plastic (FRP) custom models and themed structures",
-      "Hand-sculpted artificial rock formations, cliffs, and canyon topographies",
-      "Submerged underwater caves, reef formations, and aquatic hides",
-      "Simulated natural bark, roots, and tree trunk climbing structures",
-      "Non-toxic, inert waterproof sealing safe for sensitive aquatic species",
-      "Lightweight fabrication allowing large-scale art without excessive slab loads",
-      "Realistic geological pigmentation and natural texture replication"
+      "Captive breeding and supply of the world's best freshwater stingrays",
+      "Ethical and sustainable livestock procurement without wild population impact",
+      "Strict quarantine, health certification and disease-free guarantee",
+      "Specialist care by team of aquarists, aviculturists, biologists and engineers",
+      "Conservation-focused captive breeding programs for exotic species"
     ],
     projectTypes: [
-      "Public Oceanariums & Aquarium Theme Parks",
-      "Resort Waterfalls & Architectural Grottos",
-      "Zoological Habitats & Safari Park Enclosures",
-      "Private Luxury Paludariums & Vivarium Caves",
-      "Museum Dioramas & Educational Habitat Models"
+      "Public Aquarium Stingray Exhibits",
+      "Exotic Captive Breeding Facilities",
+      "Private Enthusiast Specialist Tanks",
+      "Conservation Breeding Repositories"
     ],
     keySpecs: [
-      "High strength-to-weight ratio ideal for interior floors and rooftop slabs",
-      "Chemically inert formulations that do not leach or alter water pH",
-      "Resistance to harsh environmental exposure, freshwater, and saltwater",
-      "Custom textures molded directly from natural geological rock strata"
+      "Supplying the World's Best Freshwater Stingrays",
+      "Zero Impact on Wild Populations",
+      "Certified Disease-Free Livestock",
+      "Multidisciplinary Team of Aquarists & Biologists"
     ],
-    image: "/images/pdf_images/p31_img1.png",
+    image: "/images/pdf_images/p29_img1.png",
+    galleryImages: [
+      "/images/pdf_images/p29_img1.png",
+      "/images/pdf_images/p29_img2.png",
+      "/images/pdf_images/p29_img4.png"
+    ],
+    badge: "Captive Breeding",
+    profileQuote: "We respect and value the bond every organism shares on this planet. Sustainability and conservation reside at the heart of our every process."
+  },
+  {
+    id: "10-acrylic-swimming-pools",
+    letter: "10",
+    title: "Acrylic Swimming Pools",
+    subtitle: "Crystal Clear Walls, High-Quality Acrylic & Seamless Construction",
+    museumCode: "CAT-10 // POOLS",
+    profilePages: "Page 30",
+    scopeSummary: "Acrylic swimming pools offer a stunning and modern twist to traditional pool designs. Crafted from high-quality acrylic, our pools offer exceptional transparency, allowing swimmers to enjoy unparalleled water views from all angles. With our sleek and seamless construction, we customize it to any size or shape, making it ideal for residential and commercial applications. Beyond aesthetic appeal, acrylic swimming pools are highly durable, resistant to UV damage, and easy to maintain.",
+    whatWeProvide: [
+      "Crystal-clear acrylic walls and transparent viewing windows",
+      "Custom pool designs tailored to any size or shape",
+      "Sleek and seamless construction for residential and commercial applications",
+      "Indoor centerpiece and outdoor oasis luxury installations",
+      "Highly durable, UV-damage resistant, easy to maintain materials"
+    ],
+    projectTypes: [
+      "Luxury Residential Courtyards & Penthouses",
+      "Commercial Boutique Hotels & Beach Resorts",
+      "Rooftop Transparent Viewing Pools",
+      "Architectural Water Body Centerpieces"
+    ],
+    keySpecs: [
+      "Exceptional Transparency from All Angles",
+      "Seamless Hydrostatic Load-Bearing Construction",
+      "Highly Durable & UV-Damage Resistant",
+      "Residential & Commercial Applications"
+    ],
+    image: "/images/pdf_images/p30_img1.png",
+    galleryImages: [
+      "/images/pdf_images/p30_img1.png",
+      "/images/pdf_images/p30_img2.png",
+      "/images/pdf_images/p30_img3.png"
+    ],
+    badge: "Acrylic Swimming Pools",
+    profileQuote: "Whether installed as an indoor centerpiece or an outdoor oasis, acrylic swimming pools redefine luxury and sophistication."
+  },
+  {
+    id: "11-gfrc-frp-theming",
+    letter: "11",
+    title: "GFRC & FRP Theming Works",
+    subtitle: "The Art and the Artist — Realistic Art Using Concrete & Plastic",
+    museumCode: "CAT-11 // THEMING",
+    profilePages: "Page 31",
+    scopeSummary: "Glass fibre reinforced concrete (GFRC) and fibre reinforced plastic (FRP) provide enhanced durability, flexibility in shaping intricate designs, and the ability to achieve a natural aesthetic while ensuring structural integrity. By utilizing these materials, designers create custom features such as rock formations, caves, models, and simulated natural habitats that seamlessly blend with the natural environment, providing both functionality and visual appeal.",
+    whatWeProvide: [
+      "Glass fibre reinforced concrete (GFRC) artistic rockwork and theming",
+      "Fibre reinforced plastic (FRP) lightweight architectural elements",
+      "Artificial rock formations, caves, grottos, and underwater geological features",
+      "Simulated natural habitats for animal enclosures and zoological displays",
+      "Lightweight properties allowing easier transportation and installation without compromising strength"
+    ],
+    projectTypes: [
+      "Zoo Habitat Rock Cliffs & Basking Areas",
+      "Aquarium Underwater Caves & Coral Substrates",
+      "Theme Parks & Public Immersion Exhibits",
+      "Resort Artificial Waterfalls & Landscape Theming"
+    ],
+    keySpecs: [
+      "Glass Fibre Reinforced Concrete (GFRC)",
+      "Fibre Reinforced Plastic (FRP)",
+      "Lightweight with High Longevity",
+      "Natural Aesthetic with Structural Integrity"
+    ],
+    image: "/images/pdf_images/p31_img2.png",
     galleryImages: [
       "/images/pdf_images/p31_img2.png",
       "/images/pdf_images/p31_img3.png",
-      "/images/pdf_images/p29_img2.png"
+      "/images/pdf_images/p31_img1.png"
     ],
-    badge: "Realistic Themed Rockwork",
-    profileQuote: "The Art and the Artist — creating realistic art using concrete & plastic."
+    badge: "GFRC & FRP Theming",
+    profileQuote: "Integrating GFRC & FRP into aquariums, models and enclosure designs to create realistic art using concrete & plastic."
   },
   {
-    id: "specialised-technical-solutions",
-    letter: "H",
-    title: "Specialised Technical Solutions & Automation",
-    subtitle: "Neptune Systems Apex Automation, Custom Filtration, Coral & Prosthetics",
-    museumCode: "DIV-08 // LSS-AUTOMATE",
+    id: "12-customised-solutions",
+    letter: "12",
+    title: "Customised Solutions",
+    subtitle: "Filtration Systems, Neptune Apex Automation, Taxidermy & 3D Prosthetics",
+    museumCode: "CAT-12 // CUSTOM",
     profilePages: "Pages 32–34",
-    scopeSummary: "From advanced Life Support Systems tailored for sensitive species like otters, penguins, and salamanders to smart telemetry, BondInWater provides specialized engineering. We offer complete packages for Neptune Systems Apex aquarium automation—including supply, installation, and expert programming. Our team also creates coral restoration structures, fabricates 3D-printed animal prosthetics, and provides taxidermy services.",
+    scopeSummary: "Our deep understanding of ecosystem components allows us to tailor environments to meet client's specific requirements, accommodating specialized species such as otters, penguins, and salamanders. We provide four documented specialist capabilities: tailored water filtration design for aquariums, ponds, and swimming pools; comprehensive Neptune Systems Apex aquarium automation (+25 years); artisanal memorial taxidermy for companion pets; and advanced 3D-printed mobility prosthetics for pets and wildlife.",
     whatWeProvide: [
       "Custom water filtration design for aquariums, ponds, and swimming pools",
-      "Neptune Systems Apex automation: supply, installation & expert programming",
-      "24/7 automated monitoring of pH, ORP, temperature, salinity, and dissolved oxygen",
-      "Integrated automation for circadian lighting, feeding schedules, and pump cycles",
-      "Tailored micro-ecosystems for specialized species (otters, penguins, salamanders)",
-      "Engineered substrate structures supporting coral reef restoration programs",
-      "Custom 3D-printed mobility prosthetics for injured pets and rescued wildlife",
-      "Artisanal taxidermy services providing lifelike memorials for beloved companions"
+      "Neptune Systems Apex automation: supply, installation, and expert programming",
+      "Automated monitoring: water parameters, lighting control, and feeding schedules",
+      "Artisanal memorial taxidermy recreating lifelike representations of companion pets",
+      "Advanced 3D-printed prosthetics tailored to animal mobility and rehabilitation needs",
+      "Specialized accommodations for delicate species: otters, penguins, salamanders"
     ],
     projectTypes: [
-      "High-Precision Marine & Reef Aquariums",
-      "Marine Conservation & Coral Restoration Facilities",
-      "Wildlife Rescue & Zoological Rehabilitation Hubs",
-      "Specialized Zoological Species Enclosures",
-      "Private Pet Tributes & Companion Memorials"
+      "Specialist Life Support System (LSS) Plant Rooms",
+      "Neptune Systems Apex Automation Deployments",
+      "Wildlife Rescue & Animal Rehabilitation",
+      "Private Memorials & Bespoke Zoological Solutions"
     ],
     keySpecs: [
-      "Complete Neptune Systems Apex package: supply, installation, and programming",
-      "Real-time cloud telemetry alerts for temperature, flow, and chemical balance",
-      "Advanced multi-chamber filtration with ozone contact and fluidized sand",
-      "Anatomically customized 3D printing designed specifically for animal rehabilitation"
+      "Neptune Systems Apex Integration (+25 Years)",
+      "Tailored Multi-Stage Filtration Design",
+      "Advanced 3D Medical Printing for Animals",
+      "Lifelike Artisanal Memorial Taxidermy"
     ],
     image: "/images/pdf_images/p32_img3.png",
     galleryImages: [
-      "/images/pdf_images/p34_img2.png",
+      "/images/pdf_images/p32_img3.png",
       "/images/pdf_images/p33_img2.png",
-      "/images/pdf_images/p34_img4.png"
+      "/images/pdf_images/p34_img2.png"
     ],
-    badge: "Aquarium Automation & Engineering",
-    profileQuote: "Neptune Systems Apex complete package — supply, installation, and expert programming."
-  },
-  {
-    id: "operation-maintenance",
-    letter: "I",
-    title: "Operation & Maintenance",
-    subtitle: "Trained Biologists, Skilled Engineers, SOPs & Water Testing",
-    museumCode: "DIV-09 // STEWARDSHIP",
-    profilePages: "Pages 12–13",
-    scopeSummary: "A thriving habitat requires dedicated ongoing stewardship. BondInWater provides comprehensive operation and maintenance services led by trained staff, specialized biologists, animal experts, and skilled engineers. Operating under strict Standard Operating Procedures (SOPs), we utilize professional tools and laboratory-grade test kits to maintain optimal water parameters and ensure animal longevity.",
-    whatWeProvide: [
-      "Dedicated teams of trained biologists, animal experts & skilled engineers",
-      "Standard Operating Procedures (SOPs) for daily care, feeding & emergencies",
-      "Rigorous water parameter testing using high-grade photometric and chemical test kits",
-      "Scheduled preventive maintenance of pumps, life support filters, and UV systems",
-      "Biological oversight: Species behavior, environmental enrichment & disease prevention",
-      "Professional aquascaping maintenance, plant pruning, and coral husbandry",
-      "Emergency response protocols ensuring continuous life support operation",
-      "Detailed water chemistry logs and operational transparency for clients"
-    ],
-    projectTypes: [
-      "Commercial Oceanariums & Public Exhibits",
-      "Luxury Residential Aquariums & Ponds",
-      "Corporate Atrium Living Displays",
-      "Resort Habitats & Petting Zoos",
-      "Institutional Animal Conservatories"
-    ],
-    keySpecs: [
-      "Standard Operating Procedures (SOPs) ensuring consistent, exemplary care",
-      "Professional testing kits measuring pH, ammonia, nitrite, nitrate, phosphate, and ORP",
-      "Biologists overseeing nutrition, species behavior, and preventative healthcare",
-      "Long-term maintenance contracts preserving ecosystem clarity and balance"
-    ],
-    image: "/images/pdf_images/p12_img1.png",
-    galleryImages: [
-      "/images/pdf_images/p12_img2.png",
-      "/images/pdf_images/p13_img1.png",
-      "/images/pdf_images/p13_img2.png"
-    ],
-    badge: "Lifecycle Stewardship & SOPs",
-    profileQuote: "Love for animals fuels our commitment — trained staff, skilled engineers, and standard operating procedures."
+    badge: "Customised Solutions",
+    profileQuote: "Our deep understanding of ecosystem components allows us to tailor environments from compact to extensive without disrupting ecological interactions."
   }
 ];
 
-// =========================================================================
-// THE COMPLETE 8-STAGE PROJECT LIFECYCLE
-// Grounded verbatim in Page 4 of the BondInWater Company Profile
-// =========================================================================
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: "01",

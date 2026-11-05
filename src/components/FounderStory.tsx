@@ -4,15 +4,18 @@ import { COMPANY_PHILOSOPHY_DATA } from "@/data/bondinwater-data";
 
 export function FounderStory() {
   const documentedStrengths = [
-    { title: "Conceptualisation & Masterplanning", desc: "Feasibility audits, spatial masterplanning for zoos and tourism destinations, and 3D architectural walkthroughs." },
-    { title: "30+ Years Architectural Heritage", desc: "Over three decades of multidisciplinary experience across luxury interiors and public zoological attractions." },
-    { title: "Zoo Masterplanning & Enclosures", desc: "Ethological animal enclosure planning prioritizing species welfare, environmental enrichment, and visitor flow." },
-    { title: "Turnkey Project Execution", desc: "Single-source general contracting across the 8 verified lifecycle stages from procurement to commissioning." },
-    { title: "Precision Acrylic Craftsmanship", desc: "Cast PMMA sheets from 20mm to 300mm thick with molecular chemical bonding and 20-year UV warranties." },
-    { title: "Aquatic Environments & Ponds", desc: "Freshwater biotopes, marine reef tanks, public oceanariums, and self-filtering natural koi ponds." },
-    { title: "Natural Habitats & Vivariums", desc: "Bioactive paludariums, epiphyte moss bio-walls, and microclimate rainforest vivariums." },
-    { title: "Operation & Biological Maintenance", desc: "Trained biologists and skilled engineers conducting regular laboratory water testing under strict SOPs." },
-    { title: "Specialised Technical Automation", desc: "Neptune Systems Apex programming, 3D-printed animal rehabilitation prosthetics, and coral restoration." },
+    { title: "01. Conceptualisation Services", desc: "Visionary architecture, creative idea development, project visualisation, and 3D walkthrough videos (Pages 5–7)." },
+    { title: "02. Designing Services", desc: "Over 3 decades of architectural experience, zoo masterplanning, animal enclosure design, MEP & HVAC systems (Pages 8–10)." },
+    { title: "03. Execution & Management", desc: "Advanced engineering techniques, unmatched quality craftsmanship, streamlined systems, and timeline excellence (Page 11)." },
+    { title: "04. Operation & Maintenance", desc: "Love for animals, expert biologists, skilled engineers, trained staff, SOPs, and water parameter testing (Pages 12–13)." },
+    { title: "05. Acrylic Craftsmanship", desc: "Cast optical PMMA sheets from 20mm to 300mm thick, producers in India, China, Germany, and 20-year warranty* (Pages 14–17)." },
+    { title: "06. Vivariums, Ponds & Aquatic Habitats", desc: "Freshwater, saltwater, reefs, paludariums, terrariums, riverine ponds, and nature-inspired themes (Pages 18–25)." },
+    { title: "07. Mini Petting Zoo", desc: "Animal interaction experiences, docile terrestrial, avian, reptilian species, and visitor flow management (Pages 26–27)." },
+    { title: "08. Aviary Engineering", desc: "Bird space & freedom, life-cycle needs, balcony-to-aviary conversions, and high-tensile aviary mesh (Page 28)." },
+    { title: "09. Captive Breeding of Exotic Species", desc: "Supplying the world's best freshwater stingrays, ethical & sustainable sourcing, and disease-free care (Page 29)." },
+    { title: "10. Acrylic Swimming Pools", desc: "Crystal-clear walls, high-quality acrylic, seamless construction for residential and commercial pools (Page 30)." },
+    { title: "11. GFRC & FRP Theming Works", desc: "Glass Fibre Reinforced Concrete & FRP creating realistic artificial rock formations, caves and habitats (Page 31)." },
+    { title: "12. Customised Solutions", desc: "Tailored filtration design, Neptune Systems Apex automation (+25 yrs), pet taxidermy, and 3D prosthetics (Pages 32–34)." },
   ];
 
   return (

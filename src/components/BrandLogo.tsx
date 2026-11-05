@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface BrandLogoProps {
   variant?: "dark" | "light" | "forest";
@@ -12,33 +13,26 @@ export function BrandLogo({ variant = "light", className = "" }: BrandLogoProps)
   return (
     <Link
       href="/"
-      className={`group inline-flex flex-col shrink-0 transition-opacity hover:opacity-90 ${className}`}
+      className={`group inline-flex items-center gap-3 shrink-0 transition-opacity hover:opacity-90 ${className}`}
     >
-      {/* Elegant Serif Wordmark matching approved reference */}
-      <div className="flex items-baseline">
-        <span
-          className={`text-xl sm:text-2xl font-serif font-normal tracking-[0.03em] leading-none ${
-            isDarkCanvas ? "text-white" : "text-[#1F4338]"
-          }`}
-        >
-          BondInWater
-        </span>
-        <span
-          className={`text-[10px] font-serif font-normal ml-0.5 relative -top-1.5 ${
-            isDarkCanvas ? "text-white/80" : "text-[#1F4338]/80"
-          }`}
-        >
-          ®
-        </span>
+      {/* Official BondInWater Emblem from Company Profile */}
+      <div className="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0">
+        <Image
+          src="/images/bondinwater_logo_symbol.png"
+          alt="BondInWater Official Logo Symbol"
+          fill
+          className="object-contain"
+          priority
+        />
       </div>
 
-      {/* Small uppercase descriptor beneath */}
+      {/* Official BONDINWATER Wordmark */}
       <span
-        className={`text-[8.5px] font-sans tracking-[0.22em] uppercase font-medium mt-1 ${
-          isDarkCanvas ? "text-[#8CA477]" : "text-[#4F8278]"
+        className={`text-lg sm:text-xl font-sans font-bold tracking-tight uppercase leading-none ${
+          isDarkCanvas ? "text-white" : "text-[#1F4338]"
         }`}
       >
-        AQUATIC &middot; HABITAT &middot; ARCHITECTURE
+        BONDINWATER
       </span>
     </Link>
   );

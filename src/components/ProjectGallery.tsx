@@ -56,11 +56,11 @@ export function ProjectGallery() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-serif font-normal text-[#1F4338] leading-[1.12] tracking-[-0.01em]">
-            Curated Living Habitats &amp; Structural Installations.
+            Curated Living Habitats &amp; Structural Installations
           </h2>
 
-          <p className="text-sm sm:text-base text-[#27302B]/80 font-sans font-light leading-relaxed max-w-3xl">
-            Explore authentic completed habitats, cantilevered acrylic swimming pools, zoo-grade enclosures, and Computational Fluid Dynamics plant rooms built by BondInWater across India and internationally.
+          <p className="text-sm sm:text-base text-[#27302B]/85 font-sans font-light leading-relaxed max-w-3xl">
+            Explore authentic documented habitats, transparent acrylic swimming pools, zoological enclosures, and specialised life support systems executed by BondInWater.
           </p>
         </div>
 
