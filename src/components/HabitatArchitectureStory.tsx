@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { EditorialBadge } from "./EditorialComponents";
 import { Compass, PenTool, Layers, Eye, Check } from "lucide-react";
 
 export function HabitatArchitectureStory() {
@@ -68,26 +67,26 @@ export function HabitatArchitectureStory() {
   ];
 
   return (
-    <section id="architecture" className="py-24 lg:py-32 bg-[#E2E4DA] text-[#202723] border-b border-[#CBD0C3] relative">
+    <section id="architecture" className="py-20 lg:py-28 bg-[#E9EFE7] text-[#27302B] border-b border-[#8CA477]/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
+        <div className="max-w-4xl space-y-3 mb-16 lg:mb-20">
           <div className="flex items-center gap-3">
-            <EditorialBadge variant="earth">
+            <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#B47750] font-semibold">
               ARCHITECTURE &bull; DESIGN METHODOLOGY
-            </EditorialBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#647368]">
+            </span>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#4F8278]">
               FROM INITIAL CONCEPT TO ENGINEERED SANCTUARY
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#1D382B] leading-[0.95]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-serif font-normal text-[#1F4338] leading-[1.12] tracking-[-0.01em]">
             How We Move From An Idea To An Engineered Environment.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#3A473E] font-sans font-normal leading-relaxed max-w-3xl">
-            Inspired by world-class habitat case studies, our architectural methodology unifies biological welfare, aesthetic elegance, and structural precision across every phase of design development.
+          <p className="text-sm sm:text-base text-[#27302B]/85 font-sans font-light leading-relaxed max-w-3xl">
+            Our architectural methodology unifies biological welfare, aesthetic elegance, and structural precision across every phase of design development.
           </p>
         </div>
 
@@ -100,14 +99,14 @@ export function HabitatArchitectureStory() {
             return (
               <div
                 key={phase.phase}
-                className="bg-white border border-[#CBD0C3] p-6 sm:p-8 lg:p-10 shadow-sm"
+                className="bg-white border border-[#8CA477]/30 p-6 sm:p-8 lg:p-10 rounded-xl shadow-sm"
               >
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${isReversed ? "lg:flex-row-reverse" : ""}`}>
                   
                   {/* Visual Column (6 cols) */}
                   <div className={`lg:col-span-6 space-y-3 ${isReversed ? "lg:order-2" : ""}`}>
-                    <div className="border border-[#E2E4DA] bg-[#F4F4EF] p-2">
-                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-white border border-[#E2E4DA]">
+                    <div className="border border-[#8CA477]/25 bg-[#E9EFE7] p-2 rounded-lg">
+                      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-md bg-white border border-[#8CA477]/25">
                         <Image
                           src={phase.image}
                           alt={phase.title}
@@ -115,45 +114,45 @@ export function HabitatArchitectureStory() {
                           className="object-cover reveal-zoom"
                           sizes="(max-width: 1024px) 100vw, 50vw"
                         />
-                        <div className="absolute top-2 left-2 bg-[#1D382B]/90 text-[#F4F4EF] px-2.5 py-1 text-[10px] font-mono border border-[#2D4C3C]">
+                        <div className="absolute top-2 left-2 bg-[#1F4338]/90 text-white px-2.5 py-1 text-[10px] font-sans font-medium rounded-[3px] border border-white/10">
                           PHASE {phase.phase} &bull; PROFILE ARCHIVE
                         </div>
                       </div>
                     </div>
-                    <div className="text-[11px] font-mono text-[#647368] italic px-1">
+                    <div className="text-[11px] font-sans text-[#4F8278] italic px-1">
                       {phase.caption}
                     </div>
                   </div>
 
                   {/* Narrative Content Column (6 cols) */}
                   <div className={`lg:col-span-6 space-y-5 ${isReversed ? "lg:order-1" : ""}`}>
-                    <div className="space-y-1.5 border-b border-[#E2E4DA] pb-4">
+                    <div className="space-y-1.5 border-b border-[#8CA477]/25 pb-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono uppercase tracking-widest text-[#A87952] font-bold">
+                        <span className="text-xs font-sans uppercase tracking-widest text-[#B47750] font-semibold">
                           PHASE {phase.phase} ARCHITECTURAL STAGE
                         </span>
-                        <Icon className="w-5 h-5 text-[#60775B]" />
+                        <Icon className="w-5 h-5 text-[#4F8278]" />
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-[#1D382B] font-bold">
+                      <h3 className="text-2xl sm:text-3xl font-serif text-[#1F4338] font-normal">
                         {phase.title}
                       </h3>
-                      <p className="text-xs font-mono text-[#647368]">
+                      <p className="text-xs font-mono text-[#4F8278]">
                         {phase.subtitle}
                       </p>
                     </div>
 
-                    <p className="text-sm sm:text-base text-[#3A473E] font-sans font-normal leading-relaxed">
+                    <p className="text-sm sm:text-base text-[#27302B]/85 font-sans font-light leading-relaxed">
                       {phase.description}
                     </p>
 
                     <div className="space-y-2 pt-2">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#1D382B] block font-bold">
-                        Documented Design Deliverables
+                      <span className="text-[10px] font-sans uppercase tracking-widest text-[#1F4338] block font-semibold">
+                        KEY ETHOLOGICAL &amp; TECHNICAL HIGHLIGHTS
                       </span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="space-y-2">
                         {phase.highlights.map((h, i) => (
-                          <div key={i} className="flex items-start gap-2 text-xs text-[#202723] bg-[#F4F4EF] p-2.5 border border-[#E2E4DA]">
-                            <Check className="w-3.5 h-3.5 text-[#60775B] shrink-0 mt-0.5" />
+                          <div key={i} className="flex items-start gap-2.5 text-xs text-[#27302B] font-sans">
+                            <Check className="w-4 h-4 text-[#4F8278] shrink-0 mt-0.5" />
                             <span>{h}</span>
                           </div>
                         ))}

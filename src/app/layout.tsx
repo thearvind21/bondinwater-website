@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Oswald, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const oswald = Oswald({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -30,13 +31,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "BondInWater — Extraordinary Environments. Engineered Around Nature.",
-  description: "From bespoke aquariums and natural habitats to architectural water features and precision engineering, BondInWater designs, builds and maintains environments shaped by nature.",
-  keywords: "BondInWater, Nature Engineered, Custom Aquariums, Natural Koi Ponds, Paludariums, Zoo Masterplanning, Acrylic Swimming Pools, Animal Enclosures, Aviary Engineering, Mumbai",
+  title: "BondInWater — Extraordinary Environments for Life",
+  description: "Aquatic environments, animal habitats and architectural solutions — designed, built and cared for by BondInWater.",
+  keywords: "BondInWater, Aquatic Environments, Animal Habitats, Zoo Masterplanning, Custom Aquariums, Natural Ponds, Paludariums, Acrylic Craftsmanship, Aviary Engineering, Mumbai",
   authors: [{ name: "BondInWater" }],
   openGraph: {
-    title: "BondInWater — Extraordinary Environments. Engineered Around Nature.",
-    description: "Bespoke aquariums, natural habitats, architectural water features, and precision habitat engineering.",
+    title: "BondInWater — Extraordinary Environments for Life",
+    description: "Aquatic environments, animal habitats and architectural solutions — designed, built and cared for by BondInWater.",
     type: "website",
     locale: "en_US",
   },
@@ -50,9 +51,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${oswald.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
+      className={`${playfair.variable} ${inter.variable} ${spaceMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#F4F4EF] text-[#202723] font-sans selection:bg-[#1D382B] selection:text-[#F4F4EF]">
+      <body className="min-h-screen bg-[#E9EFE7] text-[#27302B] font-sans selection:bg-[#1F4338] selection:text-[#E9EFE7]">
         {children}
       </body>
     </html>

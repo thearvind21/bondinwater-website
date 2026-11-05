@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { EditorialBadge } from "./EditorialComponents";
 import { COMPANY_PHILOSOPHY_DATA } from "@/data/bondinwater-data";
 
 export function FounderStory() {
@@ -17,25 +16,25 @@ export function FounderStory() {
   ];
 
   return (
-    <section id="story" className="py-24 lg:py-32 bg-[#202723] text-[#F4F4EF] border-b border-[#304A38]/50 relative">
+    <section id="story" className="py-20 lg:py-28 bg-[#1F4338] text-white border-b border-[#8CA477]/30 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-4xl space-y-4 mb-16 lg:mb-20">
+        <div className="max-w-4xl space-y-3 mb-14 lg:mb-16">
           <div className="flex items-center gap-3">
-            <EditorialBadge variant="sage">
+            <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold">
               COMPANY STORY &bull; PHILOSOPHY &amp; HERITAGE
-            </EditorialBadge>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#AEBBA4]">
+            </span>
+            <span className="text-xs font-mono uppercase tracking-widest text-[#4F8278]">
               OVER THREE DECADES OF EXPERTISE
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display uppercase tracking-tight text-[#F4F4EF] leading-[0.95]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-serif font-normal text-white leading-[1.12] tracking-[-0.01em]">
             From Biological Empathy to Turnkey Engineering.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#E2E4DA] font-sans font-light leading-relaxed max-w-3xl">
+          <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-3xl">
             {COMPANY_PHILOSOPHY_DATA.evolutionNarrative}
           </p>
         </div>
@@ -45,8 +44,8 @@ export function FounderStory() {
           
           {/* Left Column: Authentic Photography & Biome Philosophy (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="border border-[#304A38] bg-[#1D382B] p-3 shadow-2xl">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#202723]">
+            <div className="border border-[#8CA477]/30 bg-[#16332A] p-2.5 rounded-xl shadow-2xl">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#11241E]">
                 <Image
                   src="/images/bondinwater/ef9742_d41c5589ef3548f1890a925f493a7b35.jpg"
                   alt="BondInWater on-site living architecture"
@@ -54,29 +53,29 @@ export function FounderStory() {
                   className="object-cover reveal-zoom"
                   sizes="(max-width: 1024px) 100vw, 45vw"
                 />
-                <div className="absolute bottom-3 left-3 right-3 bg-[#1D382B]/90 text-[#F4F4EF] p-3.5 border border-[#304A38]">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#AEBBA4] block font-bold">
+                <div className="absolute bottom-3 left-3 right-3 bg-[#1F4338]/95 text-white p-3.5 rounded-md border border-[#8CA477]/30">
+                  <span className="text-[10px] font-sans uppercase tracking-widest text-[#8CA477] block font-semibold">
                     BIOLOGICAL CONSERVATION FOCUS
                   </span>
-                  <p className="text-xs font-sans text-[#E2E4DA] mt-1 leading-snug">
+                  <p className="text-xs font-sans text-white/90 mt-1 leading-snug font-light">
                     Recreating natural micro-environments where living organisms flourish through scientific life support.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-4 bg-[#1D382B] border border-[#304A38] text-xs font-mono text-[#E2E4DA] leading-relaxed border-l-2 border-l-[#A87952]">
+            <div className="p-4 bg-[#16332A] border border-[#8CA477]/25 text-xs font-sans text-white/90 leading-relaxed border-l-2 border-l-[#B47750] rounded-r-md italic">
               &ldquo;{COMPANY_PHILOSOPHY_DATA.architecturalHeritage}&rdquo;
             </div>
           </div>
 
           {/* Right Column: 9 Documented Strengths Matrix (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="border-b border-[#304A38] pb-4">
-              <h3 className="text-2xl sm:text-3xl font-display uppercase tracking-tight text-[#F4F4EF] font-bold">
+            <div className="border-b border-[#8CA477]/25 pb-3">
+              <h3 className="text-2xl font-serif text-white font-normal">
                 Documented Studio Strengths &amp; Scope
               </h3>
-              <p className="text-xs font-mono uppercase tracking-wider text-[#AEBBA4] mt-1">
+              <p className="text-xs font-mono uppercase tracking-wider text-[#8CA477] mt-1">
                 Verified against the 35-page company profile
               </p>
             </div>
@@ -85,16 +84,16 @@ export function FounderStory() {
               {documentedStrengths.map((strength, idx) => (
                 <div
                   key={idx}
-                  className="p-4 bg-[#1D382B] border border-[#304A38] shadow-sm flex flex-col justify-between hover:border-[#AEBBA4] transition-colors"
+                  className="p-4 bg-[#16332A] border border-[#8CA477]/25 rounded-lg shadow-sm flex flex-col justify-between hover:border-[#8CA477] transition-colors"
                 >
                   <div className="space-y-1.5">
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#AEBBA4] font-bold">
+                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#8CA477] font-semibold">
                       [{String(idx + 1).padStart(2, "0")}] STRENGTH
                     </div>
-                    <h4 className="text-sm font-display uppercase tracking-tight text-[#F4F4EF] font-bold">
+                    <h4 className="text-sm font-serif text-white font-normal">
                       {strength.title}
                     </h4>
-                    <p className="text-xs text-[#E2E4DA] font-sans font-light leading-relaxed">
+                    <p className="text-xs text-white/80 font-sans font-light leading-relaxed">
                       {strength.desc}
                     </p>
                   </div>

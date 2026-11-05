@@ -1,48 +1,45 @@
 import React from "react";
 import Link from "next/link";
-import { ApertureMark } from "./EditorialComponents";
 
 interface BrandLogoProps {
   variant?: "dark" | "light" | "forest";
   className?: string;
 }
 
-export function BrandLogo({ variant = "dark", className = "" }: BrandLogoProps) {
-  const isLightText = variant === "light" || variant === "forest";
+export function BrandLogo({ variant = "light", className = "" }: BrandLogoProps) {
+  const isDarkCanvas = variant === "light" || variant === "forest";
 
   return (
     <Link
       href="/"
-      className={`group inline-flex items-center gap-3 shrink-0 transition-opacity hover:opacity-90 ${className}`}
+      className={`group inline-flex flex-col shrink-0 transition-opacity hover:opacity-90 ${className}`}
     >
-      {/* Nature Engineered Geometric Aperture */}
-      <div
-        className={`flex items-center justify-center w-8 h-8 border transition-transform duration-200 group-hover:scale-105 shrink-0 ${
-          isLightText
-            ? "border-[#43644E] bg-[#304A38] text-[#F4F4EF]"
-            : "border-[#E2E4DA] bg-[#EBECE4] text-[#1D382B]"
-        }`}
-      >
-        <ApertureMark className={`w-4 h-4 ${isLightText ? "text-[#AEBBA4]" : "text-[#60775B]"}`} />
+      {/* Elegant Serif Wordmark matching approved reference */}
+      <div className="flex items-baseline">
+        <span
+          className={`text-xl sm:text-2xl font-serif font-normal tracking-[0.03em] leading-none ${
+            isDarkCanvas ? "text-white" : "text-[#1F4338]"
+          }`}
+        >
+          BondInWater
+        </span>
+        <span
+          className={`text-[10px] font-serif font-normal ml-0.5 relative -top-1.5 ${
+            isDarkCanvas ? "text-white/80" : "text-[#1F4338]/80"
+          }`}
+        >
+          ®
+        </span>
       </div>
 
-      {/* Typography Wordmark */}
-      <div className="flex flex-col">
-        <span
-          className={`text-lg sm:text-xl font-bold tracking-[0.12em] uppercase font-display leading-none whitespace-nowrap ${
-            isLightText ? "text-[#F4F4EF]" : "text-[#1D382B]"
-          }`}
-        >
-          Bond<span className="font-light opacity-65">In</span>Water
-        </span>
-        <span
-          className={`text-[9px] font-mono tracking-[0.24em] uppercase mt-0.5 ${
-            isLightText ? "text-[#AEBBA4]" : "text-[#647368]"
-          }`}
-        >
-          Nature Engineered
-        </span>
-      </div>
+      {/* Small uppercase descriptor beneath */}
+      <span
+        className={`text-[8.5px] font-sans tracking-[0.22em] uppercase font-medium mt-1 ${
+          isDarkCanvas ? "text-[#8CA477]" : "text-[#4F8278]"
+        }`}
+      >
+        AQUATIC &middot; HABITAT &middot; ARCHITECTURE
+      </span>
     </Link>
   );
 }

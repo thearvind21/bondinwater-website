@@ -1,44 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  /* BondInWater — Research-Led "Nature Engineered" Palette */
-  --color-forest-deep: #1D382B;
-  --color-forest-secondary: #304A38;
-  --color-forest-natural: #60775B;
-  --color-sage-muted: #AEBBA4;
-  --color-natural-white: #F4F4EF;
-  --color-natural-stone: #E2E4DA;
-  --color-earth-accent: #A87952;
-  --color-charcoal: #202723;
-  --color-brand-text: #202723;
+  /* BondInWater — Approved Brand Colour Palette (Exact Hex Codes) */
+  --color-deep-canopy: #1F4338;
+  --color-river-teal: #4F8278;
+  --color-living-leaf: #8CA477;
+  --color-earth-copper: #B47750;
+  --color-soft-mist: #E9EFE7;
+  --color-ink-charcoal: #27302B;
 
   /* Semantic UI Tokens */
-  --color-canvas: #F4F4EF;
-  --color-canvas-alt: #EBECE4;
+  --color-canvas: #E9EFE7;
   --color-canvas-white: #FFFFFF;
-  --color-canvas-stone: #E2E4DA;
-  --color-canvas-border: #E2E4DA;
-  --color-canvas-border-light: #EBECE4;
+  --color-canvas-mist: #E9EFE7;
+  --color-canvas-border: rgba(140, 164, 119, 0.35);
 
-  --color-text-primary: #202723;
-  --color-text-body: #3A473E;
-  --color-text-muted: #647368;
+  --color-text-primary: #27302B;
+  --color-text-body: #27302B;
+  --color-text-muted: #4F8278;
 
-  --color-panel-forest: #1D382B;
-  --color-panel-forest-secondary: #304A38;
-  --color-panel-forest-border: #2D4C3C;
-  --color-panel-forest-text: #F4F4EF;
-  --color-panel-forest-muted: #AEBBA4;
+  --color-panel-forest: #1F4338;
+  --color-panel-forest-border: rgba(140, 164, 119, 0.3);
+  --color-panel-forest-text: #E9EFE7;
+  --color-panel-forest-muted: #8CA477;
 
-  --font-display: var(--font-display), "Oswald", "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-serif), "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-display: var(--font-serif), "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-mono), "Space Mono", monospace;
 }
 
 @layer base {
   :root {
-    --background: #F4F4EF;
-    --foreground: #202723;
+    --background: #E9EFE7;
+    --foreground: #27302B;
   }
   
   html {
@@ -48,16 +43,15 @@
   }
 
   body {
-    background-color: #F4F4EF;
-    color: #202723;
+    background-color: #E9EFE7;
+    color: #27302B;
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, .font-display {
-    font-family: var(--font-display);
+  h1, h2, h3, h4, .font-display, .font-serif {
+    font-family: var(--font-serif);
     letter-spacing: -0.015em;
-    font-weight: 700;
   }
 
   .font-mono {
@@ -70,20 +64,19 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F4F4EF;
+  background: #E9EFE7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #AEBBA4;
+  background: #8CA477;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #60775B;
+  background: #4F8278;
 }
 
-/* Crisp Image Zoom */
+/* Image Zoom and Natural Rendering */
 .reveal-zoom {
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-.reveal-zoom:hover {
-  transform: scale(1.025);
+.group:hover .reveal-zoom {
+  transform: scale(1.03);
 }

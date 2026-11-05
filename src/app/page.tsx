@@ -1,12 +1,12 @@
 import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { CompanyIntroduction } from "@/components/CompanyIntroduction";
-import { ThreeBrandPillars } from "@/components/ThreeBrandPillars";
+import { CapabilityStrip } from "@/components/CapabilityStrip";
+import { NatureApproachSection } from "@/components/NatureApproachSection";
+import { FeaturedProjectSection } from "@/components/FeaturedProjectSection";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
-import { HabitatArchitectureStory } from "@/components/HabitatArchitectureStory";
-import { AnimalNatureStorytelling } from "@/components/AnimalNatureStorytelling";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { HabitatArchitectureStory } from "@/components/HabitatArchitectureStory";
 import { ProcessSection } from "@/components/ProcessSection";
 import { FounderStory } from "@/components/FounderStory";
 import { SmartAquariumSection } from "@/components/SmartAquariumSection";
@@ -18,53 +18,53 @@ import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#F4F4EF] text-[#202723] selection:bg-[#1D382B] selection:text-[#F4F4EF]">
-      {/* 00: Navigation Bar */}
+    <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
+      {/* 00: Navigation Bar (Deep Canopy #1F4338) */}
       <Navbar />
 
-      {/* 01: Hero Entrance — Extraordinary Environments. Engineered Around Nature. */}
+      {/* 01: Hero Entrance — Extraordinary Environments for Life (Approved Reference) */}
       <Hero />
 
-      {/* 02: Company Introduction — Where Nature, Design and Engineering Come Together */}
-      <CompanyIntroduction />
+      {/* 02: Four-Capability Strip (Soft Mist #E9EFE7 — Approved Reference) */}
+      <CapabilityStrip />
 
-      {/* 03: Three Brand Pillars — Nature • Projects • Engineering (Deep Forest #1D382B) */}
-      <ThreeBrandPillars />
+      {/* 03: Nature & Approach Section — Where Nature, Animals and Engineering Meet (White #FFFFFF — Approved Reference) */}
+      <NatureApproachSection />
 
-      {/* 04: Master Capabilities — The 9 Divisions A through I (Natural White #F4F4EF) */}
+      {/* 04: Featured Project Section — The Oceanarium (Deep Canopy #1F4338 — Approved Reference) */}
+      <FeaturedProjectSection />
+
+      {/* 05: Master Capabilities — The 9 Divisions A through I (Soft Mist #E9EFE7) */}
       <ExpertiseSection />
 
-      {/* 05: Habitat Architecture Case Study Story (Warm Stone #E2E4DA — Epsten Group Style) */}
-      <HabitatArchitectureStory />
-
-      {/* 06: Animal & Nature Storytelling — Conservation Creed (Secondary Forest #304A38) */}
-      <AnimalNatureStorytelling />
-
-      {/* 07: Curated Real Works Portfolio (Okeanos Group 8-Category Layout — Natural White #F4F4EF) */}
+      {/* 06: Curated Real Works Portfolio (White #FFFFFF) */}
       <ProjectGallery />
 
-      {/* 08: The 8-Stage Turnkey Methodology (Natural White #F4F4EF / Warm Stone #E2E4DA) */}
+      {/* 07: Habitat Architecture Case Study Story (Soft Mist #E9EFE7) */}
+      <HabitatArchitectureStory />
+
+      {/* 08: The 8-Stage Turnkey Methodology (White #FFFFFF) */}
       <ProcessSection />
 
-      {/* 09: Company Story & 30-Year Architectural Heritage (Charcoal #202723) */}
+      {/* 09: Company Story & 30-Year Architectural Heritage (Deep Canopy #1F4338) */}
       <FounderStory />
 
-      {/* 10: Specialised Technical Solutions & Apex Automation (Natural White #F4F4EF) */}
+      {/* 10: Specialised Technical Solutions & Apex Automation (Soft Mist #E9EFE7) */}
       <SmartAquariumSection />
 
-      {/* 11: Why Choose BondInWater Differentiators (Natural White #F4F4EF) */}
+      {/* 11: Why Choose BondInWater Differentiators (White #FFFFFF) */}
       <WhyBondInWater />
 
-      {/* 12: Verified Client Collaborations & Trust (Natural White #F4F4EF) */}
+      {/* 12: Verified Client Collaborations & Trust (Soft Mist #E9EFE7) */}
       <ClientTrustSection />
 
-      {/* 13: Interactive Living Habitat Feasibility Calculator (Natural White #F4F4EF) */}
+      {/* 13: Interactive Living Habitat Feasibility Calculator (Soft Mist #E9EFE7) */}
       <InteractiveHabitatEstimator />
 
-      {/* 14: Project Feasibility & Design Consultation Desk (Natural White #F4F4EF) */}
+      {/* 14: Project Feasibility & Design Consultation Desk (White #FFFFFF) */}
       <ContactSection />
 
-      {/* 15: Studio Directory Footer (Deep Forest #1D382B) */}
+      {/* 15: Studio Directory Footer (Deep Canopy #1F4338) */}
       <Footer />
     </main>
   );
