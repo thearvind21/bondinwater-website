@@ -321,7 +321,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero - Compact 250-300px */}
+      {/* Shared Approved Page Hero - Compact 250-300px with Full-Width Aquatic Master */}
       <PageHero
         eyebrow="BONDINWATER • CONSULTATION DESK"
         title={
@@ -330,9 +330,9 @@ export default function ContactPage() {
           </>
         }
         description="Discuss your aquatic, architectural or habitat project with BondInWater."
-        imageSrc="/images/pdf_images/p20_img2.png"
-        imageAlt="BondInWater authentic marine reef aquarium installation from Company Profile Page 20"
-        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        imageSrc="/images/hero_masters/contact_aquarium_installation_hero.jpg"
+        imageAlt="BondInWater authentic full-width custom aquatic installation and consultation desk"
+        imagePosition="object-[80%_center] lg:object-[85%_center]"
         ctaText="Start Your Enquiry"
         ctaHref="#enquiry-form"
         ctaIcon="arrow-down"

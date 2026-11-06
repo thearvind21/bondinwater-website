@@ -17,7 +17,7 @@ export default function ProcessPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero */}
+      {/* Shared Approved Page Hero with Authentic Architectural Planning Master */}
       <PageHero
         eyebrow="BONDINWATER • TURNKEY METHODOLOGY"
         title={
@@ -26,9 +26,9 @@ export default function ProcessPage() {
           </>
         }
         description="Explore how BondInWater develops ideas into designed, engineered and completed environments."
-        imageSrc="/images/pdf_images/p7_img3.png"
-        imageAlt="BondInWater 3D architectural habitat concept and project planning from Company Profile"
-        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        imageSrc="/images/hero_masters/process_architectural_blueprint_hero.jpg"
+        imageAlt="BondInWater authentic architectural planning, engineering schematics and turnkey blueprint development"
+        imagePosition="object-[80%_center] lg:object-[85%_center]"
         ctaText="Explore Our Process"
         ctaHref="#lifecycle"
         ctaIcon="arrow-down"

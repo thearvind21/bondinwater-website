@@ -45,7 +45,7 @@ export default function ProjectsPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero with Authentic Oceanarium Asset */}
+      {/* Shared Approved Page Hero with Authentic Installation Master */}
       <PageHero
         eyebrow="BONDINWATER • PORTFOLIO ARCHIVE"
         title={
@@ -54,9 +54,9 @@ export default function ProjectsPage() {
           </>
         }
         description="Explore BondInWater's documented aquatic environments, natural habitats, acrylic applications and specialist installations."
-        imageSrc="/images/pdf_images/p23_oceanarium_hero.png"
-        imageAlt="BondInWater authentic large-scale oceanarium installation from Company Profile Page 23"
-        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        imageSrc="/images/hero_masters/projects_acrylic_installation_hero.jpg"
+        imageAlt="BondInWater authentic large-scale acrylic marine aquarium and oceanarium installation"
+        imagePosition="object-[80%_center] lg:object-[85%_center]"
         ctaText="Explore Projects"
         ctaHref="#portfolio-gallery"
         ctaIcon="arrow-down"
