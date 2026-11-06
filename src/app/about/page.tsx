@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 import { COMPANY_PHILOSOPHY_DATA } from "@/data/bondinwater-data";
 import { ArrowUpRight, ArrowRight, ShieldCheck, Heart, Compass, Users2 } from "lucide-react";
 
@@ -16,55 +17,28 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Hero Header with Strong Opening Image Composition */}
-      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden border-b border-[#8CA477]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            {/* Left Narrative */}
-            <div className="lg:col-span-7 space-y-4">
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold block">
-                ABOUT BONDINWATER &bull; ETHOS &amp; HERITAGE
-              </span>
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.1] text-white">
-                Where Nature, Animals and <br />
-                <span className="italic font-normal text-[#8CA477]">Engineering Meet</span>
-              </h1>
-
-              <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-xl">
-                We bridge the gap between creative visual architecture and living biological health, recreating ecosystems for all creatures on our planet.
-              </p>
-            </div>
-
-            {/* Right: Strong Opening Image (p12_img1.png — Animal Care & Conservation) */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-lg overflow-hidden bg-[#142C25] shadow-lg border border-white/15">
-                <Image
-                  src="/images/pdf_images/p12_img1.png"
-                  alt="BondInWater ethical stewardship and animal welfare"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338]/90 via-transparent to-transparent p-5 flex flex-col justify-end text-white">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#8CA477] font-bold">
-                    ETHICAL CONSERVATION CREED
-                  </span>
-                  <p className="text-xs text-white/90 font-sans italic mt-1">
-                    &ldquo;{COMPANY_PHILOSOPHY_DATA.coreCreed}&rdquo;
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* Shared Approved Page Hero */}
+      <PageHero
+        eyebrow="ABOUT BONDINWATER • ETHOS & PHILOSOPHY"
+        title={
+          <>
+            Driven by a Love for <span className="italic font-normal text-[#8CA477]">Nature.</span>
+          </>
+        }
+        description="We aim for excellence in recreating the ecosystem for all creatures on our planet and helping in their conservation."
+        imageSrc="/images/pdf_images/p29_img4.png"
+        imageAlt="BondInWater captive breeding of exotic freshwater species and animal conservation from Company Profile"
+        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        ctaText="Discover BondInWater"
+        ctaHref="#philosophy"
+        ctaIcon="arrow-down"
+        heightClass="min-h-[380px] lg:min-h-[420px]"
+        paddingClass="pt-26 pb-8 lg:pt-28 lg:pb-12"
+        headingClass="text-3xl sm:text-4xl lg:text-[44px]"
+      />
 
       {/* Section 1: Evolution Narrative — From Hobbyists and Learners to Creators */}
-      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="philosophy" className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 space-y-4">
             <span className="text-xs font-sans tracking-[0.2em] uppercase text-[#4F8278] font-bold block">

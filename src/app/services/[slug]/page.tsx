@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, ArrowRight, CheckCircle2, ShieldCheck, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero, BreadcrumbItem } from "@/components/PageHero";
 import { COMPANY_DIVISIONS, CompanyDivision } from "@/data/bondinwater-data";
 import { SERVICE_FAMILIES } from "@/data/service-families";
 
@@ -41,50 +42,47 @@ export default async function ServiceDetailPage({
   const prevDivision = currentIndex > 0 ? COMPANY_DIVISIONS[currentIndex - 1] : null;
   const nextDivision = currentIndex < COMPANY_DIVISIONS.length - 1 ? COMPANY_DIVISIONS[currentIndex + 1] : null;
 
+  const breadcrumbs: BreadcrumbItem[] = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+  ];
+  if (parentFamily) {
+    breadcrumbs.push({
+      label: parentFamily.name,
+      href: `/services#${parentFamily.id}`,
+    });
+  }
+
   return (
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Breadcrumb Header */}
-      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-xs font-sans text-white/60 mb-6 flex-wrap">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            {parentFamily && (
-              <>
-                <ChevronRight className="w-3.5 h-3.5" />
-                <Link href={`/services#${parentFamily.id}`} className="hover:text-white transition-colors">
-                  {parentFamily.name}
-                </Link>
-              </>
-            )}
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#8CA477] font-medium">{division.title}</span>
+      {/* Shared Approved Page Hero */}
+      <PageHero
+        breadcrumbs={breadcrumbs}
+        currentBreadcrumb={division.title}
+        eyebrow={
+          <div className="flex items-center gap-3">
+            <span className="text-[11px] font-mono font-bold tracking-[0.2em] uppercase text-[#8CA477] bg-white/10 px-2.5 py-1 rounded">
+              CATEGORY {division.letter} // {division.museumCode}
+            </span>
+            <span className="text-xs font-sans text-white/70">
+              Company Profile: {division.profilePages}
+            </span>
           </div>
-
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-[#8CA477] bg-white/10 px-3 py-1 rounded">
-                CATEGORY {division.letter} // {division.museumCode}
-              </span>
-              <span className="text-xs font-sans text-white/70">
-                Company Profile: {division.profilePages}
-              </span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal leading-[1.1] mb-4">
-              {division.title}
-            </h1>
-
-            <p className="text-base sm:text-xl font-sans text-[#8CA477] font-normal leading-relaxed max-w-2xl">
-              {division.subtitle}
-            </p>
-          </div>
-        </div>
-      </section>
+        }
+        title={division.title}
+        description={division.subtitle}
+        imageSrc={division.image}
+        imageAlt={`${division.title} — BondInWater Company Profile`}
+        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        ctaText="Enquire For This Discipline"
+        ctaHref={`/contact?service=${division.id}#enquiry-form`}
+        ctaIcon="arrow-up-right"
+        secondaryCtaText="All 12 Services"
+        secondaryCtaHref="/services"
+        heightClass="min-h-[380px] lg:min-h-[420px]"
+      />
 
       {/* Main Content Body */}
       <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

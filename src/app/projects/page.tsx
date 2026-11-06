@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 import { PROJECTS_DATA, ProjectItem, ProjectCategory } from "@/data/bondinwater-data";
 import { ArrowUpRight, X, Check, ArrowRight } from "lucide-react";
 
@@ -44,28 +45,26 @@ export default function ProjectsPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Hero Header */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-[#1F4338] text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold">
-                BONDINWATER &bull; PORTFOLIO ARCHIVE
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal leading-[1.1] mb-6">
-              Curated Field Works &amp; <br />
-              <span className="italic font-normal text-[#8CA477]">Verified Installations</span>
-            </h1>
-            <p className="text-base sm:text-lg text-white/85 font-sans font-light leading-relaxed max-w-2xl">
-              Authentic documented habitats, optical acrylic swimming pools, zoological enclosures, and specialised Life Support Systems executed by BondInWater across India and internationally.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Shared Approved Page Hero */}
+      <PageHero
+        eyebrow="BONDINWATER • PORTFOLIO ARCHIVE"
+        title={
+          <>
+            Work Inspired by <span className="italic font-normal text-[#8CA477]">Nature.</span>
+          </>
+        }
+        description="Explore BondInWater's documented aquatic environments, natural habitats, acrylic applications and specialist installations."
+        imageSrc="/images/pdf_images/p17_img1.png"
+        imageAlt="BondInWater authentic acrylic oceanarium installation and underwater viewing architecture from Company Profile"
+        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        ctaText="Explore Projects"
+        ctaHref="#portfolio-gallery"
+        ctaIcon="arrow-down"
+        heightClass="min-h-[410px] lg:min-h-[450px]"
+      />
 
       {/* Category Filter Bar */}
-      <section className="py-8 bg-white border-b border-[#1F4338]/10 sticky top-20 z-20 shadow-xs">
+      <section id="portfolio-gallery" className="py-8 bg-white border-b border-[#1F4338]/10 sticky top-20 z-20 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
             {categories.map((cat) => (

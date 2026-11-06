@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 import { PROCESS_STEPS } from "@/data/bondinwater-data";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
@@ -16,68 +17,48 @@ export default function ProcessPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Hero Header with Two-Column Composition */}
-      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden border-b border-[#8CA477]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left Narrative */}
-            <div className="lg:col-span-7 space-y-4">
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold block">
-                BONDINWATER &bull; TURNKEY LIFECYCLE
-              </span>
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.1] text-white">
-                The Eight-Stage <br />
-                <span className="italic font-normal text-[#8CA477]">Turnkey Methodology</span>
-              </h1>
-
-              <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-xl">
-                Reproduced directly from Page 4 of the verified BondInWater Company Profile. A comprehensive, disciplined lifecycle governing civil feasibility, architectural planning, certified fabrication, and ongoing biological care.
-              </p>
-
-              {/* Quick Jump Bar */}
-              <div className="pt-2 flex flex-wrap gap-1.5">
-                {PROCESS_STEPS.map((s) => (
-                  <a
-                    key={s.number}
-                    href={`#stage-${s.number}`}
-                    className="text-[11px] font-mono px-2.5 py-1 rounded bg-white/10 hover:bg-[#8CA477] hover:text-[#1F4338] text-white/90 transition-colors"
-                  >
-                    {s.number}. {s.title}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Authentic Lifecycle Infographic (p4_img1.png) */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-lg overflow-hidden bg-[#142C25] shadow-lg border border-white/15">
-                <Image
-                  src="/images/pdf_images/p4_img1.png"
-                  alt="BondInWater 8-stage turnkey methodology infographic from company profile page 4"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338]/90 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#8CA477] font-bold">
-                    COMPANY PROFILE PAGE 4
-                  </span>
-                  <span className="text-xs text-white/90 font-sans italic">
-                    Turnkey Project Management Lifecycle
-                  </span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* Shared Approved Page Hero */}
+      <PageHero
+        eyebrow="BONDINWATER • TURNKEY METHODOLOGY"
+        title={
+          <>
+            From Vision to <span className="italic font-normal text-[#8CA477]">Reality.</span>
+          </>
+        }
+        description="Explore how BondInWater develops ideas into designed, engineered and completed environments."
+        imageSrc="/images/pdf_images/p7_img3.png"
+        imageAlt="BondInWater 3D architectural habitat concept and project planning from Company Profile"
+        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        ctaText="Explore Our Process"
+        ctaHref="#lifecycle"
+        ctaIcon="arrow-down"
+        heightClass="min-h-[360px] lg:min-h-[400px]"
+        paddingClass="pt-24 pb-8 lg:pt-28 lg:pb-10"
+        headingClass="text-3xl sm:text-4xl lg:text-[42px]"
+      />
 
       {/* Clean Timeline Composition of All 8 Stages */}
-      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <section id="lifecycle" className="py-12 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        {/* Quick Jump Bar */}
+        <div className="bg-white/80 backdrop-blur-xs p-4 rounded-lg border border-[#1F4338]/10 shadow-xs flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-[#4F8278]">
+              LIFECYCLE STAGES:
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {PROCESS_STEPS.map((s) => (
+              <a
+                key={s.number}
+                href={`#stage-${s.number}`}
+                className="text-[11px] font-mono px-2.5 py-1 rounded bg-[#E9EFE7] hover:bg-[#1F4338] hover:text-white text-[#1F4338] font-medium transition-colors border border-[#1F4338]/10"
+              >
+                {s.number}. {s.title}
+              </a>
+            ))}
+          </div>
+        </div>
         <div className="border-b border-[#1F4338]/15 pb-4">
           <span className="text-xs font-sans tracking-[0.2em] uppercase text-[#4F8278] font-bold block mb-1">
             SEQUENTIAL EXECUTION FRAMEWORK

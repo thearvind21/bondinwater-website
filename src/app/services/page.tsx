@@ -4,12 +4,13 @@ import Image from "next/image";
 import { ArrowUpRight, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 import { SERVICE_FAMILIES, getFamilyServices } from "@/data/service-families";
 import { COMPANY_DIVISIONS } from "@/data/bondinwater-data";
 
 export const metadata = {
   title: "Our Services — BondInWater",
-  description: "Explore the twelve official capability categories of BondInWater across five distinct service families: from visionary design to turnkey habitat engineering.",
+  description: "From conceptualisation and architectural planning to aquatic environments, animal habitats and specialised engineering, explore the capabilities of BondInWater.",
 };
 
 export default function ServicesPage() {
@@ -17,67 +18,47 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Part 5A: Compact Balanced Two-Column Introduction */}
-      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden border-b border-[#8CA477]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            {/* Left: Section Label, Heading, Description & Quick Nav (7 cols) */}
-            <div className="lg:col-span-7 space-y-4">
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold block">
-                BONDINWATER &bull; CAPABILITY DIRECTORY
-              </span>
+      {/* Shared Approved Page Hero */}
+      <PageHero
+        eyebrow="BONDINWATER • CAPABILITIES & DISCIPLINES"
+        title={
+          <>
+            Our <span className="italic font-normal text-[#8CA477]">Services</span>
+          </>
+        }
+        description="From conceptualisation and architectural planning to aquatic environments, animal habitats and specialised engineering, explore the capabilities of BondInWater."
+        imageSrc="/images/pdf_images/p24_img1.png"
+        imageAlt="BondInWater authentic curved acrylic oceanarium and aquatic installation from Company Profile"
+        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        ctaText="Explore Capabilities"
+        ctaHref="#service-families"
+        ctaIcon="arrow-down"
+        heightClass="min-h-[410px] lg:min-h-[450px]"
+      />
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.1] text-white">
-                Our Services
-              </h1>
-
-              <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-xl">
-                Organized into five service families from our verified 35-page company profile. Every discipline unites biological conservation, architectural planning, and turnkey structural engineering.
-              </p>
-
-              {/* Quick Jump Category Pills */}
-              <div className="pt-3 flex flex-wrap gap-2">
-                {SERVICE_FAMILIES.map((fam) => (
-                  <a
-                    key={fam.id}
-                    href={`#${fam.id}`}
-                    className="text-xs font-sans px-3 py-1.5 rounded-[4px] bg-white/10 hover:bg-[#8CA477] hover:text-[#1F4338] text-white/90 transition-colors"
-                  >
-                    {fam.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Genuine BondInWater Service Photo Composition (5 cols) */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] w-full rounded-lg overflow-hidden bg-[#142C25] shadow-lg border border-white/15">
-                <Image
-                  src="/images/pdf_images/p7_img1.png"
-                  alt="Architectural drafting and habitat design at BondInWater"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338]/85 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#8CA477] font-bold">
-                    DOCUMENTED ARCHITECTURAL PROCESS
-                  </span>
-                  <span className="text-xs text-white/90 font-sans italic">
-                    Think &bull; Sketch &bull; Repeat &bull; Construct
-                  </span>
-                </div>
-              </div>
-            </div>
-
+      {/* Part 5B: Five Service-Family Showcases with Category Jump Bar */}
+      <section id="service-families" className="py-12 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        {/* Quick-Jump Family Navigator Bar */}
+        <div className="bg-white/80 backdrop-blur-xs p-4 rounded-lg border border-[#1F4338]/10 shadow-xs flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-[#4F8278]">
+              DISCIPLINE FAMILIES:
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {SERVICE_FAMILIES.map((fam) => (
+              <a
+                key={fam.id}
+                href={`#${fam.id}`}
+                className="text-xs font-sans px-3 py-1.5 rounded-[4px] bg-[#E9EFE7] hover:bg-[#1F4338] hover:text-white text-[#1F4338] font-medium transition-colors border border-[#1F4338]/10"
+              >
+                {fam.name}
+              </a>
+            ))}
           </div>
         </div>
-      </section>
 
-      {/* Part 5B: Five Service-Family Showcases */}
-      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="border-b border-[#1F4338]/15 pb-4">
           <span className="text-xs font-sans tracking-[0.2em] uppercase text-[#4F8278] font-bold block mb-1">
             STRUCTURED ARCHITECTURE

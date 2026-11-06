@@ -4,6 +4,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageHero } from "@/components/PageHero";
 import { BRAND_CONTACT, COMPANY_DIVISIONS } from "@/data/bondinwater-data";
 import { Phone, Mail, Globe, MessageSquare, Check, Send, Copy, ArrowUpRight } from "lucide-react";
 
@@ -320,26 +321,29 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Hero Header */}
-      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden border-b border-[#8CA477]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold block">
-              BONDINWATER &bull; CONSULTATION DESK
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.1] text-white">
-              Project Feasibility &amp; <br />
-              <span className="italic font-normal text-[#8CA477]">Design Consultation</span>
-            </h1>
-            <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-xl">
-              Connect directly with our engineering desk for biological feasibility analysis, structural slab audits, and turnkey architectural quotations.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Shared Approved Page Hero - Compact 280-340px */}
+      <PageHero
+        eyebrow="BONDINWATER • CONSULTATION DESK"
+        title={
+          <>
+            Let&apos;s Create Something <span className="italic font-normal text-[#8CA477]">Extraordinary.</span>
+          </>
+        }
+        description="Discuss your aquatic, architectural or habitat project with BondInWater."
+        imageSrc="/images/pdf_images/p16_img1.png"
+        imageAlt="BondInWater authentic crystal clear acrylic installation from Company Profile"
+        imagePosition="object-[75%_center] lg:object-[80%_center]"
+        ctaText="Start Your Enquiry"
+        ctaHref="#enquiry-form"
+        ctaIcon="arrow-down"
+        heightClass="min-h-[280px] lg:min-h-[320px]"
+        paddingClass="pt-20 pb-6 lg:pt-24 lg:pb-8"
+        headingClass="text-2xl sm:text-3xl lg:text-[36px]"
+        contentSpacingClass="space-y-3 sm:space-y-3.5"
+      />
 
-      {/* Main Form Section */}
-      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Main Form Section - Immediately visible below compact hero */}
+      <section id="enquiry-form" className="py-12 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Suspense fallback={<div className="text-center py-12 text-sm font-sans">Loading enquiry desk...</div>}>
           <ContactForm />
         </Suspense>
