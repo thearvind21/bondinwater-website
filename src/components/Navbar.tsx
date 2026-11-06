@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BrandLogo } from "./BrandLogo";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,14 +19,19 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Primary 5 Navigation Links as strictly specified in Requirement 9
   const navLinks = [
-    { name: "Home", href: "#hero", active: true },
-    { name: "Services", href: "#expertise" },
-    { name: "Our Work", href: "#approach" },
-    { name: "About", href: "#story" },
-    { name: "Our Process", href: "#process" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -36,44 +43,47 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-6">
             
-            {/* Left: Brand Logo */}
+            {/* Left: Official Brand Logo */}
             <BrandLogo variant="forest" />
 
-            {/* Center / Right: Desktop Navigation Links */}
+            {/* Center / Right: Desktop Navigation Links (Single Line Guaranteed) */}
             <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className={`text-sm font-sans transition-colors relative py-1 ${
-                    link.active
-                      ? "text-white font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#8CA477]"
-                      : "text-white/85 hover:text-white"
-                  }`}
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const active = isActive(link.href);
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`text-sm font-sans transition-colors relative py-1 ${
+                      active
+                        ? "text-white font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#8CA477]"
+                        : "text-white/85 hover:text-white"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
 
               {/* Action Button: Enquire Now ↗ */}
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-1.5 bg-[#B47750] text-white hover:bg-[#9F6542] text-sm font-sans font-medium px-5 py-2.5 rounded-[4px] transition-colors whitespace-nowrap shadow-sm ml-2"
               >
                 <span>Enquire Now</span>
                 <ArrowUpRight className="w-4 h-4 text-white" />
-              </a>
+              </Link>
             </nav>
 
             {/* Mobile Hamburger Toggle */}
             <div className="flex lg:hidden items-center gap-3">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-1 bg-[#B47750] text-white text-xs font-sans font-medium px-3.5 py-2 rounded-[4px]"
               >
                 <span>Enquire</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-white hover:text-[#8CA477] transition-colors"
@@ -91,26 +101,39 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-[68px] z-40 bg-[#1F4338] border-t border-[#8CA477]/25 lg:hidden flex flex-col p-6 space-y-5 animate-in fade-in duration-200">
           <nav className="flex flex-col space-y-4 pt-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-serif text-white hover:text-[#8CA477] py-1 border-b border-white/10"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-          <div className="pt-4">
-            <a
-              href="#contact"
+            {navLinks.map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-lg font-serif py-2 border-b border-white/10 ${
+                    active ? "text-[#8CA477] font-semibold" : "text-white hover:text-[#8CA477]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+            <Link
+              href="/process"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#B47750] text-white font-sans font-medium py-3 px-6 rounded-[4px] shadow-sm text-sm"
+              className="text-base font-serif text-white/80 hover:text-white py-1"
             >
-              <span>Enquire Now</span>
+              Our 8-Stage Process
+            </Link>
+          </nav>
+
+          <div className="pt-4 border-t border-white/15">
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#B47750] text-white py-3 rounded-[4px] font-sans text-sm font-medium"
+            >
+              <span>Enquire For Project</span>
               <ArrowUpRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       )}

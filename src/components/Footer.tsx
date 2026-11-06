@@ -1,19 +1,20 @@
 import React from "react";
+import Link from "next/link";
 import { BrandLogo } from "./BrandLogo";
 import { BRAND_CONTACT, COMPANY_DIVISIONS } from "@/data/bondinwater-data";
+import { SERVICE_FAMILIES } from "@/data/service-families";
 import { Phone, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   const currentYear = 2026;
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "Our Expertise", href: "#expertise" },
-    { name: "Projects", href: "#projects" },
-    { name: "About", href: "#story" },
-    { name: "Process", href: "#process" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
+    { name: "About", href: "/about" },
+    { name: "8-Stage Process", href: "/process" },
+    { name: "Contact & Feasibility", href: "/contact" },
   ];
 
   return (
@@ -38,13 +39,13 @@ export function Footer() {
               <span>{BRAND_CONTACT.phone}</span>
             </a>
 
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#B47750] hover:bg-[#9F6542] text-white font-sans text-xs uppercase font-medium tracking-wider transition-colors border border-[#B47750] whitespace-nowrap rounded shadow-sm"
             >
               <span>Discuss Your Project</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -66,71 +67,64 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: 12 Capability Services (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
+          {/* Column 2: 5 Service Families & 12 Disciplines (5 cols) */}
+          <div className="lg:col-span-5 space-y-4">
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#E9EFE7] block font-bold">
-              12 CAPABILITY SERVICES
+              5 SERVICE FAMILIES &bull; 12 CAPABILITY CATEGORIES
             </span>
-            <div className="grid grid-cols-1 gap-1.5 text-xs font-mono text-[#E9EFE7]/80">
-              {COMPANY_DIVISIONS.map((div) => (
-                <a
-                  key={div.id}
-                  href="#expertise"
-                  className="hover:text-[#8CA477] transition-colors truncate flex items-center gap-2"
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans text-[#E9EFE7]/85">
+              {SERVICE_FAMILIES.map((fam) => (
+                <Link
+                  key={fam.id}
+                  href={`/services#${fam.id}`}
+                  className="hover:text-[#8CA477] transition-colors p-2 rounded bg-white/5 border border-white/5 block"
                 >
-                  <span className="text-[#8CA477] text-[10px]">[{div.letter}]</span>
-                  <span>{div.title}</span>
-                </a>
+                  <span className="text-[10px] font-mono text-[#8CA477] block">{fam.code}</span>
+                  <span className="font-medium text-xs text-white block truncate">{fam.name}</span>
+                </Link>
               ))}
+            </div>
+            <div className="pt-2">
+              <Link
+                href="/services"
+                className="text-xs font-sans text-[#B47750] hover:text-white inline-flex items-center gap-1 font-semibold"
+              >
+                <span>Explore All 12 Documented Disciplines</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
 
-          {/* Column 3: Navigation Index (2 cols) */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Column 3: Navigation Index (3 cols) */}
+          <div className="lg:col-span-3 space-y-4">
             <span className="text-[10px] font-mono uppercase tracking-widest text-[#E9EFE7] block font-bold">
-              NAVIGATION
+              NAVIGATION DIRECTORY
             </span>
-            <ul className="space-y-2 text-xs font-mono text-[#E9EFE7]/80">
+            <ul className="space-y-2.5 text-xs font-sans text-[#E9EFE7]/80">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="hover:text-[#8CA477] transition-colors">
-                    {link.name}
-                  </a>
+                  <Link href={link.href} className="hover:text-[#8CA477] transition-colors flex items-center justify-between">
+                    <span>{link.name}</span>
+                    <span className="text-white/20">&rarr;</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Contact & Location (2 cols) */}
-          <div className="lg:col-span-2 space-y-4 text-xs font-mono">
-            <span className="text-[10px] uppercase tracking-widest text-[#E9EFE7] block font-bold">
-              HEADQUARTERS
-            </span>
-            <div className="space-y-2 text-[#E9EFE7]/80">
-              <p className="text-[#E9EFE7] font-bold">{BRAND_CONTACT.location}</p>
-              <p className="text-[#8CA477] text-[11px] leading-snug">
-                {BRAND_CONTACT.hours.weekdays}
-              </p>
-              <a
-                href={`mailto:${BRAND_CONTACT.email}`}
-                className="text-[#8CA477] hover:underline block pt-1 break-all"
-              >
-                {BRAND_CONTACT.email}
-              </a>
-            </div>
-          </div>
-
         </div>
 
-        {/* Bottom Disclosures Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#8CA477]">
+        {/* Bottom Metadata & Legal */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#E9EFE7]/60">
           <div>
-            &copy; {currentYear} BondInWater. All Rights Reserved. Aquatic Architecture &amp; Habitat Engineering.
+            &copy; {currentYear} BondInWater. All rights reserved. Registered Marine Architectural &amp; Habitat Engineering Studio.
           </div>
-          <div className="flex items-center gap-4 text-[#8CA477]">
-            <span>COMPANY PROFILE COMPLIANT</span>
+          <div className="flex items-center gap-6">
+            <span>Official Profile Assets (35 Pages)</span>
             <span>&bull;</span>
-            <span>NATURE &bull; DESIGN &bull; ENGINEERING</span>
+            <Link href="/services" className="hover:text-[#8CA477]">12 Services</Link>
+            <span>&bull;</span>
+            <Link href="/process" className="hover:text-[#8CA477]">8 Stages</Link>
           </div>
         </div>
 
