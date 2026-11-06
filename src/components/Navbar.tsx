@@ -19,12 +19,13 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Primary 5 Navigation Links as strictly specified in Requirement 9
+  // Primary Navigation Links
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
+    { name: "Process", href: "/process" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -36,18 +37,18 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#1F4338] ${
-          isScrolled ? "py-3 shadow-md" : "py-4 sm:py-5"
+        className={`fixed top-0 left-0 right-0 z-50 h-20 bg-[#1F4338] border-b border-[#8CA477]/20 flex items-center transition-shadow duration-300 ${
+          isScrolled ? "shadow-md" : "shadow-xs"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex items-center justify-between gap-4 sm:gap-6">
             
             {/* Left: Official Brand Logo */}
             <BrandLogo variant="forest" />
 
             {/* Center / Right: Desktop Navigation Links (Single Line Guaranteed) */}
-            <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
               {navLinks.map((link) => {
                 const active = isActive(link.href);
                 return (
@@ -99,8 +100,8 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[68px] z-40 bg-[#1F4338] border-t border-[#8CA477]/25 lg:hidden flex flex-col p-6 space-y-5 animate-in fade-in duration-200">
-          <nav className="flex flex-col space-y-4 pt-2">
+        <div className="fixed inset-0 top-20 z-40 bg-[#1F4338] border-t border-[#8CA477]/25 lg:hidden flex flex-col p-6 space-y-5 animate-in fade-in duration-200">
+          <nav className="flex flex-col space-y-3 pt-2">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -116,13 +117,6 @@ export function Navbar() {
                 </Link>
               );
             })}
-            <Link
-              href="/process"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-serif text-white/80 hover:text-white py-1"
-            >
-              Our 8-Stage Process
-            </Link>
           </nav>
 
           <div className="pt-4 border-t border-white/15">
@@ -131,7 +125,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full inline-flex items-center justify-center gap-2 bg-[#B47750] text-white py-3 rounded-[4px] font-sans text-sm font-medium"
             >
-              <span>Enquire For Project</span>
+              <span>Enquire Now</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>

@@ -45,7 +45,7 @@ export default function ProjectsPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero */}
+      {/* Shared Approved Page Hero with Authentic Oceanarium Asset */}
       <PageHero
         eyebrow="BONDINWATER • PORTFOLIO ARCHIVE"
         title={
@@ -54,8 +54,8 @@ export default function ProjectsPage() {
           </>
         }
         description="Explore BondInWater's documented aquatic environments, natural habitats, acrylic applications and specialist installations."
-        imageSrc="/images/pdf_images/p17_img1.png"
-        imageAlt="BondInWater authentic acrylic oceanarium installation and underwater viewing architecture from Company Profile"
+        imageSrc="/images/pdf_images/p23_oceanarium_hero.png"
+        imageAlt="BondInWater authentic large-scale oceanarium installation from Company Profile Page 23"
         imagePosition="object-[75%_center] lg:object-[80%_center]"
         ctaText="Explore Projects"
         ctaHref="#portfolio-gallery"
@@ -63,15 +63,36 @@ export default function ProjectsPage() {
         heightClass="min-h-[410px] lg:min-h-[450px]"
       />
 
-      {/* Category Filter Bar */}
-      <section id="portfolio-gallery" className="py-8 bg-white border-b border-[#1F4338]/10 sticky top-20 z-20 shadow-xs">
+      {/* Category Filter Bar: Responsive Wrapping Desktop + Compact Mobile Control */}
+      <section id="portfolio-gallery" className="py-6 bg-white border-b border-[#1F4338]/10 sticky top-20 z-20 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          
+          {/* Mobile Select Control (Compact & Fully Accessible) */}
+          <div className="lg:hidden">
+            <label htmlFor="category-select" className="block text-[11px] font-sans font-bold uppercase tracking-wider text-[#4F8278] mb-1.5">
+              Filter By Category ({filteredProjects.length} Works):
+            </label>
+            <select
+              id="category-select"
+              value={activeCategory}
+              onChange={(e) => setActiveCategory(e.target.value as ProjectCategory)}
+              className="w-full text-xs font-sans px-3.5 py-2.5 rounded-[4px] bg-[#E9EFE7] border border-[#1F4338]/20 text-[#1F4338] font-medium focus:outline-none focus:border-[#1F4338]"
+            >
+              {categories.map((cat) => (
+                <option key={cat.id} value={cat.id}>
+                  {cat.label} ({cat.count})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Desktop Wrapping Category Filter Pills (Zero Clipping, Zero Overflow) */}
+          <div className="hidden lg:flex flex-wrap items-center gap-2">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-3.5 py-1.5 text-xs font-sans whitespace-nowrap rounded-[4px] border transition-all flex items-center gap-1.5 ${
+                className={`px-3 py-1.5 text-xs font-sans rounded-[4px] border transition-all flex items-center gap-1.5 ${
                   activeCategory === cat.id
                     ? "bg-[#1F4338] text-white border-[#1F4338] font-medium shadow-xs"
                     : "bg-[#E9EFE7] text-[#27302B] hover:bg-white border-[#1F4338]/10"
@@ -86,6 +107,7 @@ export default function ProjectsPage() {
               </button>
             ))}
           </div>
+
         </div>
       </section>
 

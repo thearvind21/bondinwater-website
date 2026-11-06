@@ -21,6 +21,7 @@ export function BrandLogo({ variant = "light", className = "" }: BrandLogoProps)
           src="/images/bondinwater_logo_symbol.png"
           alt="BondInWater Official Logo Symbol"
           fill
+          sizes="36px"
           className="object-contain"
           priority
         />

@@ -12,7 +12,7 @@ export function ThreeBrandPillars() {
       tagline: "Animal Wellbeing & Biome Conservation",
       description:
         "Recreating authentic micro-environments where living organisms flourish through scientific life support. From natural aquatic biotopes and epiphyte-laden paludariums to ethological animal enclosures, nature provides our inspiration and benchmark.",
-      image: "/images/bondinwater/ef9742_c52f71c90fbc49869aef43dc677de953.jpg",
+      image: "/images/pdf_images/p17_img1.png",
       imageCaption: "Living Marine Coral Biotope & Species Habitat",
       capabilities: [
         "Ethological animal welfare & behavioral enrichment",

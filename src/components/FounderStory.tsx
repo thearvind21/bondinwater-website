@@ -50,7 +50,7 @@ export function FounderStory() {
             <div className="border border-[#8CA477]/30 bg-[#16332A] p-2.5 rounded-xl shadow-2xl">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-[#11241E]">
                 <Image
-                  src="/images/bondinwater/ef9742_d41c5589ef3548f1890a925f493a7b35.jpg"
+                  src="/images/pdf_images/p12_img1.png"
                   alt="BondInWater on-site living architecture"
                   fill
                   className="object-cover reveal-zoom"

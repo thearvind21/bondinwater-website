@@ -321,7 +321,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero - Compact 280-340px */}
+      {/* Shared Approved Page Hero - Compact 250-300px */}
       <PageHero
         eyebrow="BONDINWATER • CONSULTATION DESK"
         title={
@@ -330,20 +330,20 @@ export default function ContactPage() {
           </>
         }
         description="Discuss your aquatic, architectural or habitat project with BondInWater."
-        imageSrc="/images/pdf_images/p16_img1.png"
-        imageAlt="BondInWater authentic crystal clear acrylic installation from Company Profile"
+        imageSrc="/images/pdf_images/p20_img2.png"
+        imageAlt="BondInWater authentic marine reef aquarium installation from Company Profile Page 20"
         imagePosition="object-[75%_center] lg:object-[80%_center]"
         ctaText="Start Your Enquiry"
         ctaHref="#enquiry-form"
         ctaIcon="arrow-down"
-        heightClass="min-h-[280px] lg:min-h-[320px]"
-        paddingClass="pt-20 pb-6 lg:pt-24 lg:pb-8"
-        headingClass="text-2xl sm:text-3xl lg:text-[36px]"
-        contentSpacingClass="space-y-3 sm:space-y-3.5"
+        heightClass="min-h-[250px] lg:min-h-[280px]"
+        paddingClass="pt-20 pb-4 lg:pt-22 lg:pb-5"
+        headingClass="text-2xl sm:text-3xl lg:text-[32px]"
+        contentSpacingClass="space-y-2 sm:space-y-2.5"
       />
 
       {/* Main Form Section - Immediately visible below compact hero */}
-      <section id="enquiry-form" className="py-12 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="enquiry-form" className="py-8 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Suspense fallback={<div className="text-center py-12 text-sm font-sans">Loading enquiry desk...</div>}>
           <ContactForm />
         </Suspense>

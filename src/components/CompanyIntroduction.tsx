@@ -31,7 +31,7 @@ export function CompanyIntroduction() {
       title: "Aquarium Design",
       subtitle: "Freshwater, Marine & Oceanariums",
       desc: "Bespoke residential reefs, public oceanarium displays, and natural koi ponds with self-sustaining bog filtration.",
-      image: "/images/bondinwater/ef9742_00d0a8d52ba24f73a1cc51b4e2821b92.jpg",
+      image: "/images/pdf_images/p20_img2.png",
       source: "Profile Page 19–24",
       icon: Waves,
     },

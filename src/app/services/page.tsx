@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero */}
+      {/* Shared Approved Page Hero with Authentic Nature Ponds Asset */}
       <PageHero
         eyebrow="BONDINWATER • CAPABILITIES & DISCIPLINES"
         title={
@@ -27,13 +27,13 @@ export default function ServicesPage() {
           </>
         }
         description="From conceptualisation and architectural planning to aquatic environments, animal habitats and specialised engineering, explore the capabilities of BondInWater."
-        imageSrc="/images/pdf_images/p24_img1.png"
-        imageAlt="BondInWater authentic curved acrylic oceanarium and aquatic installation from Company Profile"
+        imageSrc="/images/pdf_images/p24_nature_pond_hero.png"
+        imageAlt="BondInWater authentic Nature Ponds and riverine ecosystem from Company Profile Page 24"
         imagePosition="object-[75%_center] lg:object-[80%_center]"
         ctaText="Explore Capabilities"
         ctaHref="#service-families"
         ctaIcon="arrow-down"
-        heightClass="min-h-[410px] lg:min-h-[450px]"
+        heightClass="min-h-[400px] lg:min-h-[450px]"
       />
 
       {/* Part 5B: Five Service-Family Showcases with Category Jump Bar */}

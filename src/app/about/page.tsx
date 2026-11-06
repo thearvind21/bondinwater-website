@@ -17,7 +17,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Shared Approved Page Hero */}
+      {/* Shared Approved Page Hero with Authentic Natural Habitat Asset */}
       <PageHero
         eyebrow="ABOUT BONDINWATER • ETHOS & PHILOSOPHY"
         title={
@@ -26,8 +26,8 @@ export default function AboutPage() {
           </>
         }
         description="We aim for excellence in recreating the ecosystem for all creatures on our planet and helping in their conservation."
-        imageSrc="/images/pdf_images/p29_img4.png"
-        imageAlt="BondInWater captive breeding of exotic freshwater species and animal conservation from Company Profile"
+        imageSrc="/images/pdf_images/p18_vivarium_habitat_hero.png"
+        imageAlt="BondInWater authentic living vivarium habitat and ecosystem creation from Company Profile Page 18"
         imagePosition="object-[75%_center] lg:object-[80%_center]"
         ctaText="Discover BondInWater"
         ctaHref="#philosophy"
