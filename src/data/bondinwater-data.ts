@@ -74,12 +74,6 @@ export const BRAND_CONTACT = {
   phoneRaw: "+919833661551",
   email: "sales@bondinwater.com",
   website: "www.bondinwater.com",
-  location: "Mumbai, Maharashtra, India",
-  hours: {
-    weekdays: "Mon - Fri: 10:00 AM - 7:00 PM",
-    saturday: "Saturday: 10:00 AM - 5:00 PM",
-    sunday: "Sunday: By Prior Appointment",
-  },
   whatsappUrl: "https://wa.me/919833661551?text=Hello%20BondInWater%20team%2C%20I%20would%20like%20to%20discuss%20a%20turnkey%20project.",
 };
 
@@ -679,7 +673,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Aquariums & Oceanariums",
     classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_00d0a8d52ba24f73a1cc51b4e2821b92.jpg",
-    location: "Private Architectural Residence",
+    location: "Residential Architectural Setting",
     materials: "Optical Low-Iron Float Glass & Cast PMMA, Sump Array",
     filtrationType: "Multi-Chamber Downflow Sump, Protein Skimmer & Apex Automation",
     description: "A bespoke residential marine coral reef aquarium integrating vibrant live corals and reef teleosts into architectural joinery, supported by continuous automated water chemistry monitoring.",
@@ -689,7 +683,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Full spectrum circadian lighting mimicking natural tropical sun cycles",
       "Integrated Neptune Systems Apex automated monitoring and failsafes"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "cylindrical-cichlid-tower",
@@ -698,7 +692,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Aquariums & Oceanariums",
     classification: "On-Site Installation",
     image: "/images/bondinwater/edc791_b6905808d5f44203b58196e8239cc566.jpg",
-    location: "Corporate Executive Atrium, Mumbai",
+    location: "Commercial Interior Architecture",
     materials: "Seamless Thermoformed Acrylic Cylinder, Lace Rock Hardscape",
     filtrationType: "Central Concealed Downflow Sump with UV Sterilization",
     description: "A 360-degree free-standing cylindrical aquarium positioned within a commercial executive atrium. Features African Rift Valley Cichlids inhabiting authentic lace rock formations.",
@@ -708,7 +702,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "High-oxygenation rotational flow eliminating surface stagnation",
       "Architectural metal capping matching interior finishes"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "oceanarium-tunnel-display",
@@ -717,7 +711,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Aquariums & Oceanariums",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p20_img1.png",
-    location: "Public Aquarium & Marine Pavilion",
+    location: "Public Exhibition Facility",
     materials: "Heavy-Gauge Thermoformed Cast PMMA, Structural Concrete Rebate",
     filtrationType: "High-Rate Sand, Fluidized Sand Bio-Filter & Dual Ozone Reactors",
     description: "A monumental oceanarium underwater walkthrough structure from company profile page 20, providing guests with immersive panoramic observation into pelagic marine life.",
@@ -738,7 +732,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Natural Ponds & Waterfalls",
     classification: "On-Site Installation",
     image: "/images/bondinwater/22553ed11ea647cdaa83b3af08f66f04.jpg",
-    location: "Western India (Private Landscape)",
+    location: "Natural Landscape & Water Garden",
     materials: "Volcanic Granite Strata, Submerged Bog Filter, Cast Aeration Cones",
     filtrationType: "Vortex Mechanical Separation + Wetland Bog Bio-Filtration",
     description: "A landscaped natural koi pond featuring rock waterfall cascades, volcanic granite borders, and an active wetland plant bog that naturally extracts nitrates to sustain high-grade Nishikigoi.",
@@ -748,7 +742,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Natural acoustic water flow with zero splashing erosion",
       "Nighttime submerged LED illumination architecture"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "rock-cascade-koi-stream",
@@ -757,7 +751,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Natural Ponds & Waterfalls",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p24_img1.png",
-    location: "Private Estate Garden, Western India",
+    location: "Estate Landscape Water Feature",
     materials: "Naturally Selected Boulders, GFRC Formations & Heavy EPDM Membrane",
     filtrationType: "Multi-Tiered Biological Waterfall Weir with UV Clarifier",
     description: "A natural riverine pond from company profile page 24 incorporating cascading waterfalls that create continuous oxygenation while cultivating rich beneficial bacteria along rock surfaces.",
@@ -767,7 +761,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Heavy-duty EPDM waterproofing membrane with 30-year design life",
       "Swimming pool to natural pond conversion methodology applied"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
 
   // 3. VIVARIUMS & PALUDARIUMS
@@ -778,7 +772,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Vivariums & Paludariums",
     classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_24a9faa7a4974bbb808192e4c1258982.jpg",
-    location: "Private Architectural Studio",
+    location: "Studio Biotope Display",
     materials: "Low-Iron Optical Glass, Hygroscopic Epi-Web, Bromeliads & Moss",
     filtrationType: "Concealed Biological Drainage Plenum",
     description: "An intricate vertical slice of tropical riverbank ecosystem featuring bromeliads, Tillandsia, creeping ficus, and automated rain simulations operating in biological equilibrium.",
@@ -788,7 +782,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Ultra-quiet centrifugal ventilation preventing front panel condensation",
       "Reverse osmosis automatic top-off with precision TDS regulation"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "mist-canopy-paludarium",
@@ -797,7 +791,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Vivariums & Paludariums",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p21_img1.png",
-    location: "Private Nature Retreat, Western India",
+    location: "Nature Retreat Biotope",
     materials: "Opti-White Crystal Glass, Hygroscopic Driftwood, Epiphytic Flora",
     filtrationType: "Sub-Gravel Bio-Plenum & Dual Return Canister",
     description: "A breathtaking dual-zone paludarium from company profile page 21 combining submerged aquatic plants with emergent marginal reeds, automated foggers, and tropical epiphytes.",
@@ -807,7 +801,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "High CRI lighting promoting chlorophyll synthesis and vibrant coloration",
       "Handcrafted natural driftwood hardscape bonded with neutral silicones"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
 
   // 4. ANIMAL ENCLOSURES
@@ -818,7 +812,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Animal Enclosures",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p27_img2.png",
-    location: "Zoological Conservation Facility",
+    location: "Zoological Conservation Setting",
     materials: "Tempered Laminated Safety Glass, Natural Cork Bark, Substrate Plenum",
     filtrationType: "Bioactive Substrate Drainage & Microclimate Exchanger",
     description: "A biologically calibrated bio-active enclosure tailored for sensitive reptiles from profile page 27. Features natural thermal basking gradients, precise UVB photoperiods, and live plants.",
@@ -828,7 +822,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Laminated safety glass panels with escape-proof perimeter seals",
       "Naturalistic root topography supporting instinctive climbing behavior"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "species-calibrated-habitat",
@@ -837,7 +831,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Animal Enclosures",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p26_img2.png",
-    location: "Sanctuary / Conservation Enclosure",
+    location: "Zoological Habitat Environment",
     materials: "Structural Steel Frame, Impact-Resistant Acrylic & GFRC Rockwork",
     filtrationType: "HVAC Climate Control & Automated Air Exchange System",
     description: "A specialized animal enclosure from company profile page 26 designed in consultation with wildlife ethologists to support species-appropriate exercise, foraging, and security.",
@@ -847,7 +841,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Keeper safety access airlocks and heavy-duty tamper-proof lock hardware",
       "Natural daylight harvesting supplemented with UVB photoperiod arrays"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
 
   // 5. AVIARIES & FLIGHT MESH
@@ -858,7 +852,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Aviaries & Flight Mesh",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p28_img2.png",
-    location: "Public Sanctuary / Tourism Estate",
+    location: "Public Sanctuary Aviary Setting",
     materials: "High-Tensile Stainless Steel Aviary Mesh, Steel Pylon Arch",
     filtrationType: "Natural Rainwater Harvesting & Wetland Overflow",
     description: "An open-span walkthrough aviary engineering project from profile page 28. Features high-tensile stainless steel mesh that allows natural flight dynamics while providing predator protection.",
@@ -868,7 +862,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Integrated native canopy trees and misting dispersal nozzles",
       "Safe double-door public entry airlocks preventing animal escape"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "structural-flight-aviary",
@@ -877,7 +871,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Aviaries & Flight Mesh",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p28_img1.png",
-    location: "Eco-Tourism & Zoological Sanctuary",
+    location: "Eco-Tourism Flight Habitat",
     materials: "Structural Curved Steel Truss, Stainless Steel Cable Mesh",
     filtrationType: "Natural Bioretention Swale & Rain Dispersion",
     description: "A structural flight sanctuary from company profile page 28 engineered to withstand monsoonal wind loads while offering unobstructed flight corridors for varied bird species.",
@@ -887,7 +881,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Elevated visitor walkways keeping guests at bird eye-level",
       "Non-toxic zinc-free wire coatings preventing metal toxicosis in birds"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
 
   // 6. ACRYLIC ENGINEERING
@@ -898,7 +892,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Acrylic Engineering",
     classification: "3D Conceptual Model",
     image: "/images/bondinwater/ef9742_acf6df524a044c19b0da5acda84f8c87.png",
-    location: "Architectural Archives (Technical Model)",
+    location: "Architectural Concept Archive",
     materials: "Thermoformed Cast PMMA Acrylic, Rebated Compression Flange",
     filtrationType: "Life Support System Integration Blueprint",
     description: "A 3D conceptual engineering model from BondInWater's archives demonstrating optical curvature modeling and rebated concrete compression gasket mounting for public aquarium installations.",
@@ -918,7 +912,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Acrylic Engineering",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p14_img1.png",
-    location: "Precision Acrylic Fabrication Facility",
+    location: "Specialist Acrylic Fabrication Facility",
     materials: "100% Virgin Cast Monomeric PMMA Acrylic, Molecular Chemical Bonds",
     filtrationType: "Engineering Material Testing & Hydrostatic Certification",
     description: "Precision fabrication and annealing of massive cast PMMA acrylic panels ranging from 20mm up to 300mm thickness from company profile page 14, engineered for massive water containment.",
@@ -939,7 +933,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Acrylic Swimming Pools",
     classification: "On-Site Installation",
     image: "/images/bondinwater/ef9742_0c82a93844c64e2fa7a9568ba75ebab2.jpg",
-    location: "Maharashtra Hillside Villa",
+    location: "Architectural Pool Installation",
     materials: "Structural Cast PMMA Acrylic Panel, Marine Silicone Gaskets",
     filtrationType: "High-Rate Sand & Saltwater Circulation Life Support",
     description: "A cantilevered infinity swimming pool featuring a structural optical acrylic wall that creates an unhindered panoramic vista. Engineered with high safety margins against hydrostatic pressure.",
@@ -949,7 +943,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "UV-inhibited acrylic preventing discoloration or weathering",
       "Seamless aesthetic integration with natural stone pool coping"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
   {
     id: "submerged-pool-viewing-window",
@@ -958,7 +952,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Acrylic Swimming Pools",
     classification: "On-Site Installation",
     image: "/images/pdf_images/p16_img1.png",
-    location: "Luxury Private Residence, Western India",
+    location: "Residential Transparent Viewing Feature",
     materials: "Cast PMMA Optical Acrylic Panel, Marine Stainless Gasket Retainers",
     filtrationType: "Ozone Sanitized Pool Circulation System",
     description: "A submerged acrylic viewing window from company profile page 16 connecting an outdoor swimming pool directly with an interior subterranean lounge for dramatic illumination.",
@@ -968,7 +962,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Calculated deflection limits ensuring absolute perimeter watertightness",
       "Hand-polished optical bevels for crystal-clear refraction"
     ],
-    badge: "Completed Field Installation"
+    badge: "Documented Portfolio Reference"
   },
 
   // 8. FILTRATION & TECHNICAL SYSTEMS
@@ -979,7 +973,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Filtration & Technical Systems",
     classification: "Technical Plant Room",
     image: "/images/bondinwater/ef9742_88000d9858af4e41b383bb7f27d6f699.jpg",
-    location: "Institutional Exhibit Plant Room",
+    location: "Life Support Plant Room",
     materials: "Schedule 80 PVC, Variable Frequency Pumps, Ozone Reactors",
     filtrationType: "Multi-Chamber Biological, Fluidized Sand & Ozone Contact",
     description: "The complete technical life support engine behind a major aquatic exhibit. Engineered with Computational Fluid Dynamics to optimize turnover rates and energy efficiency.",
@@ -998,7 +992,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     categoryLabel: "Filtration & Technical Systems",
     classification: "Technical Plant Room",
     image: "/images/pdf_images/p13_img1.png",
-    location: "Commercial Life Support Facility",
+    location: "Automated Life Support Facility",
     materials: "Neptune Systems Apex Controllers, Digital Probes & Flow Sensors",
     filtrationType: "Automated Telemetry, Dosing & Fail-Safe Cloud Monitoring",
     description: "An automated Life Support telemetry command center from company profile page 13 providing real-time biochemical monitoring of pH, ORP, temperature, and conductivity with cloud alert dispatch.",

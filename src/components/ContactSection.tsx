@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { BRAND_CONTACT } from "@/data/bondinwater-data";
-import { Phone, Mail, MapPin, Clock, MessageSquare, Check, Send } from "lucide-react";
+import { Phone, Mail, Globe, MessageSquare, Check, Send } from "lucide-react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -116,22 +116,18 @@ export function ContactSection() {
                   </div>
                 </a>
 
-                <div className="flex items-start gap-3 p-3 bg-white border border-[#8CA477]/25 rounded">
-                  <MapPin className="w-4 h-4 text-[#1F4338] shrink-0 mt-0.5" />
+                <a
+                  href={`https://${BRAND_CONTACT.website}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 p-3 bg-white border border-[#8CA477]/25 rounded hover:border-[#1F4338] transition-colors"
+                >
+                  <Globe className="w-4 h-4 text-[#1F4338] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[#4F8278] block text-[10px] font-bold">OPERATIONAL HEADQUARTERS</span>
-                    <span className="text-[#1F4338] font-semibold">{BRAND_CONTACT.location}</span>
+                    <span className="text-[#4F8278] block text-[10px] font-bold">OFFICIAL PORTAL</span>
+                    <span className="text-[#1F4338] font-semibold">{BRAND_CONTACT.website}</span>
                   </div>
-                </div>
-
-                <div className="flex items-start gap-3 p-3 bg-white border border-[#8CA477]/25 rounded">
-                  <Clock className="w-4 h-4 text-[#1F4338] shrink-0 mt-0.5" />
-                  <div>
-                    <span className="text-[#4F8278] block text-[10px] font-bold">STUDIO CONSULTATION HOURS</span>
-                    <span className="text-[#1F4338] block">{BRAND_CONTACT.hours.weekdays}</span>
-                    <span className="text-[#4F8278] text-[10px] block mt-0.5">{BRAND_CONTACT.hours.saturday}</span>
-                  </div>
-                </div>
+                </a>
               </div>
 
               {/* Instant WhatsApp Link */}

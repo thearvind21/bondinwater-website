@@ -4,11 +4,11 @@ import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PROCESS_STEPS } from "@/data/bondinwater-data";
-import { ArrowUpRight, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "Turnkey Methodology (8 Stages) — BondInWater",
-  description: "Explore BondInWater's complete eight-stage turnkey project methodology from initial feasibility and architectural CAD to commissioning and ongoing biologist care.",
+  title: "Turnkey Project Lifecycle (8 Stages) — BondInWater",
+  description: "Explore BondInWater's documented eight-stage turnkey project methodology from initial feasibility study to ongoing biologist operation and maintenance.",
 };
 
 export default function ProcessPage() {
@@ -16,128 +16,160 @@ export default function ProcessPage() {
     <main className="min-h-screen bg-[#E9EFE7] text-[#27302B] selection:bg-[#1F4338] selection:text-white">
       <Navbar />
 
-      {/* Hero Header */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-[#1F4338] text-white relative overflow-hidden">
+      {/* Hero Header with Two-Column Composition */}
+      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden border-b border-[#8CA477]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Narrative */}
+            <div className="lg:col-span-7 space-y-4">
+              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold block">
                 BONDINWATER &bull; TURNKEY LIFECYCLE
               </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal leading-[1.1] mb-6">
-              The Eight-Stage <br />
-              <span className="italic font-normal text-[#8CA477]">Turnkey Methodology</span>
-            </h1>
-            <p className="text-base sm:text-lg text-white/85 font-sans font-light leading-relaxed max-w-2xl">
-              From our documented 35-page company profile (Page 4). A meticulous, end-to-end framework governing feasibility assessment, architectural precision, certified fabrication, and ongoing biological maintenance.
-            </p>
-          </div>
 
-          {/* Quick Step Indicators */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 pt-8 mt-6 border-t border-white/10">
-            {PROCESS_STEPS.map((step) => (
-              <a
-                key={step.number}
-                href={`#stage-${step.number}`}
-                className="p-2.5 rounded bg-white/5 hover:bg-[#8CA477] hover:text-[#1F4338] transition-colors text-center group"
-              >
-                <span className="text-xs font-mono font-bold block text-[#8CA477] group-hover:text-[#1F4338]">
-                  {step.number}
-                </span>
-                <span className="text-[11px] font-sans truncate block text-white/80 group-hover:text-[#1F4338]">
-                  {step.title}
-                </span>
-              </a>
-            ))}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.1] text-white">
+                The Eight-Stage <br />
+                <span className="italic font-normal text-[#8CA477]">Turnkey Methodology</span>
+              </h1>
+
+              <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-xl">
+                Reproduced directly from Page 4 of the verified BondInWater Company Profile. A comprehensive, disciplined lifecycle governing civil feasibility, architectural planning, certified fabrication, and ongoing biological care.
+              </p>
+
+              {/* Quick Jump Bar */}
+              <div className="pt-2 flex flex-wrap gap-1.5">
+                {PROCESS_STEPS.map((s) => (
+                  <a
+                    key={s.number}
+                    href={`#stage-${s.number}`}
+                    className="text-[11px] font-mono px-2.5 py-1 rounded bg-white/10 hover:bg-[#8CA477] hover:text-[#1F4338] text-white/90 transition-colors"
+                  >
+                    {s.number}. {s.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Authentic Lifecycle Infographic (p4_img1.png) */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full rounded-lg overflow-hidden bg-[#142C25] shadow-lg border border-white/15">
+                <Image
+                  src="/images/pdf_images/p4_img1.png"
+                  alt="BondInWater 8-stage turnkey methodology infographic from company profile page 4"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338]/90 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-[#8CA477] font-bold">
+                    COMPANY PROFILE PAGE 4
+                  </span>
+                  <span className="text-xs text-white/90 font-sans italic">
+                    Turnkey Project Management Lifecycle
+                  </span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* All 8 Stages in Full Detail */}
-      <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {PROCESS_STEPS.map((step, idx) => (
-          <div
-            key={step.number}
-            id={`stage-${step.number}`}
-            className="scroll-mt-28 bg-white rounded-lg border border-[#1F4338]/10 overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12"
-          >
-            {/* Step Left Details (7 cols) */}
-            <div className="lg:col-span-7 p-8 lg:p-12 flex flex-col justify-between space-y-6">
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-mono font-bold text-white bg-[#1F4338] px-2.5 py-1 rounded">
-                    STAGE {step.number}
-                  </span>
-                  <span className="text-xs font-sans text-[#27302B]/60 font-medium">
-                    {step.profilePage}
-                  </span>
-                </div>
+      {/* Clean Timeline Composition of All 8 Stages */}
+      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="border-b border-[#1F4338]/15 pb-4">
+          <span className="text-xs font-sans tracking-[0.2em] uppercase text-[#4F8278] font-bold block mb-1">
+            SEQUENTIAL EXECUTION FRAMEWORK
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-serif text-[#1F4338]">
+            Documented Lifecycle Stages
+          </h2>
+        </div>
 
-                <h2 className="text-2xl sm:text-3xl font-serif text-[#1F4338] mb-2">
-                  {step.title}
-                </h2>
-                <p className="text-sm font-sans font-medium text-[#B47750] mb-4">
-                  {step.subtitle}
-                </p>
-
-                <p className="text-sm sm:text-base text-[#27302B]/85 font-sans font-light leading-relaxed mb-6">
-                  {step.description}
-                </p>
-
-                <div className="space-y-3 pt-4 border-t border-[#1F4338]/10">
-                  <span className="text-xs font-sans tracking-[0.2em] uppercase text-[#4F8278] font-bold block">
-                    STAGE DELIVERABLES
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {step.deliverables.map((deliv, dIdx) => (
-                      <div key={dIdx} className="flex items-start gap-2 text-xs sm:text-sm font-sans text-[#27302B]/80">
-                        <CheckCircle2 className="w-4 h-4 text-[#4F8278] shrink-0 mt-0.5" />
-                        <span>{deliv}</span>
-                      </div>
-                    ))}
-                  </div>
+        <div className="space-y-8">
+          {PROCESS_STEPS.map((step, idx) => (
+            <div
+              key={step.number}
+              id={`stage-${step.number}`}
+              className="scroll-mt-28 bg-white rounded-lg border border-[#1F4338]/10 overflow-hidden shadow-xs grid grid-cols-1 md:grid-cols-12 hover:border-[#4F8278] transition-colors"
+            >
+              {/* Step Visual Column (4 cols) */}
+              <div className="md:col-span-4 relative min-h-[200px] md:min-h-full bg-[#1F4338]">
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 35vw"
+                />
+                <div className="absolute top-3 left-3 bg-[#1F4338]/90 text-white text-xs font-mono font-bold px-2.5 py-1 rounded backdrop-blur-xs">
+                  STAGE {step.number}
                 </div>
               </div>
 
-              {step.quote && (
-                <div className="p-4 rounded bg-[#E9EFE7]/50 border-l-2 border-[#4F8278] text-xs sm:text-sm italic font-serif text-[#1F4338]">
-                  &ldquo;{step.quote}&rdquo;
-                </div>
-              )}
-            </div>
+              {/* Step Details Column (8 cols) */}
+              <div className="md:col-span-8 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-xs font-sans font-medium text-[#B47750]">
+                      {step.subtitle}
+                    </span>
+                    <span className="text-[11px] font-mono text-[#27302B]/50">
+                      {step.profilePage}
+                    </span>
+                  </div>
 
-            {/* Step Right Image (5 cols) */}
-            <div className="lg:col-span-5 relative min-h-[260px] lg:min-h-full bg-[#1F4338]">
-              <Image
-                src={step.image}
-                alt={step.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1F4338]/60 via-transparent to-transparent lg:hidden" />
+                  <h3 className="text-xl sm:text-2xl font-serif text-[#1F4338] mb-2">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-[#27302B]/80 font-sans font-light leading-relaxed mb-4">
+                    {step.description}
+                  </p>
+
+                  <div className="pt-3 border-t border-[#1F4338]/10">
+                    <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#4F8278] block mb-2">
+                      Documented Deliverables &amp; Activities:
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {step.deliverables.map((deliv, dIdx) => (
+                        <div key={dIdx} className="flex items-start gap-2 text-xs font-sans text-[#27302B]/75">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#4F8278] shrink-0 mt-0.5" />
+                          <span>{deliv}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {step.quote && (
+                  <div className="p-3 rounded bg-[#E9EFE7]/40 border-l-2 border-[#4F8278] text-xs italic font-serif text-[#1F4338]">
+                    &ldquo;{step.quote}&rdquo;
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       {/* Turnkey Consultation CTA */}
-      <section className="bg-[#1F4338] text-white py-16 lg:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-sans font-semibold tracking-[0.24em] uppercase text-[#8CA477] block">
+      <section className="bg-[#1F4338] text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+          <span className="text-xs font-sans font-semibold tracking-[0.2em] uppercase text-[#8CA477] block">
             STAGE 01: BEGIN WITH FEASIBILITY
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif">
             Initiate Your Project Feasibility Audit
           </h2>
-          <p className="text-base text-white/80 font-sans font-light max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-white/80 font-sans font-light max-w-xl mx-auto">
             Our engineers assess slab deflection tolerances, water chemistry, microclimate requirements, and lifecycle energy demands.
           </p>
           <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#B47750] hover:bg-[#9F6542] text-white px-8 py-3.5 rounded-[4px] font-sans text-sm font-medium transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 bg-[#B47750] hover:bg-[#9F6542] text-white px-7 py-3.5 rounded-[4px] font-sans text-sm font-medium transition-colors shadow-xs"
             >
               <span>Schedule Feasibility Consultation</span>
               <ArrowUpRight className="w-4 h-4" />

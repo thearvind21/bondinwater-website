@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { BRAND_CONTACT, COMPANY_DIVISIONS } from "@/data/bondinwater-data";
-import { Phone, Mail, MapPin, Clock, MessageSquare, Check, Send, ShieldCheck } from "lucide-react";
+import { Phone, Mail, Globe, MessageSquare, Check, Send, Copy, ArrowUpRight } from "lucide-react";
 
 function ContactForm() {
   const searchParams = useSearchParams();
@@ -21,7 +21,8 @@ function ContactForm() {
     projectDetails: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isPrepared, setIsPrepared] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (initialService) {
@@ -40,133 +41,176 @@ function ContactForm() {
     }
   }, [initialService, initialProject]);
 
+  // All twelve original company categories for the dropdown
   const requirementOptions = COMPANY_DIVISIONS.map(
-    (d) => `${d.letter}. ${d.title} (${d.subtitle})`
+    (d) => `${d.letter}. ${d.title}`
   );
+
+  const emailSubject = encodeURIComponent(
+    `Project Feasibility Consultation - ${formData.fullName || "New Client"}`
+  );
+
+  const rawEmailBody = 
+    `Project Feasibility Consultation Enquiry\n` +
+    `----------------------------------------\n` +
+    `Client Name: ${formData.fullName}\n` +
+    `Email: ${formData.email}\n` +
+    `Phone: ${formData.phone || "Not provided"}\n` +
+    `Project Location: ${formData.location || "Not provided"}\n` +
+    `Discipline of Interest: ${formData.requirementType}\n\n` +
+    `Project Scope & Notes:\n${formData.projectDetails || "Looking for preliminary feasibility assessment."}\n`;
+
+  const mailtoUrl = `mailto:${BRAND_CONTACT.email}?subject=${emailSubject}&body=${encodeURIComponent(rawEmailBody)}`;
+
+  const whatsappUrl = `https://wa.me/919833661551?text=${encodeURIComponent(
+    `Hello BondInWater team, my name is ${formData.fullName}. I would like to inquire about: ${formData.requirementType}. Location: ${formData.location || "India"}. Details: ${formData.projectDetails || "Looking for consultation."}`
+  )}`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.fullName && formData.email) {
-      setIsSubmitted(true);
+      setIsPrepared(true);
+      // Automatically trigger email client
+      if (typeof window !== "undefined") {
+        window.location.href = mailtoUrl;
+      }
     }
   };
 
-  const encodedEmailBody = encodeURIComponent(
-    `Project Enquiry for BondInWater\n\n` +
-    `Client Name: ${formData.fullName}\n` +
-    `Email: ${formData.email}\n` +
-    `Phone: ${formData.phone || "Not specified"}\n` +
-    `Project Location: ${formData.location || "Not specified"}\n` +
-    `Requirement Category: ${formData.requirementType}\n\n` +
-    `Project Scope & Details:\n${formData.projectDetails || "Looking for initial feasibility consultation."}\n`
-  );
-
-  const mailtoUrl = `mailto:${BRAND_CONTACT.email}?subject=Project%20Enquiry%20-%20${encodeURIComponent(formData.fullName || "New Client")}&body=${encodedEmailBody}`;
-  
-  const whatsappUrl = `https://wa.me/919833661551?text=${encodeURIComponent(
-    `Hello BondInWater team, my name is ${formData.fullName}. I would like to inquire regarding: ${formData.requirementType}. Location: ${formData.location || "India"}. Details: ${formData.projectDetails || "Looking for consultation."}`
-  )}`;
+  const handleCopy = () => {
+    if (typeof navigator !== "undefined") {
+      navigator.clipboard.writeText(rawEmailBody);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
+  };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-      {/* Left Column: Direct Studio Channels */}
+      
+      {/* Left Column: Official Contact Channels (Page 35) (5 cols) */}
       <div className="lg:col-span-5 space-y-6">
-        <div className="border border-[#1F4338]/10 bg-white rounded-lg p-6 sm:p-8 space-y-6 shadow-sm">
+        <div className="border border-[#1F4338]/10 bg-white rounded-lg p-6 sm:p-8 space-y-6 shadow-xs">
           <div className="border-b border-[#1F4338]/10 pb-4">
             <span className="text-[11px] font-sans uppercase tracking-widest text-[#4F8278] block font-bold">
-              COMMUNICATION DESK
+              OFFICIAL CONTACT CHANNELS
             </span>
             <h3 className="text-xl font-serif text-[#1F4338] mt-1">
-              BondInWater Headquarters
+              Direct Technical Desk
             </h3>
           </div>
 
-          <div className="space-y-4 text-xs font-sans">
+          <div className="space-y-3.5 text-xs font-sans">
             <a
               href={`tel:${BRAND_CONTACT.phoneRaw}`}
-              className="flex items-start gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded hover:border-[#1F4338] transition-colors"
+              className="flex items-center gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded hover:border-[#1F4338] transition-colors"
             >
-              <Phone className="w-4 h-4 text-[#4F8278] shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-[#4F8278] shrink-0" />
               <div>
-                <span className="text-[#27302B]/60 block text-[10px] uppercase font-bold">Direct Phone</span>
+                <span className="text-[#27302B]/60 block text-[10px] uppercase font-bold">Telephone</span>
                 <span className="text-sm font-medium text-[#1F4338]">{BRAND_CONTACT.phone}</span>
               </div>
             </a>
 
             <a
               href={`mailto:${BRAND_CONTACT.email}`}
-              className="flex items-start gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded hover:border-[#1F4338] transition-colors"
+              className="flex items-center gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded hover:border-[#1F4338] transition-colors"
             >
-              <Mail className="w-4 h-4 text-[#4F8278] shrink-0 mt-0.5" />
+              <Mail className="w-4 h-4 text-[#4F8278] shrink-0" />
               <div>
                 <span className="text-[#27302B]/60 block text-[10px] uppercase font-bold">Email Transmissions</span>
                 <span className="text-sm font-medium text-[#1F4338]">{BRAND_CONTACT.email}</span>
               </div>
             </a>
 
-            <div className="flex items-start gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded">
-              <MapPin className="w-4 h-4 text-[#4F8278] shrink-0 mt-0.5" />
+            <a
+              href={`https://${BRAND_CONTACT.website}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded hover:border-[#1F4338] transition-colors"
+            >
+              <Globe className="w-4 h-4 text-[#4F8278] shrink-0" />
               <div>
-                <span className="text-[#27302B]/60 block text-[10px] uppercase font-bold">Studio Location</span>
-                <span className="text-sm font-medium text-[#1F4338]">{BRAND_CONTACT.location}</span>
+                <span className="text-[#27302B]/60 block text-[10px] uppercase font-bold">Official Web Portal</span>
+                <span className="text-sm font-medium text-[#1F4338]">{BRAND_CONTACT.website}</span>
               </div>
-            </div>
-
-            <div className="flex items-start gap-3 p-3.5 bg-[#E9EFE7]/40 border border-[#1F4338]/10 rounded">
-              <Clock className="w-4 h-4 text-[#4F8278] shrink-0 mt-0.5" />
-              <div>
-                <span className="text-[#27302B]/60 block text-[10px] uppercase font-bold">Hours of Operation</span>
-                <span className="text-sm font-medium text-[#1F4338]">{BRAND_CONTACT.hours.weekdays}</span>
-              </div>
-            </div>
+            </a>
           </div>
-        </div>
 
-        <div className="p-6 rounded-lg bg-[#1F4338] text-white space-y-3">
-          <span className="text-xs font-sans tracking-[0.2em] uppercase text-[#8CA477] font-semibold block">
-            CONFIDENTIALITY &amp; FEASIBILITY
-          </span>
-          <p className="text-xs font-sans font-light text-white/80 leading-relaxed">
-            All structural drawings, architectural floor plans, and site surveys are handled under strict engineering confidentiality. Initial feasibility consultations include civil slab load assessment and biological compatibility audits.
-          </p>
+          <div className="pt-2 text-xs font-sans text-[#27302B]/70 leading-relaxed border-t border-[#1F4338]/10">
+            Official contact details from Page 35 of the BondInWater Company Profile. All structural drawings, architectural floor plans, and site surveys are reviewed under strict engineering confidentiality.
+          </div>
         </div>
       </div>
 
-      {/* Right Column: Enquiry Form */}
+      {/* Right Column: Project Enquiry Form (7 cols) */}
       <div className="lg:col-span-7">
-        <div className="bg-white border border-[#1F4338]/10 rounded-lg p-6 sm:p-10 shadow-sm">
-          {isSubmitted ? (
-            <div className="py-12 text-center space-y-4">
-              <div className="w-12 h-12 bg-[#8CA477]/20 text-[#1F4338] rounded-full flex items-center justify-center mx-auto">
-                <Check className="w-6 h-6 text-[#1F4338]" />
+        <div className="bg-white border border-[#1F4338]/10 rounded-lg p-6 sm:p-8 shadow-xs">
+          {isPrepared ? (
+            <div className="py-8 space-y-6">
+              <div className="flex items-center gap-3 text-[#1F4338]">
+                <div className="w-10 h-10 bg-[#8CA477]/20 rounded-full flex items-center justify-center shrink-0">
+                  <Check className="w-5 h-5 text-[#1F4338]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif">
+                    Enquiry Prepared for Dispatch
+                  </h3>
+                  <p className="text-xs text-[#27302B]/70 font-sans">
+                    Choose your preferred communication channel to send your enquiry:
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-serif text-[#1F4338]">
-                Enquiry Transmitted Successfully
-              </h3>
-              <p className="text-sm text-[#27302B]/80 max-w-md mx-auto font-sans font-light">
-                Thank you, <span className="font-semibold text-[#1F4338]">{formData.fullName}</span>. Our engineering desk has recorded your consultation request and will reach out within 24 business hours.
-              </p>
-              <div className="pt-4 flex flex-wrap justify-center gap-3">
+
+              {/* Action Buttons */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <a
                   href={mailtoUrl}
-                  className="inline-flex items-center gap-2 bg-[#1F4338] text-white px-5 py-2.5 rounded text-xs font-sans font-medium"
+                  className="inline-flex items-center justify-center gap-2 bg-[#1F4338] hover:bg-[#142C25] text-white p-3.5 rounded text-xs font-sans font-medium transition-colors"
                 >
-                  <Mail className="w-3.5 h-3.5" />
-                  <span>Send Direct Email Copy</span>
+                  <Mail className="w-4 h-4 text-[#8CA477]" />
+                  <span>Open in Email Application</span>
                 </a>
+
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded text-xs font-sans font-medium"
+                  className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white p-3.5 rounded text-xs font-sans font-medium transition-colors"
                 >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>WhatsApp Desk</span>
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Send via WhatsApp Desk</span>
                 </a>
               </div>
+
+              {/* Copy Message Preview Box */}
+              <div className="p-4 rounded bg-[#E9EFE7]/50 border border-[#1F4338]/10 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#4F8278] font-bold">
+                    Message Transcript:
+                  </span>
+                  <button
+                    onClick={handleCopy}
+                    className="inline-flex items-center gap-1 text-[11px] font-sans font-semibold text-[#B47750] hover:text-[#1F4338]"
+                  >
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>{copied ? "Copied!" : "Copy Text"}</span>
+                  </button>
+                </div>
+                <pre className="text-xs font-mono text-[#27302B]/80 whitespace-pre-wrap leading-relaxed">
+                  {rawEmailBody}
+                </pre>
+              </div>
+
+              <button
+                onClick={() => setIsPrepared(false)}
+                className="text-xs font-sans text-[#27302B]/60 hover:text-[#1F4338] underline"
+              >
+                &larr; Edit form fields
+              </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-sans font-medium text-[#27302B] mb-1">
@@ -177,8 +221,8 @@ function ContactForm() {
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    placeholder="e.g. Rahul Sharma"
-                    className="w-full text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
+                    placeholder="e.g. Arvind Padyachi"
+                    className="w-full text-xs sm:text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
                   />
                 </div>
                 <div>
@@ -191,7 +235,7 @@ function ContactForm() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g. client@studio.com"
-                    className="w-full text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
+                    className="w-full text-xs sm:text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
                   />
                 </div>
               </div>
@@ -199,33 +243,33 @@ function ContactForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-sans font-medium text-[#27302B] mb-1">
-                    Contact Phone
+                    Phone Number
                   </label>
                   <input
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98336 61551"
-                    className="w-full text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
+                    className="w-full text-xs sm:text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
                   />
                 </div>
                 <div>
                   <label className="block text-xs font-sans font-medium text-[#27302B] mb-1">
-                    Project Location / City
+                    Project Location
                   </label>
                   <input
                     type="text"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     placeholder="e.g. Mumbai, Bengaluru, Dubai"
-                    className="w-full text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
+                    className="w-full text-xs sm:text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-sans font-medium text-[#27302B] mb-1">
-                  Primary Discipline of Interest
+                  Primary Service of Interest
                 </label>
                 <select
                   value={formData.requirementType}
@@ -242,30 +286,31 @@ function ContactForm() {
 
               <div>
                 <label className="block text-xs font-sans font-medium text-[#27302B] mb-1">
-                  Project Scope, Biome or Structural Notes
+                  Project Description
                 </label>
                 <textarea
                   rows={4}
                   value={formData.projectDetails}
                   onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
                   placeholder="Outline dimensions, species, architectural context, or specific challenges..."
-                  className="w-full text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
+                  className="w-full text-xs sm:text-sm font-sans px-3.5 py-2.5 rounded border border-[#1F4338]/20 focus:outline-none focus:border-[#1F4338] bg-[#E9EFE7]/20"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#B47750] hover:bg-[#9F6542] text-white py-3.5 px-6 rounded-[4px] font-sans text-sm font-medium transition-colors shadow-sm cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#B47750] hover:bg-[#9F6542] text-white py-3.5 px-6 rounded-[4px] font-sans text-sm font-medium transition-colors shadow-xs cursor-pointer"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Submit Feasibility Enquiry</span>
+                  <span>Transmit Feasibility Enquiry</span>
                 </button>
               </div>
             </form>
           )}
         </div>
       </div>
+
     </div>
   );
 }
@@ -276,27 +321,25 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Header */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-[#1F4338] text-white relative overflow-hidden">
+      <section className="pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[#1F4338] text-white relative overflow-hidden border-b border-[#8CA477]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold">
-                BONDINWATER &bull; CONSULTATION DESK
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal leading-[1.1] mb-6">
-              Initiate Project Feasibility &amp; <br />
+          <div className="max-w-3xl space-y-4">
+            <span className="text-[11px] sm:text-xs font-sans tracking-[0.24em] uppercase text-[#8CA477] font-semibold block">
+              BONDINWATER &bull; CONSULTATION DESK
+            </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal leading-[1.1] text-white">
+              Project Feasibility &amp; <br />
               <span className="italic font-normal text-[#8CA477]">Design Consultation</span>
             </h1>
-            <p className="text-base sm:text-lg text-white/85 font-sans font-light leading-relaxed max-w-2xl">
-              From preliminary concept viability to long-term water parameter testing and habitat maintenance, BondInWater provides single-source accountability. Connect directly with our engineering desk.
+            <p className="text-sm sm:text-base text-white/85 font-sans font-light leading-relaxed max-w-xl">
+              Connect directly with our engineering desk for biological feasibility analysis, structural slab audits, and turnkey architectural quotations.
             </p>
           </div>
         </div>
       </section>
 
       {/* Main Form Section */}
-      <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Suspense fallback={<div className="text-center py-12 text-sm font-sans">Loading enquiry desk...</div>}>
           <ContactForm />
         </Suspense>

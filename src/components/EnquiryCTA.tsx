@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Phone, Mail, Globe, ShieldCheck } from "lucide-react";
 import { BRAND_CONTACT } from "@/data/bondinwater-data";
 
 export function EnquiryCTA() {
@@ -47,7 +47,7 @@ export function EnquiryCTA() {
           {/* Right Column: Direct Communication Plaque (5 cols) */}
           <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-lg p-6 sm:p-8 space-y-5 backdrop-blur-xs">
             <span className="text-[10px] font-mono tracking-widest uppercase text-[#8CA477] font-bold block">
-              DIRECT DESK TRANSMISSION
+              OFFICIAL CONTACT CHANNELS
             </span>
             <h3 className="text-xl font-serif text-white">
               BondInWater Technical Desk
@@ -70,15 +70,20 @@ export function EnquiryCTA() {
                 <span className="text-sm font-medium text-white">{BRAND_CONTACT.email}</span>
               </a>
 
-              <div className="flex items-start gap-3 p-3 rounded bg-white/5 border border-white/10">
-                <MapPin className="w-4 h-4 text-[#8CA477] shrink-0 mt-0.5" />
-                <span className="text-xs text-white/80">{BRAND_CONTACT.location}</span>
-              </div>
+              <a
+                href={`https://${BRAND_CONTACT.website}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 rounded bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+              >
+                <Globe className="w-4 h-4 text-[#8CA477] shrink-0" />
+                <span className="text-sm font-medium text-white">{BRAND_CONTACT.website}</span>
+              </a>
             </div>
 
             <div className="pt-2 border-t border-white/10 flex items-center gap-2 text-xs text-white/70">
               <ShieldCheck className="w-4 h-4 text-[#8CA477]" />
-              <span>Full confidentiality for architectural drawings &amp; floorplans.</span>
+              <span>Direct transmission to sales@bondinwater.com</span>
             </div>
           </div>
 
