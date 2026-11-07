@@ -32,9 +32,6 @@ export default function ProcessPage() {
         ctaText="Explore Our Process"
         ctaHref="#lifecycle"
         ctaIcon="arrow-down"
-        heightClass="min-h-[360px] lg:min-h-[400px]"
-        paddingClass="pt-24 pb-8 lg:pt-28 lg:pb-10"
-        headingClass="text-3xl sm:text-4xl lg:text-[42px]"
       />
 
       {/* Clean Timeline Composition of All 8 Stages */}

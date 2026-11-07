@@ -81,7 +81,6 @@ export default async function ServiceDetailPage({
         ctaIcon="arrow-up-right"
         secondaryCtaText="All 12 Services"
         secondaryCtaHref="/services"
-        heightClass="min-h-[380px] lg:min-h-[420px]"
       />
 
       {/* Main Content Body */}

@@ -336,10 +336,6 @@ export default function ContactPage() {
         ctaText="Start Your Enquiry"
         ctaHref="#enquiry-form"
         ctaIcon="arrow-down"
-        heightClass="min-h-[250px] lg:min-h-[280px]"
-        paddingClass="pt-20 pb-4 lg:pt-22 lg:pb-5"
-        headingClass="text-2xl sm:text-3xl lg:text-[32px]"
-        contentSpacingClass="space-y-2 sm:space-y-2.5"
       />
 
       {/* Main Form Section - Immediately visible below compact hero */}

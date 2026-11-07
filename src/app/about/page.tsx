@@ -32,9 +32,6 @@ export default function AboutPage() {
         ctaText="Discover BondInWater"
         ctaHref="#philosophy"
         ctaIcon="arrow-down"
-        heightClass="min-h-[380px] lg:min-h-[420px]"
-        paddingClass="pt-26 pb-8 lg:pt-28 lg:pb-12"
-        headingClass="text-3xl sm:text-4xl lg:text-[44px]"
       />
 
       {/* Section 1: Evolution Narrative — From Hobbyists and Learners to Creators */}

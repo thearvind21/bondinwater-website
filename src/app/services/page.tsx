@@ -33,7 +33,6 @@ export default function ServicesPage() {
         ctaText="Explore Capabilities"
         ctaHref="#service-families"
         ctaIcon="arrow-down"
-        heightClass="min-h-[400px] lg:min-h-[450px]"
       />
 
       {/* Part 5B: Five Service-Family Showcases with Category Jump Bar */}

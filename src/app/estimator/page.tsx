@@ -29,7 +29,6 @@ export default function EstimatorPage() {
         ctaText="Calculate Feasibility"
         ctaHref="#estimator-tool"
         ctaIcon="arrow-down"
-        heightClass="min-h-[340px] lg:min-h-[380px]"
       />
 
       <section id="estimator-tool" className="py-12 lg:py-16">

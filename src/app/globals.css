@@ -34,6 +34,19 @@
   :root {
     --background: #E9EFE7;
     --foreground: #27302B;
+
+    /* Site Standard Dimensions (Locked from Approved Homepage Reference) */
+    --site-header-height: 80px;
+    --site-hero-height-mobile: 90vh;
+    --site-hero-height-tablet: 90vh;
+    --site-hero-height-desktop: 85vh;
+    --site-hero-height: 90vh;
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --site-hero-height: 85vh;
+    }
   }
   
   html {

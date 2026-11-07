@@ -55,6 +55,7 @@ export function Hero() {
       ref={heroRef}
       id="hero"
       className="relative min-h-[90vh] lg:min-h-[85vh] pt-28 pb-16 lg:pt-36 lg:pb-24 flex items-center bg-[#1F4338] text-white overflow-hidden"
+      style={{ minHeight: "var(--site-hero-height)" }}
     >
       {/* Background Image Container with Cinematic Composition & Subtle Parallax */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">

@@ -60,7 +60,6 @@ export default function ProjectsPage() {
         ctaText="Explore Projects"
         ctaHref="#portfolio-gallery"
         ctaIcon="arrow-down"
-        heightClass="min-h-[410px] lg:min-h-[450px]"
       />
 
       {/* Category Filter Bar: Responsive Wrapping Desktop + Compact Mobile Control */}
