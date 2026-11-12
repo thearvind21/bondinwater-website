@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-forest-bg: #0C1E14;
+  --color-editorial-bg: #FAF7F0;
+  --color-coral: #B4644E;
+}
+
+@layer base {
+  body {
+    background-color: #0C1E14;
+    color: #1A211D;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0C1E14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C3E2B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B4644E;
+}
+
+/* Organic Arched Mask for Chapter 02 Worlds feature */
+.organic-arch-mask {
+  clip-path: url(#arch-clip);
+  border-radius: 240px 240px 0 0;
+}
+
+@media (min-width: 1024px) {
+  .organic-arch-mask {
+    border-radius: 280px 280px 0 0;
+  }
+}
+
+/* Water Ripple Animations */
+@keyframes waterRipple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+.animate-water-ripple {
+  animation: waterRipple 4s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1.2s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2.4s;
+}
+
+/* Fine botanical line styles */
+.botanical-stroke {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawStroke 2.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Noise texture overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
